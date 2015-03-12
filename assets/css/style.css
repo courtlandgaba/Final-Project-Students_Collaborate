@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+}
+.parallaxLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 100vh 0;
+
+}
+.parallaxLayerFore {
+    -webkit-transform: translateZ(-2px);
+    transform: translateZ(-2px);
+}
+.parallaxLayerBase {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.parallaxLayerBack {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px);
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.blue {
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.63);
+    z-index: 3;
+}
+.left {
+    float: left;
+}
+.home {
+    display:table-cell;
+    vertical-align: middle;
+    height: 80px;
+    text-decoration: none;
+    padding-right: 5px;
+
+}
+.right {
+    float:right;
+}
+.links {
+    display:table-cell;
+    vertical-align: middle;
+    height: 80px;
+    text-decoration: none;
+    padding-left: 5px;
+
+
+}
+
+
+
+
+
+.slide {
+    height: 100vh;
+    width: 100%;
+}
+.slide0 {
+    height: 100vh;
+    width: 100%;
+    background-color: purple;
+}
+.slide1 {
+    background-color: red;
+}
+.slide2 {
+    background-color: green;
+}
+.slide3 {
+    background-color: blue;
+}
+.slide4 {
+    background-color: yellow;
+}
+.slide5 {
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+.slideshow{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+
+
+}
+
+figure{
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+    height: 100vh;
+
+}
+figure.show{
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+    height: 100vh;
+
+}
+
+#figure1 {
+    background-color: #86fb08;
+    width: 100%;
+}
+#figure2 {
+    background-color: #d4d0ad;
+    width: 100%;
+}
+#figure3 {
+    background-color: #7e6e97;
+    width: 100%;
+}
+
+
+.next, .prev{
+    color: #fff;
+    position: absolute;
+    background: rgba(0,0,0, .6);
+    top: 50%;
+    z-index: 1;
+    font-size: 2em;
+    margin-top: -.75em;
+    opacity: .3;
+    user-select: none;
+}
+.next:hover, .prev:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.next{
+    right: 0;
+    padding: 10px 5px 15px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.prev{
+    left: 0;
+    padding: 10px 10px 15px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}

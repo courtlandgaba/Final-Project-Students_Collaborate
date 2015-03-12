@@ -1,0 +1,104 @@
+portfolio site for photographer
+
+
+this software will:
+
+---showcase the photographers work
+
+
+
+# Requirements Document
+
+
+### Elevator
+
+<p>this website will provide potential clients examples of the photographers work</p>
+
+### MVP Features
+
+-the user will be able to crud comments
+-the user will be able to crud testimonies that are approved by the admin
+-the admin will be able to crud all content on the site
+
+-google maps api to show location of office
+
+
+
+
+### MVP Stories
+
+
+
+
+### Technologies
+
+- nodejs, passport, mongoose, mongodb, angular MEAN
+- heroku, mongolab, mandrill
+- html, css, javascript
+- google api
+-  jquery unless i figure out angular events
+
+
+### Wireframes
+
+
+
+
+
+### Roadmap (additional features)
+
+
+-the user will have to log in via facebook in order to leave comments (HUGE MAYBE)
+
+-contact form that will convert to email (email will auto sent to admin's email)
+
+
+
+## User Story Template
+
+#### Name
+
+  Ability to Crud comments that are available for app.
+
+
+#### Value Statement:
+
+As an admin user,
+I want the ability to approve testimonies
+so that clients can read reviews about the photographer
+
+
+####  Assumptions
+- We can assume that the pages are protected and only the admin can edit
+- we can assume that the user must be able to log in to comment to avoid spam/abuse/inappropiate content
+
+
+#### Acceptance Criterion
+
+1. admin is able to create an album
+2. admin is able to update all albums and text
+3. admin is able to delete an album
+4. admin is able to see all albums
+5. The album will contain the following field:
+    - multiple photos from previous work
+    - location name where photos were taken
+
+#### Notes
+Attachment - Crud interface wireframe
+Attachment - Standards document for all courses provided
+http://meta.stackexchange.com/questions/201940/how-to-save-the-world-one-question-title-at-a-time
+
+
+
+
+As a \<type of user\>,
+
+I want \<to perform some task\>
+
+so that I can \<achieve some goal/benefit/value\>
+
+#### Assumptions
+
+#### Acceptance
+
+#### Notes or unknowns
