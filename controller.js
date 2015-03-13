@@ -1,7 +1,6 @@
 
 
 
-
 (function () {
     "use strict";
     angular.module('eventApp')
@@ -21,7 +20,26 @@
         console.log("Done Configuring MainController")
 
 
+        var counter = 0,
+            $items = $('.slideshow figure'),
+            numItems = $items.length;
+            console.log(numItems);
 
+        var showCurrent = function(){
+            var itemToShow = Math.abs(counter%numItems);
+
+          $items.removeClass('show');
+          $items.eq(itemToShow).addClass('show');
+        };
+
+        $('.next').on('click', function(){
+            counter++;
+            showCurrent();
+        });
+        $('.prev').on('click', function(){
+            counter--;
+            showCurrent();
+        });
 
 
 

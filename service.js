@@ -103,29 +103,3 @@
 
 
 })();
-
-
-
-
-angular.element(document).ready(function () {
-    var counter = 0,
-        $items = $('.slideshow figure'),
-        numItems = $items.length;
-
-    var showCurrent = function(){
-        var itemToShow = Math.abs(counter%numItems);
-
-      $items.removeClass('show');
-      $items.eq(itemToShow).addClass('show');
-    };
-    console.log(numItems);
-
-    $('.next').on('click', function(){
-        counter++;
-        showCurrent();
-    });
-    $('.prev').on('click', function(){
-        counter--;
-        showCurrent();
-    });
-});
