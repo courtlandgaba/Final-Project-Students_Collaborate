@@ -23,7 +23,7 @@
         var counter = 0,
             $items = $('.slideshow figure'),
             numItems = $items.length;
-            console.log(numItems);
+            console.log("there are " +numItems+ " found slides");
 
         var showCurrent = function(){
             var itemToShow = Math.abs(counter%numItems);
