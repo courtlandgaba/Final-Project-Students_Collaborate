@@ -3,7 +3,9 @@
     console.log("app.js loaded");
 
     angular.module('eventApp', [
-        'ngRoute'
+        'ngRoute',
+        'angular-carousel'
+
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -13,7 +15,11 @@
             })
             .when('/admin', {
                 templateUrl: 'views/admin.html',
-                controller: 'AdminController as admin'
+                controller: 'AdminController as adminCtrl'
+            })
+            .when('/admin/edit/:featuredPersonId', {
+                templateUrl: 'views/editFeaturedPerson.html',
+                controller: 'AdminController as adminCtrl'
             })
 
 

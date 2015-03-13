@@ -1,0 +1,16 @@
+<div class="add">
+    <form>
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.featuredName" placeholder="name">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.featuredPicture" placeholder="pic">
+
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.questionOne" placeholder="question 1">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.answerOne" placeholder="answer 1">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.questionTwo" placeholder="question 2">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.answerTwo" placeholder="answer 2">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.questionThree" placeholder="question 3">
+        <input type="text" ng-model="adminCtrl.singleFeaturedPerson.answerThree" placeholder="answer 3">
+
+
+        <button ng-click="adminCtrl.updateFeaturedPerson(adminCtrl.singleFeaturedPerson)">Update</button>
+    </form>
+</div>

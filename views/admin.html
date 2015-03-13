@@ -10,5 +10,35 @@
     <h2><input type="text" ng-model="newFeaturedPerson.questionThree" placeholder="question 3"></h2>
     <h2><input type="text" ng-model="newFeaturedPerson.answerThree" placeholder="answer 3"></h2>
 
-    <button ng-click="admin.addFeaturedPerson(newFeaturedPerson)">Add Featured Person</button>
+    <button ng-click="adminCtrl.addFeaturedPerson(newFeaturedPerson)">Add Featured Person</button>
+</div>
+
+
+
+
+
+
+
+<h2>Edit Featured Person</h2>
+<div class="slideshow">
+    <ul>
+        <li ng-repeat="featuredPerson in adminCtrl.featuredPerson">
+            <div class="leftFav">
+                <div class="favName">{{featuredPerson.featuredName}}</div>
+                <img class="favPic" ng-src="{{featuredPerson.featuredPicture}}">
+            </div>
+            <div class="rightFav">
+                <div class="interviewQuestions">
+                    <div class="Q1">{{featuredPerson.questionOne}}</div>
+                    <div class="A1">{{featuredPerson.answerOne}}</div>
+                    <div class="Q2">{{featuredPerson.questionTwo}}</div>
+                    <div class="A2">{{featuredPerson.answerTwo}}</div>
+                    <div class="Q3">{{featuredPerson.questionThree}}</div>
+                    <div class="A3">{{featuredPerson.answerThree}}</div>
+                </div>
+                <a class="editFav" href="#/admin/edit/{{featuredPerson._id}}">edit.</a><button class="deleteFav" ng-click="adminCtrl.deleteFeaturedPerson(featuredPerson._id)">delete.</button>
+
+            </div>
+        </li>
+    </ul>
 </div>
