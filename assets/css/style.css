@@ -7,65 +7,8 @@ body {
     padding: 0;
     height: 100%;
 }
-.parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-}
-.parallaxLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 100vh 0;
 
-}
-.parallaxLayerFore {
-    -webkit-transform: translateZ(-2px);
-    transform: translateZ(-2px);
-}
-.parallaxLayerBase {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-.parallaxLayerBack {
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-}
-
-h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-}
-
-.blue {
-    color: blue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header {
+.navbar {
     margin: 0;
     padding: 0;
     height: 80px;
@@ -74,7 +17,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.63);
     z-index: 3;
 }
-.left {
+.leftNav {
     float: left;
 }
 .home {
@@ -85,7 +28,7 @@ h1 {
     padding-right: 5px;
 
 }
-.right {
+.rightNav {
     float:right;
 }
 .links {
@@ -94,22 +37,22 @@ h1 {
     height: 80px;
     text-decoration: none;
     padding-left: 5px;
-
-
 }
+
+
+
+
 
 
 
 
 
 .slide {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
 .slide0 {
-    height: 100vh;
-    width: 100%;
-    background-color: purple;
+    background-color: blue;
 }
 .slide1 {
     background-color: red;
@@ -117,15 +60,17 @@ h1 {
 .slide2 {
     background-color: green;
 }
-.slide3 {
-    background-color: blue;
-}
 .slide4 {
     background-color: yellow;
 }
 .slide5 {
-    background-color: orange;
+    background-color: purple;
 }
+
+
+
+
+
 
 
 
@@ -138,26 +83,20 @@ h1 {
     position: relative;
     display: block;
     overflow: hidden;
-    height: 100vh;
-
-
+    height: 60vh;
 }
-
 figure{
     position: absolute;
     opacity: 0;
     transition: 1s opacity;
-    height: 100vh;
-
+    height: 60vh;
 }
 figure.show{
     opacity: 1;
     position: static;
     transition: 1s opacity;
-    height: 100vh;
-
+    height: 60vh;
 }
-
 #figure1 {
     background-color: #86fb08;
     width: 100%;
@@ -170,8 +109,6 @@ figure.show{
     background-color: #7e6e97;
     width: 100%;
 }
-
-
 .next, .prev{
     color: #fff;
     position: absolute;

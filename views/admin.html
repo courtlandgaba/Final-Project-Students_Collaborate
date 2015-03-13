@@ -1,0 +1,14 @@
+<h2>New Featured Person</h2>
+<div class="box">
+    <h2><input type="text" ng-model="newFeaturedPerson.featuredPicture" placeholder="Picture"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.featuredName" placeholder="Name"></h2>
+
+    <h2><input type="text" ng-model="newFeaturedPerson.questionOne" placeholder="question 1"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.answerOne" placeholder="answer 1"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.questionTwo" placeholder="question 2"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.answerTwo" placeholder="answer 2"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.questionThree" placeholder="question 3"></h2>
+    <h2><input type="text" ng-model="newFeaturedPerson.answerThree" placeholder="answer 3"></h2>
+
+    <button ng-click="admin.addFeaturedPerson(newFeaturedPerson)">Add Featured Person</button>
+</div>

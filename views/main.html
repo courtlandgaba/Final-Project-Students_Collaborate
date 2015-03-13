@@ -1,0 +1,56 @@
+<div class="wrapper">
+
+    <div class="navbar">
+        <div class="leftNav">
+            <a class="home" href="">home</a>
+        </div>
+        <div class="rightNav">
+            <a class="links about" href="">about</a>
+            <a class="links blog" href="">next event</a>
+            <a class="links gallery" href="">featured person</a>
+            <a class="links investment" href="">photos</a>
+            <a class="links contact" href="">contact</a>
+        </div>
+    </div>
+
+    <div class="slideshow">
+
+        <figure ng-class="{show:!$index}" ng-repeat="featuredPeople in mainCtrl.featuredPeople">
+            <div class="leftFav">
+                <div class="favName">{{featuredPeople.featuredName}}</div>
+                <img class="favPic" ng-src="{{featuredPeople.featuredPicture}}">
+            </div>
+            <div class="rightFav">
+                <div class="interviewQuestions">
+                    <div class="Q1">{{featuredPeople.questionOne}}</div>
+                    <div class="A1">{{featuredPeople.answerOne}}</div>
+                    <div class="Q2">{{featuredPeople.questionTwo}}</div>
+                    <div class="A2">{{featuredPeople.answerTwo}}</div>
+                    <div class="Q3">{{featuredPeople.questionThree}}</div>
+                    <div class="A3">{{featuredPeople.answerThree}}</div>
+                </div>
+            </div>
+        </figure>
+
+        <span class="prev" ng-click="prev()">&laquo;</span>
+        <span class="next" ng-click="next()">&raquo;</span>
+
+    </div>
+
+    <div class="slide slide1">
+        <h1>about</h1>
+    </div>
+    <div class="slide slide2">
+        <h1>next event</h1>
+    </div>
+    <div class="slide slide3">
+        <h1>featured person</h1>
+    </div>
+    <div class="slide slide4">
+        <h1>photos</h1>
+    </div>
+    <div class="slide slide5">
+        <h1>contact</h1>
+    </div>
+
+</div>
