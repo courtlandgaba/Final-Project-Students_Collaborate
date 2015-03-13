@@ -19,8 +19,11 @@
 <!-- splash splash splash splash splash splash splash splash  -->
 
     <div class="slide slide1">
-
-        <img ng-src="{{Splash.photo}}" alt="">
+        <ul>
+            <li ng-repeat="Splash in mainCtrl.Splash">
+                <img ng-src="{{Splash.photo}}" alt="">
+            </li>
+        </ul>
 
     </div>
 
@@ -47,11 +50,14 @@
 <!-- event event event event event event event event event -->
     <div class="slide slide3">
         <div class="slide3left">
-            <div class="eventInfo">
-                <span class="location">{{Event.eventLocationName}}</span>
-                <span class="time">{{Event.eventLocationTime}}</span>
-                <span class="address">{{Event.eventLocationAddress}}</span>
-            </div>
+            <ul>
+                <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
+                    <span class="location">{{Event.eventLocationName}}</span>
+                    <span class="time">{{Event.eventLocationTime}}</span>
+                    <span class="address">{{Event.eventLocationAddress}}</span>
+                </li>
+            </ul>
+
             <div class="rsvp">
                 <input type="text" placeholder="name">
                 <input type="text" placeholder="email">
@@ -66,7 +72,7 @@
 
 <!-- featured people featured people featured people featured people featured people -->
     <ul rn-carousel class="slide slide4">
-        <li ng-repeat="Person in mainCtrl.person">
+        <li ng-repeat="Person in mainCtrl.Person">
             <div class="leftFav">
                 <div class="favName">{{Person.featuredName}}</div>
                 <img class="favPic" ng-src="{{Person.featuredPicture}}">

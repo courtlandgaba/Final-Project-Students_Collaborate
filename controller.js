@@ -2,10 +2,43 @@
 (function () {
     "use strict";
     angular.module('eventApp')
-    .controller('MainController', function (PersonService, RuleService, EventService, $location, $routeParams, _, $rootScope) {
+
+//////////////////////main controller//////////////////////////////////////////
+//////////////////////main controller//////////////////////////////////////////
+//////////////////////main controller//////////////////////////////////////////
+
+    .controller('MainController', function (SplashService, RuleService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
 
         var mainCtrl = this;
 
+        //MAIN CRUD: SPLASH//////////////////////////////////////////////////////////////////
+        SplashService.getSingleSplash($routeParams.SplashId).success(function (splash) {
+            mainCtrl.singleSplash=splash;
+        });
+        SplashService.getSplash().success(function (splash) {
+            mainCtrl.Splash = splash;
+        });
+        mainCtrl.currentIndex = $routeParams.SplashId;
+
+        //MAIN CRUD: RULES//////////////////////////////////////////////////////////////////
+        RuleService.getSingleRule($routeParams.RuleId).success(function (rule) {
+            mainCtrl.singleRule=rule;
+        });
+        RuleService.getRule().success(function (rule) {
+            mainCtrl.Rule = rule;
+        });
+        mainCtrl.currentIndex = $routeParams.RuleId;
+
+        //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
+        EventService.getSingleEvent($routeParams.EventId).success(function (event) {
+            mainCtrl.singleEvent=event;
+        });
+        EventService.getEvent().success(function (event) {
+            mainCtrl.Event = event;
+        });
+        mainCtrl.currentIndex = $routeParams.EventId;
+
+        //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
             mainCtrl.singlePerson=person;
         });
@@ -15,11 +48,15 @@
         mainCtrl.currentIndex = $routeParams.PersonId;
     })
 
-    .controller('AdminController', function (SplashService, PersonService, RuleService, EventService, $location, $routeParams, _, $rootScope) {
+//////////////////////admin controller//////////////////////////////////////////
+//////////////////////admin controller//////////////////////////////////////////
+//////////////////////admin controller//////////////////////////////////////////
+
+    .controller('AdminController', function (SplashService, RuleService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
-// ADMIN CRUD: SPLASH PAGE
+        // ADMIN CRUD: SPLASH PAGE//////////////////////////////////////////////////////////////////
         SplashService.getSplash().success(function (splash) {
             adminCtrl.Splash = splash;
         });
@@ -40,31 +77,7 @@
             SplashService.updateSplash(splash, $routeParams.SplashId);
             $location.path('/admin');
         };
-// ADMIN CRUD: FEATURED PEOPLE
-        PersonService.getPerson().success(function (person) {
-            adminCtrl.Person = person;
-        });
-
-        PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
-            adminCtrl.singlePerson=person;
-        });
-        adminCtrl.currentIndex = $routeParams.PersonId;
-
-        adminCtrl.addPerson = function (person) {
-            PersonService.createPerson(person);
-            $location.path('/admin');
-        };
-        adminCtrl.deletePerson = function (person) {
-            PersonService.deletePerson(person);
-        };
-        adminCtrl.updatePerson = function (person) {
-            PersonService.updatePerson(person, $routeParams.PersonId);
-            $location.path('/admin');
-        };
-
-
-
-// ADMIN CRUD: RULES
+        // ADMIN CRUD: RULE PAGE//////////////////////////////////////////////////////////////////
         RuleService.getRule().success(function (rule) {
             adminCtrl.Rule = rule;
         });
@@ -85,8 +98,7 @@
             RuleService.updateRule(rule, $routeParams.RuleId);
             $location.path('/admin');
         };
-
-// ADMIN CRUD: EVENTS
+        // ADMIN CRUD: EVENTS PAGE//////////////////////////////////////////////////////////////////
         EventService.getEvent().success(function (event) {
             adminCtrl.Event = event;
         });
@@ -107,8 +119,26 @@
             EventService.updateEvent(event, $routeParams.EventId);
             $location.path('/admin');
         };
+        // ADMIN CRUD: FEATURED PEOPLE PAGE//////////////////////////////////////////////////////////////////
+        PersonService.getPerson().success(function (person) {
+            adminCtrl.Person = person;
+        });
+
+        PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
+            adminCtrl.singlePerson=person;
+        });
+        adminCtrl.currentIndex = $routeParams.PersonId;
+
+        adminCtrl.addPerson = function (person) {
+            PersonService.createPerson(person);
+            $location.path('/admin');
+        };
+        adminCtrl.deletePerson = function (person) {
+            PersonService.deletePerson(person);
+        };
+        adminCtrl.updatePerson = function (person) {
+            PersonService.updatePerson(person, $routeParams.PersonId);
+            $location.path('/admin');
+        };
     })
-
-
-
 })();
