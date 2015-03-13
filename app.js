@@ -17,10 +17,21 @@
                 templateUrl: 'views/admin.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/:featuredPersonId', {
-                templateUrl: 'views/editFeaturedPerson.html',
+            .when('/admin/edit/:PersonId', {
+                templateUrl: 'views/edit.html',
                 controller: 'AdminController as adminCtrl'
             })
+            .when('/admin/edit/:RuleId', {
+                templateUrl: 'views/edit.html',
+                controller: 'AdminController as adminCtrl'
+            })
+            .when('/admin/edit/:EventId', {
+                templateUrl: 'views/edit.html',
+                controller: 'AdminController as adminCtrl'
+            })
+
+
+
 
 
 

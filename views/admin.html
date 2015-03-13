@@ -1,44 +1,85 @@
-<h2>New Featured Person</h2>
-<div class="box">
-    <h2><input type="text" ng-model="newFeaturedPerson.featuredPicture" placeholder="Picture"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.featuredName" placeholder="Name"></h2>
-
-    <h2><input type="text" ng-model="newFeaturedPerson.questionOne" placeholder="question 1"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.answerOne" placeholder="answer 1"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.questionTwo" placeholder="question 2"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.answerTwo" placeholder="answer 2"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.questionThree" placeholder="question 3"></h2>
-    <h2><input type="text" ng-model="newFeaturedPerson.answerThree" placeholder="answer 3"></h2>
-
-    <button ng-click="adminCtrl.addFeaturedPerson(newFeaturedPerson)">Add Featured Person</button>
-</div>
+<h1>New Splash Page</h1>
+            <h1><input type="text" ng-model="Splash.photo" placeholder="Splash Photo"></h1>
+            <button ng-click="adminCtrl.addSplash(Splash)">Add Splash Photo</button>
+<hr>
+<h1>Edit Splash</h1>
+            <div>photo: {{Splash.photo}}</div>
+            <a href="#/admin/edit/{{Splash._id}}">edit</a>
+<hr>
+<hr>
+<hr>
 
 
 
 
+<h1>New Featured Person</h1>
+            <h1><input type="text" ng-model="Person.featuredPicture" placeholder="Picture">   </h1>
+            <h1><input type="text" ng-model="Person.featuredName"    placeholder="Name">      </h1>
+            <h1><input type="text" ng-model="Person.questionOne"     placeholder="question 1"></h1>
+            <h1><input type="text" ng-model="Person.answerOne"       placeholder="answer 1">  </h1>
+            <h1><input type="text" ng-model="Person.questionTwo"     placeholder="question 2"></h1>
+            <h1><input type="text" ng-model="Person.answerTwo"       placeholder="answer 2">  </h1>
+            <h1><input type="text" ng-model="Person.questionThree"   placeholder="question 3"></h1>
+            <h1><input type="text" ng-model="Person.answerThree"     placeholder="answer 3">  </h1>
+            <button ng-click="adminCtrl.addPerson(Person)">Add Featured Person</button>
+<hr>
+
+<h1>Edit Featured Person</h1>
+            <ul>
+                <li ng-repeat="Person in adminCtrl.Person">
+                    <div>name: {{Person.featuredName}}</div>
+                    <img ng-src="{{Person.featuredPicture}}">
+                    <div>Q1: {{Person.questionOne}}  </div>
+                    <div>A1: {{Person.answerOne}}    </div>
+                    <div>Q2: {{Person.questionTwo}}  </div>
+                    <div>A2: {{Person.answerTwo}}    </div>
+                    <div>Q3: {{Person.questionThree}}</div>
+                    <div>A3: {{Person.answerThree}}  </div>
+                    <a href="#/admin/edit/{{Person._id}}">edit</a>
+                    <button ng-click="adminCtrl.deletePerson(Person._id)">delete</button></p>
+                    <br>
+                    <br>
+                </li>
+            </ul>
+<hr>
+<hr>
+<hr>
 
 
 
-<h2>Edit Featured Person</h2>
-<div class="slideshow">
-    <ul>
-        <li ng-repeat="featuredPerson in adminCtrl.featuredPerson">
-            <div class="leftFav">
-                <div class="favName">{{featuredPerson.featuredName}}</div>
-                <img class="favPic" ng-src="{{featuredPerson.featuredPicture}}">
+
+<h1>New About/Rules </h1>
+            <h1><input type="text" ng-model="Rule.aboutUs" placeholder="about"></h1>
+            <h1><input type="text" ng-model="Rule.ruleOne" placeholder="rule1"></h1>
+            <h1><input type="text" ng-model="Rule.ruleTwo" placeholder="rule2"></h1>
+            <button ng-click="adminCtrl.addRule(Rule)">Add About Section</button>
+<hr>
+<h1>edit about/rules</h1>
+        <div>
+            <div>About:  {{Rule.aboutUs}}</div>
+            <div>Rule 1: {{Rule.ruleOne}}</div>
+            <div>Rule 2: {{Rule.ruleTwo}}</div>
+            <a href="#/admin/edit/{{Rule._id}}">edit</a>
+        </div>
+
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+<h1>New event</h1>
+            <h1><input type="text" ng-model="Event.eventLocationName"    placeholder="name">    </h1>
+            <h1><input type="text" ng-model="Event.eventLocationTime"    placeholder="location"></h1>
+            <h1><input type="text" ng-model="Event.eventLocationAddress" placeholder="address"> </h1>
+            <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
+<hr>
+<h1>edit event </h1>
+            <div>
+                <div>name: {{Event.eventLocationName}}      </div>
+                <div>time: {{Event.eventLocationTime}}      </div>
+                <div>address: {{Event.eventLocationAddress}}</div>
+                <a href="#/admin/edit/{{Event._id}}">edit   </a>
             </div>
-            <div class="rightFav">
-                <div class="interviewQuestions">
-                    <div class="Q1">{{featuredPerson.questionOne}}</div>
-                    <div class="A1">{{featuredPerson.answerOne}}</div>
-                    <div class="Q2">{{featuredPerson.questionTwo}}</div>
-                    <div class="A2">{{featuredPerson.answerTwo}}</div>
-                    <div class="Q3">{{featuredPerson.questionThree}}</div>
-                    <div class="A3">{{featuredPerson.answerThree}}</div>
-                </div>
-                <a class="editFav" href="#/admin/edit/{{featuredPerson._id}}">edit.</a><button class="deleteFav" ng-click="adminCtrl.deleteFeaturedPerson(featuredPerson._id)">delete.</button>
-
-            </div>
-        </li>
-    </ul>
-</div>

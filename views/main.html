@@ -1,58 +1,56 @@
 <div class="wrapper">
 
+
+<!-- navbar navbar navbar navbar navbar navbar navbar navbar  -->
     <div class="navbar">
         <div class="leftNav">
             <a class="home" href="">home</a>
         </div>
         <div class="rightNav">
-            <a ng-click="gotoElement('slide2')" href="">about</a>
-
             <a class="links about" href="">about</a>
             <a class="links blog" href="">next event</a>
-            <a class="links gallery" href="">featured person</a>
+            <a class="links gallery" href="">featured</a>
             <a class="links investment" href="">photos</a>
             <a class="links contact" href="">contact</a>
         </div>
     </div>
 
 
+<!-- splash splash splash splash splash splash splash splash  -->
 
     <div class="slide slide1">
-        <h1>splash</h1>
+
+        <img ng-src="{{Splash.photo}}" alt="">
+
     </div>
 
 
 
-
-    <div class="slide slide2" id="slide2">
-
+<!-- about about about about about about about about -->
+    <div class="slide slide2">
         <div class="slide2top">
             <div class="aboutUs">about us</div>
-            <div class="aboutStatement">asdfl;kajsdl;kfjaskl;dfjakls;djadslfslfflasjaslkfjaskl;fajsfkl;asjalskjadfkl;asj</div>
-
+            <div class="aboutStatement">{{Rule.aboutUs}}</div>
         </div>
-        <div class="slide3bottom">
+        <div class="slide2bottom">
             <div class="rules">rules</div>
             <div class="rule1">
                 <div class="rule1number">1</div>
-                <div class="rule1text">asdfasdfasdf</div>
+                <div class="rule1text">{{Rule.ruleOne}}</div>
             </div>
             <div class="rule2">
-                <div class="rule2number">2</div>
-                <div class="rule1text">asdfasdfasdf</div>
+                <div class="rule1text">{{Rule.ruleTwo}}</div>
             </div>
-
         </div>
-
-
-
     </div>
+
+<!-- event event event event event event event event event -->
     <div class="slide slide3">
         <div class="slide3left">
             <div class="eventInfo">
-                <span class="location">location name</span>
-                <span class="time">time</span>
-                <span class="address">address</span>
+                <span class="location">{{Event.eventLocationName}}</span>
+                <span class="time">{{Event.eventLocationTime}}</span>
+                <span class="address">{{Event.eventLocationAddress}}</span>
             </div>
             <div class="rsvp">
                 <input type="text" placeholder="name">
@@ -60,36 +58,37 @@
                 <input type="text" placeholder="bio">
             </div>
         </div>
-
         <div class="slide3right">
             <div class="map"></div>
         </div>
+    </div>
 
 
-    </div>
-    <div class="slide slide4 slideshow">
-        <ul rn-carousel>
-            <li ng-repeat="featuredPerson in mainCtrl.featuredPerson">
-                <div class="leftFav">
-                    <div class="favName">{{featuredPerson.featuredName}}</div>
-                    <img class="favPic" ng-src="{{featuredPerson.featuredPicture}}">
+<!-- featured people featured people featured people featured people featured people -->
+    <ul rn-carousel class="slide slide4">
+        <li ng-repeat="Person in mainCtrl.person">
+            <div class="leftFav">
+                <div class="favName">{{Person.featuredName}}</div>
+                <img class="favPic" ng-src="{{Person.featuredPicture}}">
+            </div>
+            <div class="rightFav">
+                <div class="interviewQuestions">
+                    <div class="Q1">{{Person.questionOne}}</div>
+                    <div class="A1">{{Person.answerOne}}</div>
+                    <div class="Q2">{{Person.questionTwo}}</div>
+                    <div class="A2">{{Person.answerTwo}}</div>
+                    <div class="Q3">{{Person.questionThree}}</div>
+                    <div class="A3">{{Person.answerThree}}</div>
                 </div>
-                <div class="rightFav">
-                    <div class="interviewQuestions">
-                        <div class="Q1">{{featuredPerson.questionOne}}</div>
-                        <div class="A1">{{featuredPerson.answerOne}}</div>
-                        <div class="Q2">{{featuredPerson.questionTwo}}</div>
-                        <div class="A2">{{featuredPerson.answerTwo}}</div>
-                        <div class="Q3">{{featuredPerson.questionThree}}</div>
-                        <div class="A3">{{featuredPerson.answerThree}}</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </li>
+    </ul>
+
+<!-- photos photos photos photos photos photos photos photos photos photos -->
     <div class="slide slide5">
         <h1>photos</h1>
     </div>
+<!-- contact contact contact contact contact contact contact contact contact contact -->
     <div class="slide slide6">
         <h1>contact</h1>
     </div>
