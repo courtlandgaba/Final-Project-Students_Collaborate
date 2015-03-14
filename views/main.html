@@ -73,6 +73,15 @@
                     <button ng-click="mainCtrl.addRsvp(Rsvp)" >Rsvp</button>
                 </form>
             </div>
+            <div>
+                <ul>
+                    <li ng-repeat="Confirm in mainCtrl.Confirm">
+                        <div type="text"> {{Confirm.name}}    </div>
+                        <div type="text"> {{Confirm.email}}   </div>
+                        <div type="text"> {{Confirm.website}} </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="slide3right">
             <div class="map"></div>

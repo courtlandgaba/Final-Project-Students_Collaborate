@@ -92,34 +92,34 @@
                  deleteRsvp: deleteRsvp,
              }
          })
-         .factory('ConfirmRsvpService', function ($http, $rootScope) {
+         .factory('ConfirmService', function ($http, $rootScope) {
 
               var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmm';
 
-              var createConfirmRsvp = function (ConfirmRsvp) {
-                  $http.post(url, ConfirmRsvp);
-                  $rootScope.$broadcast('ConfirmRsvp:created');
+              var createConfirm = function (Confirm) {
+                  $http.post(url, Confirm);
+                  $rootScope.$broadcast('Confirm:created');
               };
-              var getConfirmRsvp = function () {
+              var getConfirm = function () {
                   return $http.get(url);
               };
-              var getSingleConfirmRsvp = function (ConfirmRsvp) {
-                  return $http.get(url + '/' + ConfirmRsvp);
+              var getSingleConfirm = function (Confirm) {
+                  return $http.get(url + '/' + Confirm);
               };
-              var updateConfirmRsvp = function (item, ConfirmRsvp) {
-                  $http.put(url + '/' + ConfirmRsvp, item);
-                  $rootScope.$broadcast('ConfirmRsvp:updated');
+              var updateConfirm = function (item, Confirm) {
+                  $http.put(url + '/' + Confirm, item);
+                  $rootScope.$broadcast('Confirm:updated');
               };
-              var deleteConfirmRsvp = function (ConfirmRsvp) {
-                  $http.delete(url + '/' + ConfirmRsvp);
-                  $rootScope.$broadcast('ConfirmRsvp:deleted');
+              var deleteConfirm = function (Confirm) {
+                  $http.delete(url + '/' + Confirm);
+                  $rootScope.$broadcast('Confirm:deleted');
               };
               return {
-                  createConfirmRsvp: createConfirmRsvp,
-                  getConfirmRsvp: getConfirmRsvp,
-                  getSingleConfirmRsvp: getSingleConfirmRsvp,
-                  updateConfirmRsvp: updateConfirmRsvp,
-                  deleteConfirmRsvp: deleteConfirmRsvp,
+                  createConfirm: createConfirm,
+                  getConfirm: getConfirm,
+                  getSingleConfirm: getSingleConfirm,
+                  updateConfirm: updateConfirm,
+                  deleteConfirm: deleteConfirm,
               }
 
          })

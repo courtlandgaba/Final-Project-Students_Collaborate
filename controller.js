@@ -7,7 +7,7 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmRsvpService, EventService, PersonService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
@@ -43,13 +43,13 @@
             $location.path('/');
         };
     //MAIN CRUD: CONFIRM RSVP//////////////////////////////////////////////////////////////////
-        ConfirmRsvpService.getSingleConfirmRsvp($routeParams.ConfirmRsvpId).success(function (rsvp) {
-            mainCtrl.singleConfirmRsvp=rsvp;
+        ConfirmService.getSingleConfirm($routeParams.ConfirmId).success(function (rsvp) {
+            mainCtrl.singleConfirm=rsvp;
         });
-        ConfirmRsvpService.getConfirmRsvp().success(function (rsvp) {
-            mainCtrl.ConfirmRsvp = rsvp;
+        ConfirmService.getConfirm().success(function (rsvp) {
+            mainCtrl.Confirm = rsvp;
         });
-        mainCtrl.currentIndex = $routeParams.ConfirmRsvpId;
+        mainCtrl.currentIndex = $routeParams.ConfirmId;
 
 
     //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
@@ -75,7 +75,7 @@
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 
-    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmRsvpService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
+    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
@@ -142,25 +142,25 @@
             RsvpService.updateRsvp(rsvp, $routeParams.RsvpId);
             $location.path('/admin');
         };
-    // ADMIN CRUD: CONFIRM RSVP PAGE//////////////////////////////////////////////////////////////////
-        ConfirmRsvpService.getConfirmRsvp().success(function (confirmrsvp) {
-            adminCtrl.ConfirmRsvp = confirmrsvp;
+    // ADMIN CRUD: CONFIRM  RSVP PAGE//////////////////////////////////////////////////////////////////
+        ConfirmService.getConfirm().success(function (confirm) {
+            adminCtrl.Confirm = confirm;
         });
 
-        ConfirmRsvpService.getSingleConfirmRsvp($routeParams.ConfirmRsvpId).success(function (confirmrsvp) {
-            adminCtrl.singleConfirmRsvp= confirmrsvp;
+        ConfirmService.getSingleConfirm($routeParams.ConfirmId).success(function (confirm) {
+            adminCtrl.singleConfirm=confirm;
         });
-        adminCtrl.currentIndex = $routeParams.ConfirmRsvpId;
+        adminCtrl.currentIndex = $routeParams.ConfirmId;
 
-        adminCtrl.addConfirmRsvp = function (confirmrsvp) {
-            ConfirmRsvpService.createConfirmRsvp(confirmrsvp);
+        adminCtrl.addConfirm = function (confirm) {
+            ConfirmService.createConfirm(confirm);
             $location.path('/admin');
         };
-        adminCtrl.deleteConfirmRsvp = function (confirmrsvp) {
-            ConfirmRsvpService.deleteConfirmRsvp(confirmrsvp);
+        adminCtrl.deleteConfirm = function (confirm) {
+            ConfirmService.deleteConfirm(confirm);
         };
-        adminCtrl.updateConfirmRsvp = function (confirmrsvp) {
-            ConfirmRsvpService.updateConfirmRsvp(confirmrsvp, $routeParams.ConfirmRsvpId);
+        adminCtrl.updateConfirm = function (confirm) {
+            ConfirmService.updateConfirm(confirm, $routeParams.ConfirmId);
             $location.path('/admin');
         };
     // ADMIN CRUD: EVENTS PAGE//////////////////////////////////////////////////////////////////

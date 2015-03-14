@@ -28,19 +28,28 @@
             </li>
             </ul>
 <hr>
-<h1>View RSVPs</h1>
+<h1>Incoming RSVPs</h1>
             <ul>
             <li ng-repeat="Rsvp in adminCtrl.Rsvp">
-                <div type="text" ng-model="Rsvp.name">    {{Rsvp.name}}    </div>
-                <div type="text" ng-model="Rsvp.email">   {{Rsvp.email}}   </div>
-                <div type="text" ng-model="Rsvp.website"> {{Rsvp.website}} </div>
+                <div type="text" ng-model="Confirm.name">    {{Rsvp.name}}    </div>
+                <div type="text" ng-model="Confirm.email">   {{Rsvp.email}}   </div>
+                <div type="text" ng-model="Confirm.website"> {{Rsvp.website}} </div>
 
 
-                <button ng-click="adminCtrl.addConfirmRsvp(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
+                <button ng-click="adminCtrl.addConfirm(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
                 <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)">delete  </button>
             </li>
             </ul>
 <hr>
+<h1>Confirmed RSVPs</h1>
+            <ul>
+            <li ng-repeat="Confirm in adminCtrl.Confirm">
+                <div type="text"> {{Confirm.name}}    </div>
+                <div type="text"> {{Confirm.email}}   </div>
+                <div type="text"> {{Confirm.website}} </div>
+                <button ng-click="adminCtrl.deleteConfirm(Confirm_.id)">delete</button>
+            </li>
+            </ul>
 <h1>New Event</h1>
             <h1><input type="text" ng-model="Event.eventLocationName"    placeholder="name">    </h1>
             <h1><input type="text" ng-model="Event.eventLocationTime"    placeholder="location"></h1>
