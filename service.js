@@ -62,6 +62,67 @@
                 deleteRule: deleteRule,
             }
          })
+         .factory('RsvpService', function ($http, $rootScope) {
+
+             var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp';
+
+             var createRsvp = function (Rsvp) {
+                 $http.post(url, Rsvp);
+                 $rootScope.$broadcast('Rsvp:created');
+             };
+             var getRsvp = function () {
+                 return $http.get(url);
+             };
+             var getSingleRsvp = function (Rsvp) {
+                 return $http.get(url + '/' + Rsvp);
+             };
+             var updateRsvp = function (item, Rsvp) {
+                 $http.put(url + '/' + Rsvp, item);
+                 $rootScope.$broadcast('Rsvp:updated');
+             };
+             var deleteRsvp = function (Rsvp) {
+                 $http.delete(url + '/' + Rsvp);
+                 $rootScope.$broadcast('Rsvp:deleted');
+             };
+             return {
+                 createRsvp: createRsvp,
+                 getRsvp: getRsvp,
+                 getSingleRsvp: getSingleRsvp,
+                 updateRsvp: updateRsvp,
+                 deleteRsvp: deleteRsvp,
+             }
+         })
+         .factory('ConfirmRsvpService', function ($http, $rootScope) {
+
+              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmm';
+
+              var createConfirmRsvp = function (ConfirmRsvp) {
+                  $http.post(url, ConfirmRsvp);
+                  $rootScope.$broadcast('ConfirmRsvp:created');
+              };
+              var getConfirmRsvp = function () {
+                  return $http.get(url);
+              };
+              var getSingleConfirmRsvp = function (ConfirmRsvp) {
+                  return $http.get(url + '/' + ConfirmRsvp);
+              };
+              var updateConfirmRsvp = function (item, ConfirmRsvp) {
+                  $http.put(url + '/' + ConfirmRsvp, item);
+                  $rootScope.$broadcast('ConfirmRsvp:updated');
+              };
+              var deleteConfirmRsvp = function (ConfirmRsvp) {
+                  $http.delete(url + '/' + ConfirmRsvp);
+                  $rootScope.$broadcast('ConfirmRsvp:deleted');
+              };
+              return {
+                  createConfirmRsvp: createConfirmRsvp,
+                  getConfirmRsvp: getConfirmRsvp,
+                  getSingleConfirmRsvp: getSingleConfirmRsvp,
+                  updateConfirmRsvp: updateConfirmRsvp,
+                  deleteConfirmRsvp: deleteConfirmRsvp,
+              }
+
+         })
          .factory('EventService', function ($http, $rootScope) {
 
              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-event';

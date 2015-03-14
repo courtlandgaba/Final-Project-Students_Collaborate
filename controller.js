@@ -7,11 +7,11 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (SplashService, RuleService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
+    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmRsvpService, EventService, PersonService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
-        //MAIN CRUD: SPLASH//////////////////////////////////////////////////////////////////
+    //MAIN CRUD: SPLASH//////////////////////////////////////////////////////////////////
         SplashService.getSingleSplash($routeParams.SplashId).success(function (splash) {
             mainCtrl.singleSplash=splash;
         });
@@ -20,7 +20,7 @@
         });
         mainCtrl.currentIndex = $routeParams.SplashId;
 
-        //MAIN CRUD: RULES//////////////////////////////////////////////////////////////////
+    //MAIN CRUD: RULES//////////////////////////////////////////////////////////////////
         RuleService.getSingleRule($routeParams.RuleId).success(function (rule) {
             mainCtrl.singleRule=rule;
         });
@@ -29,7 +29,30 @@
         });
         mainCtrl.currentIndex = $routeParams.RuleId;
 
-        //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
+    //MAIN CRUD: RSVP//////////////////////////////////////////////////////////////////
+        RsvpService.getSingleRsvp($routeParams.RsvpId).success(function (rsvp) {
+            mainCtrl.singleRsvp=rsvp;
+        });
+        RsvpService.getRsvp().success(function (rsvp) {
+            mainCtrl.Rsvp = rsvp;
+        });
+        mainCtrl.currentIndex = $routeParams.RsvpId;
+
+        mainCtrl.addRsvp = function (rsvp) {
+            RsvpService.createRsvp(rsvp);
+            $location.path('/');
+        };
+    //MAIN CRUD: CONFIRM RSVP//////////////////////////////////////////////////////////////////
+        ConfirmRsvpService.getSingleConfirmRsvp($routeParams.ConfirmRsvpId).success(function (rsvp) {
+            mainCtrl.singleConfirmRsvp=rsvp;
+        });
+        ConfirmRsvpService.getConfirmRsvp().success(function (rsvp) {
+            mainCtrl.ConfirmRsvp = rsvp;
+        });
+        mainCtrl.currentIndex = $routeParams.ConfirmRsvpId;
+
+
+    //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
         EventService.getSingleEvent($routeParams.EventId).success(function (event) {
             mainCtrl.singleEvent=event;
         });
@@ -38,7 +61,7 @@
         });
         mainCtrl.currentIndex = $routeParams.EventId;
 
-        //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
+    //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
             mainCtrl.singlePerson=person;
         });
@@ -52,11 +75,11 @@
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 
-    .controller('AdminController', function (SplashService, RuleService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
+    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmRsvpService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
-        // ADMIN CRUD: SPLASH PAGE//////////////////////////////////////////////////////////////////
+    // ADMIN CRUD: SPLASH PAGE//////////////////////////////////////////////////////////////////
         SplashService.getSplash().success(function (splash) {
             adminCtrl.Splash = splash;
         });
@@ -77,15 +100,15 @@
             SplashService.updateSplash(splash, $routeParams.SplashId);
             $location.path('/admin');
         };
-        // ADMIN CRUD: RULE PAGE//////////////////////////////////////////////////////////////////
+    // ADMIN CRUD: ABOUT///RULE PAGE//////////////////////////////////////////////////////////////////
         RuleService.getRule().success(function (rule) {
             adminCtrl.Rule = rule;
         });
 
-        RuleService.getSingleRule($routeParams.RuleID).success(function (rule) {
+        RuleService.getSingleRule($routeParams.RuleId).success(function (rule) {
             adminCtrl.singleRule=rule;
         });
-        adminCtrl.currentIndex = $routeParams.RuleID;
+        adminCtrl.currentIndex = $routeParams.RuleId;
 
         adminCtrl.addRule = function (rule) {
             RuleService.createRule(rule);
@@ -98,15 +121,57 @@
             RuleService.updateRule(rule, $routeParams.RuleId);
             $location.path('/admin');
         };
-        // ADMIN CRUD: EVENTS PAGE//////////////////////////////////////////////////////////////////
+    // ADMIN CRUD: RSVP PAGE//////////////////////////////////////////////////////////////////
+        RsvpService.getRsvp().success(function (rsvp) {
+            adminCtrl.Rsvp = rsvp;
+        });
+
+        RsvpService.getSingleRsvp($routeParams.RsvpId).success(function (rsvp) {
+            adminCtrl.singleRsvp=rsvp;
+        });
+        adminCtrl.currentIndex = $routeParams.RsvpId;
+
+        adminCtrl.addRsvp = function (rsvp) {
+            RsvpService.createRsvp(rsvp);
+            $location.path('/admin');
+        };
+        adminCtrl.deleteRsvp = function (rsvp) {
+            RsvpService.deleteRsvp(rsvp);
+        };
+        adminCtrl.updateRsvp = function (rsvp) {
+            RsvpService.updateRsvp(rsvp, $routeParams.RsvpId);
+            $location.path('/admin');
+        };
+    // ADMIN CRUD: CONFIRM RSVP PAGE//////////////////////////////////////////////////////////////////
+        ConfirmRsvpService.getConfirmRsvp().success(function (confirmrsvp) {
+            adminCtrl.ConfirmRsvp = confirmrsvp;
+        });
+
+        ConfirmRsvpService.getSingleConfirmRsvp($routeParams.ConfirmRsvpId).success(function (confirmrsvp) {
+            adminCtrl.singleConfirmRsvp= confirmrsvp;
+        });
+        adminCtrl.currentIndex = $routeParams.ConfirmRsvpId;
+
+        adminCtrl.addConfirmRsvp = function (confirmrsvp) {
+            ConfirmRsvpService.createConfirmRsvp(confirmrsvp);
+            $location.path('/admin');
+        };
+        adminCtrl.deleteConfirmRsvp = function (confirmrsvp) {
+            ConfirmRsvpService.deleteConfirmRsvp(confirmrsvp);
+        };
+        adminCtrl.updateConfirmRsvp = function (confirmrsvp) {
+            ConfirmRsvpService.updateConfirmRsvp(confirmrsvp, $routeParams.ConfirmRsvpId);
+            $location.path('/admin');
+        };
+    // ADMIN CRUD: EVENTS PAGE//////////////////////////////////////////////////////////////////
         EventService.getEvent().success(function (event) {
             adminCtrl.Event = event;
         });
 
-        EventService.getSingleEvent($routeParams.EventID).success(function (event) {
+        EventService.getSingleEvent($routeParams.EventId).success(function (event) {
             adminCtrl.singleEvent= event;
         });
-        adminCtrl.currentIndex = $routeParams.EventID;
+        adminCtrl.currentIndex = $routeParams.EventId;
 
         adminCtrl.addEvent = function (event) {
             EventService.createEvent(event);
@@ -119,7 +184,7 @@
             EventService.updateEvent(event, $routeParams.EventId);
             $location.path('/admin');
         };
-        // ADMIN CRUD: FEATURED PEOPLE PAGE//////////////////////////////////////////////////////////////////
+    // ADMIN CRUD: FEATURED PEOPLE PAGE//////////////////////////////////////////////////////////////////
         PersonService.getPerson().success(function (person) {
             adminCtrl.Person = person;
         });
@@ -141,4 +206,5 @@
             $location.path('/admin');
         };
     })
+
 })();

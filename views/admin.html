@@ -1,26 +1,63 @@
 <h1>New Splash Page</h1>
             <h1><input type="text" ng-model="Splash.photo" placeholder="Splash Photo"></h1>
             <button ng-click="adminCtrl.addSplash(Splash)">Add Splash Photo</button>
-<br>
-<br>
+
 <h1>Edit Splash</h1>
             <ul>
             <li ng-repeat="Splash in adminCtrl.Splash">
                 <div>photo: {{Splash.photo}}</div>
-                <a href="#/admin/edit/{{Splash._id}}">edit</a>
+                <a href="#/admin/edit/splash/{{Splash._id}}">edit</a>
             </li>
             </ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <hr>
+<h1>New About/Rules </h1>
+            <h1><input type="text" ng-model="Rule.aboutUs" placeholder="about"></h1>
+            <h1><input type="text" ng-model="Rule.ruleOne" placeholder="rule1"></h1>
+            <h1><input type="text" ng-model="Rule.ruleTwo" placeholder="rule2"></h1>
+            <button ng-click="adminCtrl.addRule(Rule)">Add About Section</button>
+
+<h1>Edit About/Rules</h1>
+            <ul>
+            <li ng-repeat="Rule in adminCtrl.Rule">
+                <div>About:  {{Rule.aboutUs}}</div>
+                <div>Rule 1: {{Rule.ruleOne}}</div>
+                <div>Rule 2: {{Rule.ruleTwo}}</div>
+                <a href="#/admin/edit/rule/{{Rule._id}}">edit</a>
+                <button ng-click="adminCtrl.deleteRule(Rule._id)">delete</button>
+            </li>
+            </ul>
+<hr>
+<h1>View RSVPs</h1>
+            <ul>
+            <li ng-repeat="Rsvp in adminCtrl.Rsvp">
+                <div type="text" ng-model="Rsvp.name">    {{Rsvp.name}}    </div>
+                <div type="text" ng-model="Rsvp.email">   {{Rsvp.email}}   </div>
+                <div type="text" ng-model="Rsvp.website"> {{Rsvp.website}} </div>
 
 
+                <button ng-click="adminCtrl.addConfirmRsvp(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
+                <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)">delete  </button>
+            </li>
+            </ul>
+<hr>
+<h1>New Event</h1>
+            <h1><input type="text" ng-model="Event.eventLocationName"    placeholder="name">    </h1>
+            <h1><input type="text" ng-model="Event.eventLocationTime"    placeholder="location"></h1>
+            <h1><input type="text" ng-model="Event.eventLocationAddress" placeholder="address"> </h1>
+            <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
+<h1>Edit Event </h1>
+            <ul>
+            <li ng-repeat="Event in adminCtrl.Event">
+                <div>name: {{Event.eventLocationName}}      </div>
+                <div>time: {{Event.eventLocationTime}}      </div>
+                <div>address: {{Event.eventLocationAddress}}</div>
+                <a href="#/admin/edit/event/{{Event._id}}">edit   </a>
+                <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
+            </li>
+            </ul>
+
+<hr>
 <h1>New Featured Person</h1>
             <h1><input type="text" ng-model="Person.featuredPicture" placeholder="Picture">   </h1>
             <h1><input type="text" ng-model="Person.featuredName"    placeholder="Name">      </h1>
@@ -31,9 +68,6 @@
             <h1><input type="text" ng-model="Person.questionThree"   placeholder="question 3"></h1>
             <h1><input type="text" ng-model="Person.answerThree"     placeholder="answer 3">  </h1>
             <button ng-click="adminCtrl.addPerson(Person)">Add Featured Person</button>
-<br>
-<br>
-
 <h1>Edit Featured Person</h1>
             <ul>
             <li ng-repeat="Person in adminCtrl.Person">
@@ -45,68 +79,9 @@
                 <div>A2: {{Person.answerTwo}}    </div>
                 <div>Q3: {{Person.questionThree}}</div>
                 <div>A3: {{Person.answerThree}}  </div>
-                <a href="#/admin/edit/{{Person._id}}">edit</a>
+                <a href="#/admin/edit/person/{{Person._id}}">edit</a>
                 <button ng-click="adminCtrl.deletePerson(Person._id)">delete</button>
                 <br>
                 <br>
-            </li>
-            </ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-
-
-
-
-<h1>New About/Rules </h1>
-            <h1><input type="text" ng-model="Rule.aboutUs" placeholder="about"></h1>
-            <h1><input type="text" ng-model="Rule.ruleOne" placeholder="rule1"></h1>
-            <h1><input type="text" ng-model="Rule.ruleTwo" placeholder="rule2"></h1>
-            <button ng-click="adminCtrl.addRule(Rule)">Add About Section</button>
-<br>
-<br>
-<h1>edit about/rules</h1>
-            <ul>
-            <li ng-repeat="Rule in adminCtrl.Rule">
-                <div>About:  {{Rule.aboutUs}}</div>
-                <div>Rule 1: {{Rule.ruleOne}}</div>
-                <div>Rule 2: {{Rule.ruleTwo}}</div>
-                <a href="#/admin/edit/{{Rule._id}}">edit</a>
-            </li>
-            </ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-
-
-
-
-
-<h1>New event</h1>
-            <h1><input type="text" ng-model="Event.eventLocationName"    placeholder="name">    </h1>
-            <h1><input type="text" ng-model="Event.eventLocationTime"    placeholder="location"></h1>
-            <h1><input type="text" ng-model="Event.eventLocationAddress" placeholder="address"> </h1>
-            <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
-<br>
-<h1>edit event </h1>
-            <ul>
-            <li ng-repeat="Event in adminCtrl.Event">
-                <div>name: {{Event.eventLocationName}}      </div>
-                <div>time: {{Event.eventLocationTime}}      </div>
-                <div>address: {{Event.eventLocationAddress}}</div>
-                <a href="#/admin/edit/{{Event._id}}">edit   </a>
-                <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
             </li>
             </ul>

@@ -7,16 +7,16 @@
             <a class="home" href="">home</a>
         </div>
         <div class="rightNav">
-            <a class="links about" href="">about</a>
-            <a class="links blog" href="">next event</a>
-            <a class="links gallery" href="">featured</a>
-            <a class="links investment" href="">photos</a>
-            <a class="links contact" href="">contact</a>
+            <a class="links about"      href="">about     </a>
+            <a class="links blog"       href="">next event</a>
+            <a class="links gallery"    href="">featured  </a>
+            <a class="links investment" href="">photos    </a>
+            <a class="links contact"    href="">contact   </a>
         </div>
     </div>
 
 
-<!-- splash splash splash splash splash splash splash splash  -->
+<!-- 111111 splash splash splash splash splash splash splash splash  -->
 
     <div class="slide slide1">
         <ul>
@@ -29,39 +29,49 @@
 
 
 
-<!-- about about about about about about about about -->
+<!-- 22222222 about about about about about about about about -->
     <div class="slide slide2">
-        <div class="slide2top">
-            <div class="aboutUs">about us</div>
-            <div class="aboutStatement">{{Rule.aboutUs}}</div>
-        </div>
-        <div class="slide2bottom">
-            <div class="rules">rules</div>
-            <div class="rule1">
-                <div class="rule1number">1</div>
-                <div class="rule1text">{{Rule.ruleOne}}</div>
-            </div>
-            <div class="rule2">
-                <div class="rule1text">{{Rule.ruleTwo}}</div>
-            </div>
+        <div>
+            <ul>
+                <li ng-repeat="Rule in mainCtrl.Rule">
+                    <div class="slide2top">
+                        <div class="aboutUs">about us               </div>
+                        <div class="aboutStatement">{{Rule.aboutUs}}</div>
+                    </div>
+                    <div class="slide2bottom">
+                        <div class="rules">rules</div>
+                        <div class="rule1">
+                            <div class="rule1number">1             </div>
+                            <div class="rule1text">{{Rule.ruleOne}}</div>
+                        </div>
+                        <div class="rule2">
+                            <div class="rule2number">2             </div>
+                            <div class="rule1text">{{Rule.ruleTwo}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
-<!-- event event event event event event event event event -->
+<!-- 3333333 event event event event event event event event event -->
     <div class="slide slide3">
         <div class="slide3left">
             <ul>
                 <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
-                    <span class="location">{{Event.eventLocationName}}</span>
-                    <span class="time">{{Event.eventLocationTime}}</span>
-                    <span class="address">{{Event.eventLocationAddress}}</span>
+                    <span class="location">{{Event.eventLocationName}}   </span>
+                    <span class="time">    {{Event.eventLocationTime}}   </span>
+                    <span class="address"> {{Event.eventLocationAddress}}</span>
                 </li>
             </ul>
-
+            <!-- 3.5 3.5 3.5 rsvp rsvp rsvp rsvp rsvp rsvp -->
             <div class="rsvp">
-                <input type="text" placeholder="name">
-                <input type="text" placeholder="email">
-                <input type="text" placeholder="bio">
+                <form name="form">
+                    <input type="text" placeholder="name"     ng-model="Rsvp.name"      ng-required="'true'">
+                    <input type="text" placeholder="email"    ng-model="Rsvp.email"     ng-required="'true'">
+                    <input type="text" placeholder="website"  ng-model="Rsvp.website"   ng-required="'true'">
+                    <button ng-click="mainCtrl.addRsvp(Rsvp)" >Rsvp</button>
+                </form>
             </div>
         </div>
         <div class="slide3right">
@@ -70,31 +80,31 @@
     </div>
 
 
-<!-- featured people featured people featured people featured people featured people -->
+<!-- 4444444 featured people featured people featured people featured people featured people -->
     <ul rn-carousel class="slide slide4">
         <li ng-repeat="Person in mainCtrl.Person">
             <div class="leftFav">
-                <div class="favName">{{Person.featuredName}}</div>
-                <img class="favPic" ng-src="{{Person.featuredPicture}}">
+                <div class="favName">       {{Person.featuredName}} </div>
+                <img class="favPic" ng-src="{{Person.featuredPicture}}"  >
             </div>
             <div class="rightFav">
                 <div class="interviewQuestions">
-                    <div class="Q1">{{Person.questionOne}}</div>
-                    <div class="A1">{{Person.answerOne}}</div>
-                    <div class="Q2">{{Person.questionTwo}}</div>
-                    <div class="A2">{{Person.answerTwo}}</div>
+                    <div class="Q1">{{Person.questionOne}}  </div>
+                    <div class="A1">{{Person.answerOne}}    </div>
+                    <div class="Q2">{{Person.questionTwo}}  </div>
+                    <div class="A2">{{Person.answerTwo}}    </div>
                     <div class="Q3">{{Person.questionThree}}</div>
-                    <div class="A3">{{Person.answerThree}}</div>
+                    <div class="A3">{{Person.answerThree}}  </div>
                 </div>
             </div>
         </li>
     </ul>
 
-<!-- photos photos photos photos photos photos photos photos photos photos -->
+<!-- 555555555 photos photos photos photos photos photos photos photos photos photos -->
     <div class="slide slide5">
         <h1>photos</h1>
     </div>
-<!-- contact contact contact contact contact contact contact contact contact contact -->
+<!-- 6666666666 contact contact contact contact contact contact contact contact contact contact -->
     <div class="slide slide6">
         <h1>contact</h1>
     </div>

@@ -17,16 +17,20 @@
                 templateUrl: 'views/admin.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/:PersonId', {
-                templateUrl: 'views/edit.html',
+            .when('/admin/edit/splash/:SplashId', {
+                templateUrl: 'views/edit/editSplash.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/:RuleId', {
-                templateUrl: 'views/edit.html',
+            .when('/admin/edit/rule/:RuleId', {
+                templateUrl: 'views/edit/editRule.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/:EventId', {
-                templateUrl: 'views/edit.html',
+            .when('/admin/edit/event/:EventId', {
+                templateUrl: 'views/edit/editEvent.html',
+                controller: 'AdminController as adminCtrl'
+            })
+            .when('/admin/edit/person/:PersonId', {
+                templateUrl: 'views/edit/editPerson.html',
                 controller: 'AdminController as adminCtrl'
             })
 

@@ -62,6 +62,7 @@ body {
 }
 .slide6 {
     background-color: blue;
+    height:30vh;
 
 }
 
@@ -74,7 +75,7 @@ body {
     width: 100%;
     text-align: center;
 }
-.slide3bottom {
+.slide2bottom {
     display: block;
     height: 50%;
     width: 100%;
@@ -111,6 +112,9 @@ body {
     height: 400px;
     width: 400px;
     background-color: white;
+}
+.slide3 input {
+    display: block;
 }
 .
 /* slide 4   featured */
