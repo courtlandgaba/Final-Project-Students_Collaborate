@@ -1,0 +1,33 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 30;
+    border-bottom: 3px solid rgb(254, 54, 73);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.25);
+
+}
+.leftNav {
+    float: left;
+}
+.home {
+    display:table-cell;
+    vertical-align: middle;
+    height: 80px;
+    text-decoration: none;
+    padding-right: 5px;
+
+}
+.rightNav {
+    float:right;
+}
+.links {
+    display:table-cell;
+    vertical-align: middle;
+    height: 80px;
+    text-decoration: none;
+    padding-left: 5px;
+}

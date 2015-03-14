@@ -33,23 +33,6 @@
                 templateUrl: 'views/edit/editPerson.html',
                 controller: 'AdminController as adminCtrl'
             })
-
-
-
-
-
-
-
-
-            // .when('/blog', {
-            //     templateUrl: 'views/blog.html',
-            //     controller: 'BlogController as blogCtrl'
-            // })
-            // .when('/gallery', {
-            //     templateUrl: 'views/gallery.html',
-            //     controller: 'GalleryController as gallCtrl'
-            // })
-
     })
     .constant('_', _)
 })();

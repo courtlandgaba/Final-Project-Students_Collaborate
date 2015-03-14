@@ -94,7 +94,7 @@
          })
          .factory('ConfirmService', function ($http, $rootScope) {
 
-              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmm';
+              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmmm';
 
               var createConfirm = function (Confirm) {
                   $http.post(url, Confirm);
@@ -155,7 +155,7 @@
          })
         .factory('PersonService', function ($http, $rootScope) {
 
-            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-person';
+            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-personnn';
 
             var createPerson = function (Person) {
                 $http.post(url, Person);

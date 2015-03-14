@@ -1,0 +1,83 @@
+/* slide 2   about/rules */
+.containerSlide {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+}
+.slide2top {
+    display: block;
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+.slide2topLeft {
+    display: inline-block;
+    width: 45%;
+    float:left;
+}
+.slide2topRight {
+    display: inline-block;
+    width: 45%;
+    float:right;
+}
+.slide2bottom {
+    display: block;
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+.slide2bottomLeft {
+    display: inline-block;
+    width: 45%;
+    float:left;
+}
+.slide2bottomRight {
+    display: inline-block;
+    width: 45%;
+    float:right;
+}
+
+.aboutUs {
+    color: #2b2925;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.aboutStatement {
+    font-family: Lato, sans-serif;
+    color: #2b2925;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align:center;
+}
+
+.ruleNumber {
+    color: #2b2925;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.ruleText {
+    font-family: Lato, sans-serif;
+    color: #2b2925;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align:center;
+}

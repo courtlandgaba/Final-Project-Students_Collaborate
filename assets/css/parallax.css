@@ -1,37 +1,57 @@
-.parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
+/* parallax*/
+.slide {
+    width: 100vw;
+    height: 80vh;
+    margin:0;
+    padding:0;
+    transform-style: inherit;
+    position: relative;
 }
-.parallaxLayer {
+.slide:before {
+    content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    padding: 100vh 0;
-
-}
-.parallaxLayerFore {
-    -webkit-transform: translateZ(-2px);
-    transform: translateZ(-2px);
-}
-.parallaxLayerBase {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-.parallaxLayerBack {
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
+    left:0;
+    right:0;
 }
 
-h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 50px;
+
+#slide1:before {
+    background-image: url("../images/splash1.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+#slide2 {
+    background-image: url("../images/dot.png");
+    background-color: white;
+    background-attachment: fixed;
+}
+#slide3:before {
+    background-image: url("../images/Splash.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+#slide4 {
+    background-image: url("../images/dot.png");
+    background-color: white;
+    background-attachment: fixed;
+}
+#slide5:before {
+    background-image: url("../images/splash1.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+#slide6 {
+    background-color: rgb(254, 54, 73);
+    background-attachment: fixed;
 }

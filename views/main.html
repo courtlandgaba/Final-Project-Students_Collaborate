@@ -1,52 +1,53 @@
+<!-- navbar navbar navbar navbar navbar navbar navbar navbar-->
+<div class="navbar">
+    <div class="leftNav">
+        <a class="home"             href="">home</a>
+    </div>
+    <div class="rightNav">
+        <a class="links about"      href="">about     </a>
+        <a class="links blog"       href="">next event</a>
+        <a class="links gallery"    href="">featured  </a>
+        <a class="links investment" href="">photos    </a>
+        <a class="links contact"    href="">contact   </a>
+    </div>
+</div>
 <div class="wrapper">
 
 
-<!-- navbar navbar navbar navbar navbar navbar navbar navbar  -->
-    <div class="navbar">
-        <div class="leftNav">
-            <a class="home" href="">home</a>
-        </div>
-        <div class="rightNav">
-            <a class="links about"      href="">about     </a>
-            <a class="links blog"       href="">next event</a>
-            <a class="links gallery"    href="">featured  </a>
-            <a class="links investment" href="">photos    </a>
-            <a class="links contact"    href="">contact   </a>
-        </div>
-    </div>
 
-
-<!-- 111111 splash splash splash splash splash splash splash splash  -->
-
-    <div class="slide slide1">
-        <ul>
-            <li ng-repeat="Splash in mainCtrl.Splash">
-                <img ng-src="{{Splash.photo}}" alt="">
-            </li>
-        </ul>
-
+<!-- 111111 splash splash splash splash splash splash splash splash -->
+    <div class="slide" id="slide1">
+        <div class="logo"></div>
     </div>
 
 
 
 <!-- 22222222 about about about about about about about about -->
-    <div class="slide slide2">
+    <div class="slide" id="slide2">
         <div>
             <ul>
                 <li ng-repeat="Rule in mainCtrl.Rule">
-                    <div class="slide2top">
-                        <div class="aboutUs">about us               </div>
-                        <div class="aboutStatement">{{Rule.aboutUs}}</div>
-                    </div>
-                    <div class="slide2bottom">
-                        <div class="rules">rules</div>
-                        <div class="rule1">
-                            <div class="rule1number">1             </div>
-                            <div class="rule1text">{{Rule.ruleOne}}</div>
+                    <div class="containerSlide">
+                        <div class="slide2top">
+                            <div class="slide2topLeft">
+                                <div class="aboutUs">       THE CHALLENGE     </div>
+                                <div class="aboutStatement">{{Rule.challenge}}</div>
+                            </div>
+                            <div class="slide2topRight">
+                                <div class="aboutUs">       OUR SOLUTION      </div>
+                                <div class="aboutStatement">{{Rule.solution}} </div>
+                            </div>
                         </div>
-                        <div class="rule2">
-                            <div class="rule2number">2             </div>
-                            <div class="rule1text">{{Rule.ruleTwo}}</div>
+
+                        <div class="slide2bottom">
+                            <div class="slide2bottomLeft">
+                                <div class="ruleNumber">Rule 1             </div>
+                                <div class="ruleText">{{Rule.ruleOne}}</div>
+                            </div>
+                            <div class="slide2bottomRight">
+                                <div class="ruleNumber">Rule 2             </div>
+                                <div class="ruleText">{{Rule.ruleTwo}}</div>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -54,68 +55,122 @@
         </div>
     </div>
 
+
+
 <!-- 3333333 event event event event event event event event event -->
-    <div class="slide slide3">
-        <div class="slide3left">
-            <ul>
-                <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
-                    <span class="location">{{Event.eventLocationName}}   </span>
-                    <span class="time">    {{Event.eventLocationTime}}   </span>
-                    <span class="address"> {{Event.eventLocationAddress}}</span>
-                </li>
-            </ul>
-            <!-- 3.5 3.5 3.5 rsvp rsvp rsvp rsvp rsvp rsvp -->
-            <div class="rsvp">
-                <form name="form">
-                    <input type="text" placeholder="name"     ng-model="Rsvp.name"      ng-required="'true'">
-                    <input type="text" placeholder="email"    ng-model="Rsvp.email"     ng-required="'true'">
-                    <input type="text" placeholder="website"  ng-model="Rsvp.website"   ng-required="'true'">
-                    <button ng-click="mainCtrl.addRsvp(Rsvp)" >Rsvp</button>
-                </form>
-            </div>
-            <div>
+    <div class="slide" id="slide3">
+        <div class="containerEvent">
+            <div class="slide3top">
+                <h1>UPCOMING EVENT</h1>
                 <ul>
-                    <li ng-repeat="Confirm in mainCtrl.Confirm">
-                        <div type="text"> {{Confirm.name}}    </div>
-                        <div type="text"> {{Confirm.email}}   </div>
-                        <div type="text"> {{Confirm.website}} </div>
+                    <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
+                        <div class="eventDate">    {{Event.eventLocationDate}}   </div>
+                        <div class="eventTime">    {{Event.eventLocationTime}}   </div>
+                        <div class="eventLocation">{{Event.eventLocationName}}   </div>
+                        <div class="eventAddress"> {{Event.eventLocationAddress}}</div>
                     </li>
                 </ul>
+            <!-- 3.5 3.5 3.5 rsvp rsvp rsvp rsvp rsvp rsvp -->
+
+
+            </div>
+            <div class="slide3bottom">
+                <div class="slide3bottomLeft">
+                    <div class="containerForm">
+                        <h1>SAVE YOUR SPOT!</h1>
+                        <form class="rsvpForm">
+                            <input placeholder="*YOUR NAME" type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                            <input placeholder="*YOUR EMAIL" type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                            <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >R.S.V.P.</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="slide3bottomRight">
+                    <div class="map">
+
+                    </div>
+
+                </div>
             </div>
         </div>
-        <div class="slide3right">
-            <div class="map"></div>
-        </div>
+
     </div>
+
 
 
 <!-- 4444444 featured people featured people featured people featured people featured people -->
-    <ul rn-carousel class="slide slide4">
-        <li ng-repeat="Person in mainCtrl.Person">
-            <div class="leftFav">
-                <div class="favName">       {{Person.featuredName}} </div>
-                <img class="favPic" ng-src="{{Person.featuredPicture}}"  >
-            </div>
-            <div class="rightFav">
-                <div class="interviewQuestions">
-                    <div class="Q1">{{Person.questionOne}}  </div>
-                    <div class="A1">{{Person.answerOne}}    </div>
-                    <div class="Q2">{{Person.questionTwo}}  </div>
-                    <div class="A2">{{Person.answerTwo}}    </div>
-                    <div class="Q3">{{Person.questionThree}}</div>
-                    <div class="A3">{{Person.answerThree}}  </div>
-                </div>
-            </div>
-        </li>
-    </ul>
+        <div class="slide" id="slide4">
+            <h1>check out some of our members!</h1>
+            <ul>
+                <li ng-repeat="Person in mainCtrl.Person">
+                    <a class="slideThumb" href="">
+                        <img class="thumb" src="{{Person.featuredPicture}}" alt="{{Person.featuredName}}" width="100px" height="100px">
+                        <div class="thumbName">{{Person.featuredName}}</div>
+                        <div class="big">
+                            <div class="leftFav">
+                                <div class="leftFavTop">
+                                    <img ng-src="{{Person.featuredPicture}}"  >
+                                </div>
+                                <div class="leftFavBottom">
+                                    <div class="favName">{{Person.featuredName}}</div>
+                                    <div class="favWebsite">{{Person.featuredWebsite}}</div>
+                                    <div class="favProfession">{{Person.featuredProfession}}</div>
+                                    <div id="favBio">{{Person.featuredBio}}</div>
+
+                                </div>
+                            </div>
+                            <div class="rightFav">
+                                <div class="interviewQuestions">
+                                    <div class="Q">Q. {{Person.questionOne}}  </div>
+                                    <div class="A">{{Person.answerOne}}    </div>
+                                    <div class="Q">Q. {{Person.questionTwo}}  </div>
+                                    <div class="A">{{Person.answerTwo}}    </div>
+                                    <div class="Q">Q. {{Person.questionThree}}</div>
+                                    <div class="A">{{Person.answerThree}}  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
 
 <!-- 555555555 photos photos photos photos photos photos photos photos photos photos -->
-    <div class="slide slide5">
+    <div class="slide" id="slide5">
         <h1>photos</h1>
     </div>
-<!-- 6666666666 contact contact contact contact contact contact contact contact contact contact -->
-    <div class="slide slide6">
-        <h1>contact</h1>
-    </div>
 
+
+
+<!-- 6666666666 contact contact contact contact contact contact contact contact contact contact -->
+    <div class="slide" id="slide6">
+        <div class="containerContact">
+            <div class="contactLeft">
+                <form class="contactForm">
+                    <label>*YOUR NAME</label>
+                    <input type="text"ng-required="'true'">
+                    <label>*YOUR EMAIL</label>
+                    <input type="text"ng-required="'true'">
+                    <label>YOUR WEBSITE</label>
+                    <input type="text">
+                    <label>YOUR MESSAGE</label>
+                    <textarea id="contactMessage"></textarea>
+                    <button class="contactFormButton">SEND YOUR MESSAGE</button>
+                </form>
+            </div>
+            <div class="contactRight">
+                <h1>inquiries</h1>
+                <h4>asdfasdfasdfsdfadsfsafdsaasdf</h4>
+                <br>
+                <h4>aasdfasdfasdfasfsadfafsafsafa</h4>
+                <br>
+                <br>
+                <br>
+                <h3>charleston, sc</h3>
+                <h4>more address</h4>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,157 @@
+/* slide 4   featured people */
+#slide4 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#slide4 h1 {
+    text-align: center;
+    color: #2b2925;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#slide4 ul {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#slide4 a {
+    float: left;
+    margin: 20px;
+}
+
+.thumb {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    border: 5px solid #2b2925;
+}
+.thumbName {
+    font-family: Lato, sans-serif;
+    color: #2b2925;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align:center;
+    text-transform: uppercase;
+
+}
+.big {
+    position: absolute;
+    top: 250px;
+    left: 2000px;
+    -webkit-transition: left 1s ease;
+    -moz-transition: left 1s ease;
+    -o-transition: left 1s ease;
+    -ms-transition: left 1s ease;
+    transition: left 1s ease;
+    width: 1000px;
+    padding-top: 60px;
+}
+
+a:focus .thumb {
+    border: 5px solid rgb(254, 54, 73);
+
+}
+a:hover .thumb {
+    border: 5px solid rgb(254, 54, 73);
+}
+
+a:focus .big{
+    top: 250px;
+    left: 210px;
+    position: absolute;
+    margin-left: auto;
+    margin-right:auto;
+}
+a:active .big{
+    top: 250px;
+    left: 210px;
+    position: absolute;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.leftFav {
+    display: inline-block;
+    float: left;
+}
+.leftFavTop {
+    width: 260px;
+    height: 260px;
+    background-color: rgb(245, 242, 242);
+    margin-bottom: 15px;
+    border-bottom: 3px solid rgb(254, 54, 73);
+    border-top: 3px solid #2b2925;
+
+
+}
+.leftFavTop img {
+    height: 100%;
+    width: 100%;
+}
+.leftFavBottom {
+    width: 300px;
+    height: 150px;
+    /* background-color: rgb(254, 54, 73); */
+}
+.leftFavBottom div {
+    font-family: Lato, sans-serif;
+    color: #2b2925;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-bottom: 5px;
+
+}
+.favName {
+    font-size: 28px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.rightFav {
+    display: inline-block;
+    width: 65%;
+    height: 100%;
+    float: right;
+}
+
+.Q {
+    color: #2b2925;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.A {
+    font-family: Lato, sans-serif;
+    color: #2b2925;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-bottom: 40px;
+    padding-left: 55px;
+}
+#favBio {
+    font-size: 14px;
+}
