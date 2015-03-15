@@ -11,7 +11,22 @@
 
 }
 .containerGallery img {
-    width: 250px;
-    height: 250px;
-    padding: 8px;
+    width: 220px;
+    height: 220px;
+    margin: 5px;
+}
+.containerGallery h1 {
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 43px;
+    line-height: 49px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
+    padding-top: 30px;
+    border-bottom: 3px solid rgb(151, 7, 12);
+    padding-bottom: 5px;
+
 }

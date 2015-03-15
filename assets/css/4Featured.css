@@ -22,8 +22,8 @@
     letter-spacing: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 #slide4 ul {
     margin-left: auto;
@@ -70,7 +70,7 @@
     -ms-transition: left 1s ease;
     transition: left 1s ease;
     width: 1000px;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 a:focus .thumb {
@@ -101,8 +101,9 @@ a:active .big{
     float: left;
 }
 .leftFavTop {
-    width: 260px;
-    height: 260px;
+    margin-left: 10px;
+    width: 240px;
+    height: 240px;
     background-color: rgb(245, 242, 242);
     margin-bottom: 15px;
     border-bottom: 3px solid rgb(151, 7, 12);
@@ -115,7 +116,8 @@ a:active .big{
     width: 100%;
 }
 .leftFavBottom {
-    width: 300px;
+    margin-left: 10px;
+    width: 260px;
     height: 150px;
     /* background-color: rgb(151, 7, 12); */
 }
@@ -125,7 +127,7 @@ a:active .big{
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 
 }
 .favName {
@@ -152,16 +154,16 @@ a:active .big{
     letter-spacing: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 7px;
 }
 
 .A {
     font-family: Lato, sans-serif;
     color: #2b2925;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 24px;
     font-weight: 300;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-left: 55px;
 }
 #favBio {
