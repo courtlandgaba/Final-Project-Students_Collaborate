@@ -1,4 +1,11 @@
 /* slide 4   featured people */
+.containerPeople{
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    height: 100%;
+}
 #slide4 {
     position: relative;
     height: 100vh;
@@ -6,7 +13,7 @@
     overflow: hidden;
     margin: 0 auto;
 }
-#slide4 h1 {
+.containerPeople h1 {
     text-align: center;
     color: #2b2925;
     font-size: 28px;
@@ -15,23 +22,27 @@
     letter-spacing: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 #slide4 ul {
-    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    display: table;
+}
+#slide4 ul li {
+    display: inline-block;
+    margin: 0 20px;
+
 }
 #slide4 a {
     float: left;
-    margin: 20px;
 }
 
 .thumb {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 100px;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -41,11 +52,12 @@
 .thumbName {
     font-family: Lato, sans-serif;
     color: #2b2925;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 24px;
     font-weight: 300;
     text-align:center;
     text-transform: uppercase;
+    width: 120px;
 
 }
 .big {
@@ -58,15 +70,15 @@
     -ms-transition: left 1s ease;
     transition: left 1s ease;
     width: 1000px;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 a:focus .thumb {
-    border: 5px solid rgb(254, 54, 73);
+    border: 5px solid rgb(151, 7, 12);
 
 }
 a:hover .thumb {
-    border: 5px solid rgb(254, 54, 73);
+    border: 5px solid rgb(151, 7, 12);
 }
 
 a:focus .big{
@@ -93,7 +105,7 @@ a:active .big{
     height: 260px;
     background-color: rgb(245, 242, 242);
     margin-bottom: 15px;
-    border-bottom: 3px solid rgb(254, 54, 73);
+    border-bottom: 3px solid rgb(151, 7, 12);
     border-top: 3px solid #2b2925;
 
 
@@ -105,7 +117,7 @@ a:active .big{
 .leftFavBottom {
     width: 300px;
     height: 150px;
-    /* background-color: rgb(254, 54, 73); */
+    /* background-color: rgb(151, 7, 12); */
 }
 .leftFavBottom div {
     font-family: Lato, sans-serif;

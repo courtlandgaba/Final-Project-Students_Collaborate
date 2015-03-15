@@ -4,9 +4,9 @@
     height: 80px;
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: rgb(254, 254, 254);
     z-index: 30;
-    border-bottom: 3px solid rgb(254, 54, 73);
+    border-bottom: 3px solid rgb(151, 7, 12);
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.25);
 
 }
@@ -30,4 +30,22 @@
     height: 80px;
     text-decoration: none;
     padding-left: 5px;
+    font-family: Montserrat, sans-serif;
+    color: #2b2925;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    letter-spacing: 3px;
+    font-weight: 800;
+
+}
+.links:hover {
+    color: rgb(151, 7, 12);
+}
+.logo {
+    height: 77px;
 }

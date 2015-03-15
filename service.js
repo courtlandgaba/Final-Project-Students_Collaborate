@@ -182,5 +182,36 @@
                 updatePerson: updatePerson,
                 deletePerson: deletePerson,
             }
-      })
+        })
+        .factory('GalleryService', function ($http, $rootScope) {
+
+            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-photoooo';
+
+            var createGallery = function (Gallery) {
+                $http.post(url, Gallery);
+                $rootScope.$broadcast('Gallery:created');
+            };
+            var getGallery = function () {
+                return $http.get(url);
+            };
+            var getSingleGallery = function (Gallery) {
+                return $http.get(url + '/' + Gallery);
+            };
+            var updateGallery  = function (item, Gallery) {
+                $http.put(url + '/' + Gallery, item);
+                $rootScope.$broadcast('Gallery:updated');
+            };
+            var deleteGallery  = function (Gallery) {
+                $http.delete(url + '/' + Gallery);
+                $rootScope.$broadcast('Gallery:deleted');
+            };
+            return {
+                createGallery: createGallery,
+                getGallery: getGallery,
+                getSingleGallery: getSingleGallery,
+                updateGallery: updateGallery,
+                deleteGallery: deleteGallery,
+            }
+        })
+
 })();

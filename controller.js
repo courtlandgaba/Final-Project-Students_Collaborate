@@ -7,7 +7,7 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
@@ -69,13 +69,22 @@
             mainCtrl.Person = person;
         });
         mainCtrl.currentIndex = $routeParams.PersonId;
+    //MAIN CRUD: PHOTO //////////////////////////////////////////////////////////////////
+        GalleryService.getSingleGallery($routeParams.GalleryId).success(function (gallery) {
+            mainCtrl.singleGallery=gallery;
+        });
+        GalleryService.getGallery().success(function (gallery) {
+            mainCtrl.Gallery = gallery;
+        });
+        mainCtrl.currentIndex = $routeParams.GalleryId;
+
     })
 
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 
-    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, $location, $routeParams, _, $rootScope) {
+    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
@@ -94,7 +103,7 @@
             $location.path('/admin');
         };
         adminCtrl.deleteSplash = function (splash) {
-            SplashService.deletePerson(person);
+            SplashService.deletePerson(splash);
         };
         adminCtrl.updateSplash = function (splash) {
             SplashService.updateSplash(splash, $routeParams.SplashId);
@@ -205,6 +214,28 @@
             PersonService.updatePerson(person, $routeParams.PersonId);
             $location.path('/admin');
         };
+    // ADMIN CRUD: Gallery GALLERY PAGE//////////////////////////////////////////////////////////////////
+        GalleryService.getGallery().success(function (gallery) {
+            adminCtrl.Gallery = gallery;
+        });
+
+        GalleryService.getSingleGallery($routeParams.GalleryId).success(function (gallery) {
+            adminCtrl.singleGallery=gallery;
+        });
+        adminCtrl.currentIndex = $routeParams.GalleryId;
+
+        adminCtrl.addGallery = function (gallery) {
+            GalleryService.createGallery(gallery);
+            $location.path('/admin');
+        };
+        adminCtrl.deleteGallery = function (gallery) {
+            GalleryService.deleteGallery(gallery);
+        };
+        adminCtrl.updateGallery = function (gallery) {
+            GalleryService.updateGallery(gallery, $routeParams.GalleryId);
+            $location.path('/admin');
+        };
+
     })
 
 })();

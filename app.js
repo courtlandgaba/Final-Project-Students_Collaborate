@@ -33,6 +33,11 @@
                 templateUrl: 'views/edit/editPerson.html',
                 controller: 'AdminController as adminCtrl'
             })
+            .when('/admin/edit/gallery/:PhotoId', {
+                templateUrl: 'views/edit/editPhoto.html',
+                controller: 'AdminController as adminCtrl'
+            })
     })
+
     .constant('_', _)
 })();

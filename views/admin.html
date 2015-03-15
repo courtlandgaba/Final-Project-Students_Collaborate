@@ -1,6 +1,8 @@
 <h1>New Featured Person</h1>
     <input type="text" ng-model="Person.featuredPicture"    placeholder="Picture">
-    <input type="text" ng-model="Person.featuredName"       placeholder="Name">
+    <input type="text" ng-model="Person.featuredFirstName"       placeholder="First Name">
+    <input type="text" ng-model="Person.featuredLastName"       placeholder="Last Name">
+
     <input type="text" ng-model="Person.featuredWebsite"    placeholder="Website">
     <input type="text" ng-model="Person.featuredProfession" placeholder="Profession">
     <input type="text" ng-model="Person.featuredBio"        placeholder="Bio">
@@ -16,11 +18,11 @@
 <h1>Edit Featured Person</h1>
     <ul><li ng-repeat="Person in adminCtrl.Person">
         <img ng-src="{{Person.featuredPicture}}">
-        <div>name: {{Person.featuredName}}</div>
-        <div>name: {{Person.featuredWebsite}}</div>
-        <div>name: {{Person.featuredProfession}}</div>
-        <div>name: {{Person.featuredBio}}</div>
-
+        <div>first name: {{Person.featuredFirstName}} </div>
+        <div>last name:  {{Person.featuredLastName}}  </div>
+        <div>website:    {{Person.featuredWebsite}}   </div>
+        <div>profession: {{Person.featuredProfession}}</div>
+        <div>bio:        {{Person.featuredBio}}       </div>
         <div>Q1: {{Person.questionOne}}  </div>
         <div>A1: {{Person.answerOne}}    </div>
         <div>Q2: {{Person.questionTwo}}  </div>
@@ -89,3 +91,17 @@
         <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
     </li></ul>
 <hr>
+
+<h1>New Photo For Gallery</h1>
+    <label>Photo for Gallery</label>
+    <input type="text" ng-model="Gallery.photo">
+    <button ng-click="adminCtrl.addGallery(Gallery)">add photo</button>
+<hr>
+<h1>Edit Photos In Gallery</h1>
+    <ul>
+    <li ng-repeat="Gallery in adminCtrl.Gallery">
+        <img src="{{Gallery.photo}}" alt="">
+        <a href="#/admin/edit/gallery/{{Gallery._id}}">edit</a>
+        <button ng-cick="adminCtrl.deletePhoto(Gallery._id)">delete</button>
+    </li>
+    </ul>

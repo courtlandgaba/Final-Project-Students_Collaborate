@@ -12,16 +12,16 @@
     height: 40vh;
     width: 100%;
     text-align: center;
-    padding: 50px 0 0 0;
+    padding: 70px 0 0 0;
 }
 .slide2topLeft {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     float:left;
 }
 .slide2topRight {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     float:right;
 }
 .slide2bottom {
@@ -33,18 +33,18 @@
 }
 .slide2bottomLeft {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     float:left;
 }
 .slide2bottomRight {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     float:right;
 }
 
 .aboutUs {
     color: #2b2925;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     text-align: center;
@@ -64,7 +64,7 @@
 
 .ruleNumber {
     color: #2b2925;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     text-align: center;
