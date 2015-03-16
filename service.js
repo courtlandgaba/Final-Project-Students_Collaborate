@@ -2,36 +2,7 @@
     "use strict";
 
     angular.module('eventApp')
-        .factory('SplashService', function ($http, $rootScope) {
 
-            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-splash';
-
-            var createSplash = function (Splash) {
-                $http.post(url, Splash);
-                $rootScope.$broadcast('Splash:created');
-            };
-            var getSplash = function () {
-                return $http.get(url);
-            };
-            var getSingleSplash = function (Splash) {
-                return $http.get(url + '/' + Splash);
-            };
-            var updateSplash  = function (item, Splash) {
-                $http.put(url + '/' + Splash, item);
-                $rootScope.$broadcast('Splash:updated');
-            };
-            var deleteSplash  = function (Splash) {
-                $http.delete(url + '/' + Splash);
-                $rootScope.$broadcast('Splash:deleted');
-            };
-            return {
-                createSplash: createSplash,
-                getSplash: getSplash,
-                getSingleSplash: getSingleSplash,
-                updateSplash: updateSplash,
-                deleteSplash: deleteSplash,
-            }
-        })
         .factory('RuleService', function ($http, $rootScope) {
 
             var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rule';
@@ -94,7 +65,7 @@
          })
          .factory('ConfirmService', function ($http, $rootScope) {
 
-              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmmm';
+              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmmmm';
 
               var createConfirm = function (Confirm) {
                   $http.post(url, Confirm);
@@ -213,6 +184,13 @@
                 deleteGallery: deleteGallery,
             }
         })
+
+
+
+
+
+
+
 
 
 })();

@@ -32,15 +32,7 @@
         <a href="#/admin/edit/person/{{Person._id}}">edit</a>
         <button ng-click="adminCtrl.deletePerson(Person._id)">delete</button>
     </li></ul>
-<h1>New Splash Page</h1>
-    <input type="text" ng-model="Splash.photo" placeholder="Splash Photo">
-    <button ng-click="adminCtrl.addSplash(Splash)">Add Splash Photo</button>
-<hr>
-<h1>Edit Splash</h1>
-    <ul><li ng-repeat="Splash in adminCtrl.Splash">
-        <div>photo: {{Splash.photo}}</div>
-        <a href="#/admin/edit/splash/{{Splash._id}}">edit</a>
-    </li></ul>
+
 <hr>
 <h1>New About/Rules </h1>
     <input type="text" ng-model="Rule.challenge" placeholder="challenge">
@@ -59,10 +51,17 @@
         <button ng-click="adminCtrl.deleteRule(Rule._id)">delete</button>
     </li></ul>
 <hr>
+
+
+
+
+
+
 <h1>Incoming RSVPs</h1>
     <ul><li ng-repeat="Rsvp in adminCtrl.Rsvp">
         <div type="text" ng-model="Confirm.name">    {{Rsvp.name}}    </div>
         <div type="text" ng-model="Confirm.email">   {{Rsvp.email}}   </div>
+        <div type="text" ng-model="Confirm.website">   {{Rsvp.website}}   </div>
         <button ng-click="adminCtrl.addConfirm(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
         <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)"                            >delete  </button>
     </li></ul>
@@ -71,9 +70,16 @@
     <ul><li ng-repeat="Confirm in adminCtrl.Confirm">
         <div type="text"> {{Confirm.name}}    </div>
         <div type="text"> {{Confirm.email}}   </div>
+        <div type="text"> {{Confirm.website}} </div>
         <button ng-click="adminCtrl.deleteConfirm(Confirm_.id)">delete</button>
     </li></ul>
 <hr>
+
+
+
+
+
+
 <h1>New Event</h1>
     <input type="text" ng-model="Event.eventLocationDate"    placeholder="date">
     <input type="text" ng-model="Event.eventLocationTime"    placeholder="time">
@@ -94,14 +100,12 @@
 
 <h1>New Photo For Gallery</h1>
     <label>Photo for Gallery</label>
-    <input type="text" ng-model="Gallery.photo">
+    <input type="text" ng-model="Gallery.photo" placeholder="Gallery Photo">
     <button ng-click="adminCtrl.addGallery(Gallery)">add photo</button>
 <hr>
 <h1>Edit Photos In Gallery</h1>
-    <ul>
-    <li ng-repeat="Gallery in adminCtrl.Gallery">
-        <img src="{{Gallery.photo}}" alt="">
+    <ul><li ng-repeat="Gallery in adminCtrl.Gallery">
+        <img ng-src="{{Gallery.photo}}" alt="">
         <a href="#/admin/edit/gallery/{{Gallery._id}}">edit</a>
-        <button ng-cick="adminCtrl.deletePhoto(Gallery._id)">delete</button>
-    </li>
-    </ul>
+        <button ng-click="adminCtrl.deleteGallery(Gallery._id)">delete</button>
+    </li></ul>

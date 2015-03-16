@@ -2,10 +2,10 @@
 <div class="navbar">
     <div class="containerNav">
         <div class="leftNav">
-            <a class="home" href="/" ><img class="logo" src="../assets/images/company.png" alt=""></a>
+            <a class="home" href="#/" ><img class="logo" src="../assets/images/company.png" alt=""></a>
         </div>
         <div class="rightNav">
-            <a class="links "           id="slide2button" href="">what we do     </a>
+            <a class="links "           href="">what we do     </a>
             <a class="links blog"       href="">next event</a>
             <a class="links gallery"    href="">members  </a>
             <a class="links investment" href="">photos    </a>
@@ -24,7 +24,7 @@
 
 
 <!-- 111111 splash splash splash splash splash splash splash splash -->
-    <div class="slide" id="slide1">
+    <div class="slide" id="slide1" >
         <div class="slogan">let's talk side projects.</div>
     </div>
 
@@ -84,19 +84,41 @@
             </div>
             <div class="slide3bottom">
                 <div class="slide3bottomLeft">
-                    <div class="map"></div>
+                    <div id="map-canvas" height="300px" width="300px"></div>
                 </div>
-                <div class="slide3bottomRight">
+                <div class="slide3bottomRightRsvp">
                     <div class="containerForm">
                         <h1>let us know you're coming!</h1>
                         <form class="rsvpForm">
-                            <input placeholder="*YOUR NAME" type="text" ng-model="Rsvp.name"      ng-required="'true'">
-                            <input placeholder="*YOUR EMAIL" type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                            <input placeholder="*YOUR NAME"    type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                            <input placeholder="*YOUR EMAIL"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                            <input placeholder=" YOUR WEBSITE" type="text" ng-model="Rsvp.website"   >
+
                             <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >R.S.V.P.</button>
                         </form>
                     </div>
-
-
+                </div>
+                <div class="slide3bottomRightList hide">
+                    <div class="containerList">
+                        <h1>confirmed guests!</h1>
+                        <ul>
+                            <li class="guestList" ng-repeat="Confirm in mainCtrl.Confirm">
+                                <div class="guestName"> {{Confirm.name}}</div>
+                                <div class="guestEmail"> {{Confirm.email}}</div>
+                                <a   class="guestWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide3bottomRightButtonRsvp">
+                    <div class="containerListButton">
+                        <button id="rsvpButton">Rsvp</button>
+                    </div>
+                </div>
+                <div class="slide3bottomRightButtonList">
+                    <div class="containerListButton">
+                        <button id="guestButton">Guests!</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,30 +134,30 @@
                 <ul>
                     <li ng-repeat="Person in mainCtrl.Person">
                         <a class="slideThumb" href="">
-                            <img class="thumb" src="{{Person.featuredPicture}}" alt="{{Person.featuredFirstName}} {{Person.featuredLastName}}" width="100px" height="100px">
+                            <img class="thumb" ng-src="{{Person.featuredPicture}}" alt="{{Person.featuredFirstName}} {{Person.featuredLastName}}" width="100px" height="100px">
                             <div class="thumbName">{{Person.featuredFirstName}}</div>
-                            <div class="thumbName">{{Person.featuredLastName}}</div>
+                            <div class="thumbName">{{Person.featuredLastName}} </div>
                             <div class="big">
                                 <div class="leftFav">
                                     <div class="leftFavTop">
                                         <img ng-src="{{Person.featuredPicture}}"  >
                                     </div>
                                     <div class="leftFavBottom">
-                                        <div class="favName">{{Person.featuredFirstName}} {{Person.featuredLastName}}</div>
-                                        <div class="favWebsite">{{Person.featuredWebsite}}</div>
-                                        <div class="favProfession">{{Person.featuredProfession}}</div>
-                                        <div id="favBio">{{Person.featuredBio}}</div>
+                                        <div class="favName">      {{Person.featuredFirstName}} {{Person.featuredLastName}}</div>
+                                        <div class="favWebsite">   {{Person.featuredWebsite}}                              </div>
+                                        <div class="favProfession">{{Person.featuredProfession}}                           </div>
+                                        <div id="favBio">          {{Person.featuredBio}}                                  </div>
 
                                     </div>
                                 </div>
                                 <div class="rightFav">
                                     <div class="interviewQuestions">
                                         <div class="Q">Q. {{Person.questionOne}}  </div>
-                                        <div class="A">{{Person.answerOne}}    </div>
+                                        <div class="A">   {{Person.answerOne}}    </div>
                                         <div class="Q">Q. {{Person.questionTwo}}  </div>
-                                        <div class="A">{{Person.answerTwo}}    </div>
+                                        <div class="A">   {{Person.answerTwo}}    </div>
                                         <div class="Q">Q. {{Person.questionThree}}</div>
-                                        <div class="A">{{Person.answerThree}}  </div>
+                                        <div class="A">   {{Person.answerThree}}  </div>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +176,7 @@
             <h1>photo gallery</h1>
                 <ul>
                     <li ng-repeat="Gallery in mainCtrl.Gallery">
-                        <img src="{{Gallery.photo}}" alt="">
+                        <img ng-src="{{Gallery.photo}}" alt="">
                     </li>
                 </ul>
         </div>
@@ -167,14 +189,6 @@
     <div class="slide" id="slide6">
         <div class="containerContact">
             <div class="contactLeft">
-                <div class="contactBig">contact us</div>
-                <div class="contactSmall">casdfasdfsafsadfsadfasfas</div>
-                <div class="contactSmall">asdfasfsafasfsaffa</div>
-                <br>
-                <div class="contactSmall">charleston, sc</div>
-                <div class="contactSmall">more address</div>
-            </div>
-            <div class="contactRight">
                 <form class="contactForm">
                     <label>*YOUR NAME</label>
                     <input type="text"ng-required="'true'">
@@ -186,8 +200,22 @@
                     <textarea id="contactMessage"></textarea>
                     <button class="contactFormButton">SEND YOUR MESSAGE</button>
                 </form>
+            </div>
+            <div class="contactRight">
+                <div class="contactBig">  say hello!               </div>
+                <div class="contactSmall">casdfasdfsafsadfsadfasfas</div>
+                <div class="contactSmall">asdfasfsafasfsaffa       </div>
+                <br>
+                <div class="contactSmall">Charleston, SC           </div>
+                <div class="contactSmall">843-555-5555             </div>
+                <div class="contactSmall">example@gmail.com        </div>
 
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="containerFooter">
+            <h1>© 2015 Students Collaborate</h1>
         </div>
     </div>
 </div>

@@ -7,18 +7,10 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
-    //MAIN CRUD: SPLASH//////////////////////////////////////////////////////////////////
-        SplashService.getSingleSplash($routeParams.SplashId).success(function (splash) {
-            mainCtrl.singleSplash=splash;
-        });
-        SplashService.getSplash().success(function (splash) {
-            mainCtrl.Splash = splash;
-        });
-        mainCtrl.currentIndex = $routeParams.SplashId;
 
     //MAIN CRUD: RULES//////////////////////////////////////////////////////////////////
         RuleService.getSingleRule($routeParams.RuleId).success(function (rule) {
@@ -69,6 +61,7 @@
             mainCtrl.Person = person;
         });
         mainCtrl.currentIndex = $routeParams.PersonId;
+
     //MAIN CRUD: PHOTO //////////////////////////////////////////////////////////////////
         GalleryService.getSingleGallery($routeParams.GalleryId).success(function (gallery) {
             mainCtrl.singleGallery=gallery;
@@ -78,37 +71,30 @@
         });
         mainCtrl.currentIndex = $routeParams.GalleryId;
 
+
+        $('#guestButton').on('click', function(){
+            console.log('asdfsadfasdfasdf');
+            $('.slide3bottomRightList').removeClass('hide');
+            $('.slide3bottomRightRsvp').addClass('hide');
+        });
+        $('#rsvpButton').on('click', function(){
+            console.log('asdfsadfasdfasdf');
+            $('.slide3bottomRightRsvp').removeClass('hide');
+            $('.slide3bottomRightList').addClass('hide');
+        });
+
+
+
     })
 
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 
-    .controller('AdminController', function (SplashService, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope) {
+    .controller('AdminController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
-    // ADMIN CRUD: SPLASH PAGE//////////////////////////////////////////////////////////////////
-        SplashService.getSplash().success(function (splash) {
-            adminCtrl.Splash = splash;
-        });
-
-        SplashService.getSingleSplash($routeParams.SplashId).success(function (splash) {
-            adminCtrl.singleSplash=splash;
-        });
-        adminCtrl.currentIndex = $routeParams.SplashId;
-
-        adminCtrl.addSplash = function (splash) {
-            SplashService.createSplash(splash);
-            $location.path('/admin');
-        };
-        adminCtrl.deleteSplash = function (splash) {
-            SplashService.deletePerson(splash);
-        };
-        adminCtrl.updateSplash = function (splash) {
-            SplashService.updateSplash(splash, $routeParams.SplashId);
-            $location.path('/admin');
-        };
     // ADMIN CRUD: ABOUT///RULE PAGE//////////////////////////////////////////////////////////////////
         RuleService.getRule().success(function (rule) {
             adminCtrl.Rule = rule;
@@ -237,5 +223,6 @@
         };
 
     })
+
 
 })();

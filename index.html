@@ -10,17 +10,20 @@
     <link rel="stylesheet" href="assets/css/4Featured.css">
     <link rel="stylesheet" href="assets/css/5Gallery.css">
     <link rel="stylesheet" href="assets/css/6Contact.css">
+    <link rel="stylesheet" href="assets/css/7Footer.css">
     <link rel="stylesheet" href="assets/css/allSlides.css">
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/parallax.css">
     <link rel="stylesheet" href="assets/css/social.css">
-
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
 
 </head>
 
 <body ng-app="eventApp">
 
-<ng-view></ng-view>
+<ng-view autoscroll="true"></ng-view>
 
 
 <!-- scripts -->
@@ -34,5 +37,15 @@
 <script src="app.js"></script>
 <script src="controller.js"></script>
 <script src="service.js"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

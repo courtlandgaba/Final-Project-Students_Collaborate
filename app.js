@@ -17,10 +17,7 @@
                 templateUrl: 'views/admin.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/splash/:SplashId', {
-                templateUrl: 'views/edit/editSplash.html',
-                controller: 'AdminController as adminCtrl'
-            })
+
             .when('/admin/edit/rule/:RuleId', {
                 templateUrl: 'views/edit/editRule.html',
                 controller: 'AdminController as adminCtrl'
@@ -33,8 +30,8 @@
                 templateUrl: 'views/edit/editPerson.html',
                 controller: 'AdminController as adminCtrl'
             })
-            .when('/admin/edit/gallery/:PhotoId', {
-                templateUrl: 'views/edit/editPhoto.html',
+            .when('/admin/edit/gallery/:GalleryId', {
+                templateUrl: 'views/edit/editGallery.html',
                 controller: 'AdminController as adminCtrl'
             })
     })

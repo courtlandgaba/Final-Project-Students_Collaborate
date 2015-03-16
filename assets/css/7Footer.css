@@ -1,0 +1,22 @@
+.footer {
+    padding: 0;
+    margin: 0;
+    height: 90px;
+    width: 100%;
+    background-color: #2b2925;
+}
+.containerFooter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+.containerFooter h1 {
+    display: inline-block;
+    color: #63615c;
+    font-family: Lato, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-top: 30px;
+}
