@@ -22,7 +22,7 @@
     letter-spacing: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 30px;
 }
 #slide4 ul {
@@ -64,37 +64,40 @@
     position: absolute;
     top: 250px;
     left: 2000px;
-    -webkit-transition: left 1s ease;
-    -moz-transition: left 1s ease;
-    -o-transition: left 1s ease;
-    -ms-transition: left 1s ease;
-    transition: left 1s ease;
+    -webkit-transition: left .7s ease;
+    -moz-transition: left .7s ease;
+    -o-transition: left .7s ease;
+    -ms-transition: left .7s ease;
+    transition: left .7s ease;
     width: 940px;
     padding-top: 50px;
 }
 
-a:focus .thumb {
+
+.containerPeople a:focus .thumb {
     border: 5px solid rgb(151, 7, 12);
 
 }
-a:hover .thumb {
+.containerPeople a:hover .thumb {
     border: 5px solid rgb(151, 7, 12);
 }
 
-a:focus .big{
+.containerPeople a:focus .big{
     top: 250px;
     left: 240px;
     position: absolute;
     margin-left: auto;
     margin-right:auto;
 }
-a:active .big{
+.containerPeople a:active .big{
     top: 250px;
     left: 210px;
     position: absolute;
     margin-left: auto;
     margin-right:auto;
 }
+
+
 
 .leftFav {
     display: inline-block;

@@ -191,14 +191,15 @@
             <div class="contactLeft">
                 <form class="contactForm">
                     <label>*YOUR NAME</label>
-                    <input type="text"ng-required="'true'">
+                    <input type="text" ng-required="'true'" ng-model="Contact.name">
                     <label>*YOUR EMAIL</label>
-                    <input type="text"ng-required="'true'">
+                    <input type="text" ng-required="'true'" ng-model="Contact.email">
                     <label>YOUR WEBSITE</label>
-                    <input type="text">
+                    <input type="text" ng-model="Contact.website">
                     <label>YOUR MESSAGE</label>
-                    <textarea id="contactMessage"></textarea>
-                    <button class="contactFormButton">SEND YOUR MESSAGE</button>
+                    <textarea id="contactMessage" ng-model="Contact.message"></textarea>
+                    <button class="contactFormButton" ng-click="mainCtrl.addContact(Contact)">SEND YOUR MESSAGE</button>
+
                 </form>
             </div>
             <div class="contactRight">

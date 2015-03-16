@@ -7,7 +7,7 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
@@ -34,6 +34,7 @@
             RsvpService.createRsvp(rsvp);
             $location.path('/');
         };
+
     //MAIN CRUD: CONFIRM RSVP//////////////////////////////////////////////////////////////////
         ConfirmService.getSingleConfirm($routeParams.ConfirmId).success(function (rsvp) {
             mainCtrl.singleConfirm=rsvp;
@@ -71,7 +72,20 @@
         });
         mainCtrl.currentIndex = $routeParams.GalleryId;
 
+    //MAIN CRUD: CONTACT//////////////////////////////////////////////////////////////////
+        ContactService.getSingleContact($routeParams.ContactId).success(function (Contact) {
+            mainCtrl.singleContact=Contact;
+        });
+        ContactService.getContact().success(function (Contact) {
+            mainCtrl.Contact = Contact;
+        });
+        mainCtrl.currentIndex = $routeParams.ContactId;
 
+        mainCtrl.addContact = function (Contact) {
+            ContactService.createContact(Contact);
+            $location.path('/');
+        };
+     ///////////events////////
         $('#guestButton').on('click', function(){
             console.log('asdfsadfasdfasdf');
             $('.slide3bottomRightList').removeClass('hide');
@@ -91,7 +105,7 @@
 //////////////////////admin controller//////////////////////////////////////////
 //////////////////////admin controller//////////////////////////////////////////
 
-    .controller('AdminController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, $location, $routeParams, _, $rootScope) {
+    .controller('AdminController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
 
@@ -219,6 +233,27 @@
         };
         adminCtrl.updateGallery = function (gallery) {
             GalleryService.updateGallery(gallery, $routeParams.GalleryId);
+            $location.path('/admin');
+        };
+    // ADMIN CRUD: Contact PAGE//////////////////////////////////////////////////////////////////
+        ContactService.getContact().success(function (Contact) {
+            adminCtrl.Contact = Contact;
+        });
+
+        ContactService.getSingleContact($routeParams.ContactId).success(function (Contact) {
+            adminCtrl.singleContact=Contact;
+        });
+        adminCtrl.currentIndex = $routeParams.ContactId;
+
+        adminCtrl.addContact = function (Contact) {
+            ContactService.createContact(Contact);
+            $location.path('/admin');
+        };
+        adminCtrl.deleteContact = function (Contact) {
+            ContactService.deleteContact(Contact);
+        };
+        adminCtrl.updateContact = function (Contact) {
+            ContactService.updateContact(Contact, $routeParams.ContactId);
             $location.path('/admin');
         };
 

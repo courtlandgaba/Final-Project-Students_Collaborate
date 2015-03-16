@@ -1,111 +1,207 @@
-<h1>New Featured Person</h1>
-    <input type="text" ng-model="Person.featuredPicture"    placeholder="Picture">
-    <input type="text" ng-model="Person.featuredFirstName"       placeholder="First Name">
-    <input type="text" ng-model="Person.featuredLastName"       placeholder="Last Name">
+<div class="adminWrapper">
 
-    <input type="text" ng-model="Person.featuredWebsite"    placeholder="Website">
-    <input type="text" ng-model="Person.featuredProfession" placeholder="Profession">
-    <input type="text" ng-model="Person.featuredBio"        placeholder="Bio">
+    <div class="adminSlide">
+        <div class="adminEditContact">
+            <h1>Incoming Messages</h1>
+            <ul><li ng-repeat="Contact in adminCtrl.Contact">
+                <div type="text" ng-model="Confirm.name">    {{Contact.name}}      </div>
+                <div type="text" ng-model="Confirm.email">   {{Contact.email}}     </div>
+                <div type="text" ng-model="Confirm.website"> {{Contact.website}}   </div>
+                <div type="text" ng-model="Confirm.message"> {{Contact.message}}   </div>
+                <button ng-click="adminCtrl.deleteContact(Contact._id)">delete  </button>
+            </li></ul>
+        </div>
+    </div>
 
-    <input type="text" ng-model="Person.questionOne"        placeholder="question 1">
-    <input type="text" ng-model="Person.answerOne"          placeholder="answer 1">
-    <input type="text" ng-model="Person.questionTwo"        placeholder="question 2">
-    <input type="text" ng-model="Person.answerTwo"          placeholder="answer 2">
-    <input type="text" ng-model="Person.questionThree"      placeholder="question 3">
-    <input type="text" ng-model="Person.answerThree"        placeholder="answer 3">
-    <button ng-click="adminCtrl.addPerson(Person)">Add Featured Person</button>
-<hr>
-<h1>Edit Featured Person</h1>
-    <ul><li ng-repeat="Person in adminCtrl.Person">
-        <img ng-src="{{Person.featuredPicture}}">
-        <div>first name: {{Person.featuredFirstName}} </div>
-        <div>last name:  {{Person.featuredLastName}}  </div>
-        <div>website:    {{Person.featuredWebsite}}   </div>
-        <div>profession: {{Person.featuredProfession}}</div>
-        <div>bio:        {{Person.featuredBio}}       </div>
-        <div>Q1: {{Person.questionOne}}  </div>
-        <div>A1: {{Person.answerOne}}    </div>
-        <div>Q2: {{Person.questionTwo}}  </div>
-        <div>A2: {{Person.answerTwo}}    </div>
-        <div>Q3: {{Person.questionThree}}</div>
-        <div>A3: {{Person.answerThree}}  </div>
-        <a href="#/admin/edit/person/{{Person._id}}">edit</a>
-        <button ng-click="adminCtrl.deletePerson(Person._id)">delete</button>
-    </li></ul>
 
-<hr>
-<h1>New About/Rules </h1>
-    <input type="text" ng-model="Rule.challenge" placeholder="challenge">
-    <input type="text" ng-model="Rule.solution"  placeholder="solution">
-    <input type="text" ng-model="Rule.ruleOne"   placeholder="rule1">
-    <input type="text" ng-model="Rule.ruleTwo"   placeholder="rule2">
-    <button ng-click="adminCtrl.addRule(Rule)">Add About Section</button>
-<hr>
-<h1>Edit About/Rules</h1>
-    <ul><li ng-repeat="Rule in adminCtrl.Rule">
-        <div>The Challenge:  {{Rule.challenge}}</div>
-        <div>Our Solution:   {{Rule.solution}}</div>
-        <div>Rule 1: {{Rule.ruleOne}}</div>
-        <div>Rule 2: {{Rule.ruleTwo}}</div>
-        <a href="#/admin/edit/rule/{{Rule._id}}">edit</a>
-        <button ng-click="adminCtrl.deleteRule(Rule._id)">delete</button>
-    </li></ul>
-<hr>
+
+    <div class="adminSlide">
+        <div class="adminIncomingRsvps">
+            <h1>Incoming RSVPs</h1>
+            <ul><li ng-repeat="Rsvp in adminCtrl.Rsvp">
+                <div type="text" ng-model="Confirm.name">    {{Rsvp.name}}    </div>
+                <div type="text" ng-model="Confirm.email">   {{Rsvp.email}}   </div>
+                <div type="text" ng-model="Confirm.website">   {{Rsvp.website}}   </div>
+                <button ng-click="adminCtrl.addConfirm(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
+                <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)"                            >delete  </button>
+            </li></ul>
+        </div>
+        <div class="adminConfirmedRsvps">
+            <h1>Confirmed RSVPs</h1>
+            <ul><li ng-repeat="Confirm in adminCtrl.Confirm">
+                <div type="text"> {{Confirm.name}}    </div>
+                <div type="text"> {{Confirm.email}}   </div>
+                <div type="text"> {{Confirm.website}} </div>
+                <button ng-click="adminCtrl.deleteConfirm(Confirm_.id)">delete</button>
+            </li></ul>
+        </div>
+    </div>
 
 
 
 
 
 
-<h1>Incoming RSVPs</h1>
-    <ul><li ng-repeat="Rsvp in adminCtrl.Rsvp">
-        <div type="text" ng-model="Confirm.name">    {{Rsvp.name}}    </div>
-        <div type="text" ng-model="Confirm.email">   {{Rsvp.email}}   </div>
-        <div type="text" ng-model="Confirm.website">   {{Rsvp.website}}   </div>
-        <button ng-click="adminCtrl.addConfirm(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
-        <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)"                            >delete  </button>
-    </li></ul>
-<hr>
-<h1>Confirmed RSVPs</h1>
-    <ul><li ng-repeat="Confirm in adminCtrl.Confirm">
-        <div type="text"> {{Confirm.name}}    </div>
-        <div type="text"> {{Confirm.email}}   </div>
-        <div type="text"> {{Confirm.website}} </div>
-        <button ng-click="adminCtrl.deleteConfirm(Confirm_.id)">delete</button>
-    </li></ul>
-<hr>
+
+
+
+
+    <div class="adminSlide">
+        <div class="adminNewEvent">
+            <h1>New Event</h1>
+            <h2>Event date</h2>
+                <input type="text" ng-model="Event.eventLocationDate"    placeholder="example: march 2nd">
+            <h2>Event time</h2>
+                <input type="text" ng-model="Event.eventLocationTime"    placeholder="example: 5pm-6pm">
+            <h2>Event location name</h2>
+                <input type="text" ng-model="Event.eventLocationName"    placeholder="example: black tap coffee">
+            <h2>Event address</h2>
+                <input type="text" ng-model="Event.eventLocationAddress" placeholder="example: 555 example street, charleston, sc, 29401">
+                <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
+        </div>
+
+        <div class="adminEditEvent">
+            <h1>Edit Event</h1>
+            <ul><li ng-repeat="Event in adminCtrl.Event">
+                <div>date: {{Event.eventLocationDate}}       </div>
+                <div>time: {{Event.eventLocationTime}}       </div>
+                <div>name: {{Event.eventLocationName}}       </div>
+                <div>address: {{Event.eventLocationAddress}} </div>
+                <a href="#/admin/edit/event/{{Event._id}}">         edit</a>
+                <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
+            </li></ul>
+        </div>
+    </div>
 
 
 
 
 
 
-<h1>New Event</h1>
-    <input type="text" ng-model="Event.eventLocationDate"    placeholder="date">
-    <input type="text" ng-model="Event.eventLocationTime"    placeholder="time">
-    <input type="text" ng-model="Event.eventLocationName"    placeholder="location name">
-    <input type="text" ng-model="Event.eventLocationAddress" placeholder="address">
-    <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
-<hr>
-<h1>Edit Event</h1>
-    <ul><li ng-repeat="Event in adminCtrl.Event">
-        <div>date: {{Event.eventLocationDate}}       </div>
-        <div>time: {{Event.eventLocationTime}}       </div>
-        <div>name: {{Event.eventLocationName}}       </div>
-        <div>address: {{Event.eventLocationAddress}} </div>
-        <a href="#/admin/edit/event/{{Event._id}}">         edit</a>
-        <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
-    </li></ul>
-<hr>
 
-<h1>New Photo For Gallery</h1>
-    <label>Photo for Gallery</label>
-    <input type="text" ng-model="Gallery.photo" placeholder="Gallery Photo">
-    <button ng-click="adminCtrl.addGallery(Gallery)">add photo</button>
-<hr>
-<h1>Edit Photos In Gallery</h1>
-    <ul><li ng-repeat="Gallery in adminCtrl.Gallery">
-        <img ng-src="{{Gallery.photo}}" alt="">
-        <a href="#/admin/edit/gallery/{{Gallery._id}}">edit</a>
-        <button ng-click="adminCtrl.deleteGallery(Gallery._id)">delete</button>
-    </li></ul>
+
+
+
+    <div class="adminSlide">
+        <div class="adminAddGallery">
+            <h1>New Photo For Gallery</h1>
+            <h2>Photo for Gallery</h2>
+                <input type="text" ng-model="Gallery.photo" placeholder="Gallery Photo">
+            <button ng-click="adminCtrl.addGallery(Gallery)">add photo</button>
+        </div>
+
+        <div class="adminEditGallery">
+            <h1>Edit Photos In Gallery</h1>
+            <ul><li ng-repeat="Gallery in adminCtrl.Gallery">
+                <img ng-src="{{Gallery.photo}}" alt="">
+                <a href="#/admin/edit/gallery/{{Gallery._id}}">edit</a>
+                <button ng-click="adminCtrl.deleteGallery(Gallery._id)">delete</button>
+            </li></ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="adminSlide">
+        <div class="adminAddPerson">
+            <h1>add featured person (5 person max)</h1>
+            <h2>picture url</h2>
+                <input type="text" ng-model="Person.featuredPicture"    placeholder="Picture">
+            <h2>first name</h2>
+                <input type="text" ng-model="Person.featuredFirstName"  placeholder="First Name">
+            <h2>last name</h2>
+                <input type="text" ng-model="Person.featuredLastName"   placeholder="Last Name">
+            <h2>website</h2>
+                <input type="text" ng-model="Person.featuredWebsite"    placeholder="Website">
+            <h2>profession</h2>
+                <input type="text" ng-model="Person.featuredProfession" placeholder="Profession">
+            <h2>short bio</h2>
+                <input type="text" ng-model="Person.featuredBio"        placeholder="Bio">
+            <h2>question 1</h2>
+                <input type="text" ng-model="Person.questionOne"        placeholder="question 1">
+            <h2>answer 1</h2>
+                <input type="text" ng-model="Person.answerOne"          placeholder="answer 1">
+            <h2>question 2</h2>
+                <input type="text" ng-model="Person.questionTwo"        placeholder="question 2">
+            <h2>answer 2</h2>
+                <input type="text" ng-model="Person.answerTwo"          placeholder="answer 2">
+            <h2>question 3</h2>
+                <input type="text" ng-model="Person.questionThree"      placeholder="question 3">
+            <h2>answer 3</h2>
+                <input type="text" ng-model="Person.answerThree"        placeholder="answer 3">
+            <button ng-click="adminCtrl.addPerson(Person)">Add Featured Person</button>
+        </div>
+
+        <div class="adminEditPerson">
+            <h1>Edit Featured Person (5 person max)</h1>
+
+            <ul><li ng-repeat="Person in adminCtrl.Person">
+                <img ng-src="{{Person.featuredPicture}}">
+                <div>first name: {{Person.featuredFirstName}} </div>
+                <div>last name:  {{Person.featuredLastName}}  </div>
+                <div>website:    {{Person.featuredWebsite}}   </div>
+                <div>profession: {{Person.featuredProfession}}</div>
+                <div>bio:        {{Person.featuredBio}}       </div>
+                <div>Q1:         {{Person.questionOne}}       </div>
+                <div>A1:         {{Person.answerOne}}         </div>
+                <div>Q2:         {{Person.questionTwo}}       </div>
+                <div>A2:         {{Person.answerTwo}}         </div>
+                <div>Q3:         {{Person.questionThree}}     </div>
+                <div>A3:         {{Person.answerThree}}       </div>
+                <a      href=    "#/admin/edit/person/{{Person._id}}">edit       </a>
+                <button ng-click="adminCtrl.deletePerson(Person._id)">delete</button>
+            </li></ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="adminSlide">
+        <div class="adminNewAbout">
+            <h1>New About/Rules (don't add if section already exist)</h1>
+
+            <h2>The challenge</h2>
+                <input type="text" ng-model="Rule.challenge" placeholder="challenge">
+            <h2>The solution</h2>
+                <input type="text" ng-model="Rule.solution"  placeholder="solution">
+            <h2>rule 1</h2>
+                <input type="text" ng-model="Rule.ruleOne"   placeholder="rule1">
+            <h2>rule 2</h2>
+                <input type="text" ng-model="Rule.ruleTwo"   placeholder="rule2">
+            <button ng-click="adminCtrl.addRule(Rule)">Add About/rule Section</button>
+        </div>
+
+        <div class="adminEditAbout">
+            <h1>Edit About/Rules</h1>
+            <ul><li ng-repeat="Rule in adminCtrl.Rule">
+                <div>The Challenge:  {{Rule.challenge}}</div>
+                <div>Our Solution:   {{Rule.solution}}</div>
+                <div>Rule 1: {{Rule.ruleOne}}</div>
+                <div>Rule 2: {{Rule.ruleTwo}}</div>
+                <a href="#/admin/edit/rule/{{Rule._id}}">edit</a>
+                <button ng-click="adminCtrl.deleteRule(Rule._id)">delete</button>
+            </li></ul>
+        </div>
+    </div>
+
+
+
+
+</div>

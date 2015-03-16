@@ -184,6 +184,36 @@
                 deleteGallery: deleteGallery,
             }
         })
+        .factory('ContactService', function ($http, $rootScope) {
+
+            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-contact';
+
+            var createContact = function (Contact) {
+                $http.post(url, Contact);
+                $rootScope.$broadcast('Contact:created');
+            };
+            var getContact = function () {
+                return $http.get(url);
+            };
+            var getSingleContact = function (Contact) {
+                return $http.get(url + '/' + Contact);
+            };
+            var updateContact = function (item, Contact) {
+                $http.put(url + '/' + Contact, item);
+                $rootScope.$broadcast('Contact:updated');
+            };
+            var deleteContact = function (Contact) {
+                $http.delete(url + '/' + Contact);
+                $rootScope.$broadcast('Contact:deleted');
+            };
+            return {
+                createContact: createContact,
+                getContact: getContact,
+                getSingleContact: getSingleContact,
+                updateContact: updateContact,
+                deleteContact: deleteContact,
+            }
+        })
 
 
 
