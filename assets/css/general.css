@@ -25,3 +25,7 @@ a {
 .hide {
     display: none;
 }
+
+button {
+    outline: none;
+}
