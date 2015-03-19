@@ -1,6 +1,6 @@
 <!-- navbar navbar navbar navbar navbar navbar navbar navbar-->
-<div class="navbar">
-    <div class="containerNav">
+<div class="navbar ">
+    <div class="containerNav ">
         <div class="leftNav">
             <a class="home" href="#/" ><img class="logo" src="../assets/images/company.png" alt=""></a>
         </div>
@@ -20,37 +20,39 @@
 
 
 <!-- 111111 splash splash splash splash splash splash splash splash -->
-    <div class="slide" id="slide1" >
-        <div class="slogan">let's talk side projects.</div>
+    <div class="slide" id="slide1">
+        <div class="row">
+            <div class="slogan col-lg-12 centerText">let's talk side projects.</div>
+        </div>
     </div>
 
 
 
 <!-- 22222222 about about about about about about about about -->
     <div class="slide" id="slide2">
-        <div class="containerEvent">
-            <div class="slide3top">
-                <h1 class="h1event">UPCOMING EVENT</h1>
-                <div class="fancyLineBlack"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 bigTextSlide2 centerText">upcoming event</div>
+            </div>
+            <div class="redLine centerText"></div>
+            <div class="row">
                 <ul>
-                    <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
-                        <div class="eventText eventDate">    {{Event.eventLocationDate}}   </div>
-                        <div class="eventText eventTime">    {{Event.eventLocationTime}}   </div>
-                        <div class="eventText eventLocation">{{Event.eventLocationName}}   </div>
-                        <div class="eventText eventAddress"> {{Event.eventLocationAddress}}</div>
+                    <li ng-repeat="Event in mainCtrl.Event">
+                        <div class="smallTextSlide2 col-lg-12 centerText">{{Event.eventLocationDate}}</div>
+                        <div class="smallTextSlide2 col-lg-12 centerText">{{Event.eventLocationTime}}</div>
+                        <div class="smallTextSlide2 col-lg-12 centerText">{{Event.eventLocationName}}</div>
+                        <div class="smallTextSlide2 col-lg-12 centerText">{{Event.eventLocationAddress}}</div>
                     </li>
                 </ul>
-                <div class="fancyLineBlack"></div>
             </div>
-            <div class="slide3bottom">
-                <div class="slide3bottomLeft">
-                    <div class="map" id="map" >
-                        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
-                        </ui-gmap-google-map>
-                    </div>
+            <div class="redLine centerText"></div>
+            <div class="row">
+                <div class="col-lg-6 slide1Boxes">
+                    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                        <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
+                    </ui-gmap-google-map>
                 </div>
-                <div class="slide3bottomRight">
+                <div class="col-lg-6 slide1Boxes">
                     <div class="containerForm">
                         <form class="rsvpForm">
                             <input placeholder="Name*"    type="text" ng-model="Rsvp.name"      ng-required="'true'">
@@ -61,8 +63,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -70,36 +70,36 @@
 
 <!-- 3333333 event event event event event event event event event -->
     <div class="slide" id="slide3">
-        <div>
+        <div class="container">
             <ul>
                 <li ng-repeat="Rule in mainCtrl.Rule">
-                    <div class="containerSlide">
-                        <div class="slide2whole">
-                            <div class="slide2top">
-                                <div class="aboutUs">       the challenge     </div>
-                                <div class="aboutStatement">{{Rule.challenge}}</div>
-                            </div>
-                        <div class="fancyLine"></div>
-                            <div class="slide2middle">
-                                <div class="aboutUs">       our solution      </div>
-                                <div class="aboutStatement">{{Rule.solution}} </div>
-                            </div>
-                        <div class="fancyLine"></div>
-                            <div class="slide2bottom">
-                                <div class="ourRules">we only have two rules</div>
-                                <div class="slide2bottomLeft">
-                                    <div class="ruleNumber">1             </div>
-                                    <div class="ruleText">{{Rule.ruleOne}}</div>
-                                </div>
-                                <div class="slide2bottomRight">
-                                    <div class="ruleNumber">2             </div>
-                                    <div class="ruleText">{{Rule.ruleTwo}}</div>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="bigTextSlide3   col-lg-12 centerText" >the challenge</div>
+                        <div class="smallTextSlide3 col-lg-12 centerText" >{{Rule.challenge}}</div>
+                    </div>
+                    <div class="whiteLine       centerText" ></div>
+                    <div class="row">
+                        <div class="bigTextSlide3   col-lg-12 centerText" >our solution</div>
+                        <div class="smallTextSlide3 col-lg-12 centerText" >{{Rule.solution}}</div>
+                    </div>
+                    <div class="whiteLine       centerText" ></div>
+                    <div class="row">
+                        <div class="bigTextSlide3   col-lg-12 centerText" >we only have two rules</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 ruleBox" >
+                            <div class="ruleNumber col-lg-12 centerText">1              </div>
+                            <div class="smallTextSlide3 col-lg-12 centerText">{{Rule.ruleOne}}</div>
+                        </div>
+                        <div class="col-lg-6 ruleBox">
+                            <div class="ruleNumber col-lg-12 centerText">2              </div>
+                            <div class="smallTextSlide3 col-lg-12 centerText">{{Rule.ruleTwo}}</div>
                         </div>
                     </div>
                 </li>
             </ul>
+        </div>
     </div>
 
 
@@ -165,33 +165,38 @@
 
 <!-- 6666666666 contact contact contact contact contact contact contact contact contact contact -->
     <div class="slide" id="slide6">
-        <div class="containerContact">
-            <div class="contactLeft">
-                <form class="contactForm">
-                    <label>*YOUR NAME</label>
-                    <input type="text" ng-required="'true'" ng-model="Contact.name">
-                    <label>*YOUR EMAIL</label>
-                    <input type="text" ng-required="'true'" ng-model="Contact.email">
-                    <label>YOUR WEBSITE</label>
-                    <input type="text" ng-model="Contact.website">
-                    <label>YOUR MESSAGE</label>
-                    <textarea id="contactMessage" ng-model="Contact.message"></textarea>
-                    <button class="contactFormButton" ng-click="mainCtrl.addContact(Contact)">SEND YOUR MESSAGE</button>
-
-                </form>
-            </div>
-            <div class="contactRight">
-                <div class="contactBig">  say hello!               </div>
-                <div class="contactSmall">casdfasdfsafsadfsadfasfas</div>
-                <div class="contactSmall">asdfasfsafasfsaffa       </div>
-                <br>
-                <div class="contactSmall">Charleston, SC           </div>
-                <div class="contactSmall">843-555-5555             </div>
-                <div class="contactSmall">example@gmail.com        </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form class="contactForm">
+                        <label>*YOUR NAME</label>
+                        <input type="text" ng-required="'true'" ng-model="Contact.name">
+                        <label>*YOUR EMAIL</label>
+                        <input type="text" ng-required="'true'" ng-model="Contact.email">
+                        <label>YOUR WEBSITE</label>
+                        <input type="text" ng-model="Contact.website">
+                        <label>YOUR MESSAGE</label>
+                        <textarea id="contactMessage" ng-model="Contact.message"></textarea>
+                        <button class="contactFormButton" ng-click="mainCtrl.addContact(Contact)">SEND YOUR MESSAGE</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12 bigTextSlide6">  say hello!               </div>
+                        <div class="col-lg-12 smallTextSlide6">casdfasdfsafsadfsadfasfas</div>
+                        <div class="col-lg-12 smallTextSlide6">asdfasfsafasfsaffa       </div>
+                        <br>
+                        <div class="col-lg-12 smallTextSlide6">Charleston, SC           </div>
+                        <div class="col-lg-12 smallTextSlide6">843-555-5555             </div>
+                        <div class="col-lg-12 smallTextSlide6">example@gmail.com        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+    
     <div class="footer">
         <div class="containerFooter">
             <h1>© 2015 Students Collaborate</h1>
