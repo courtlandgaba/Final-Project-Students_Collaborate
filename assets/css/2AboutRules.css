@@ -7,55 +7,55 @@
     height: 100%;
     position: relative;
 }
+.slide2whole {
+    height: 100vh;
+    padding: 75px 0;
+}
 .slide2top {
     display: block;
-    height: 40vh;
     width: 100%;
     text-align: center;
-    padding: 70px 0 0 0;
 }
-.slide2topLeft {
-    display: inline-block;
-    width: 50%;
-    float:left;
-}
-.slide2topRight {
-    display: inline-block;
-    width: 50%;
-    float:right;
-}
-.slide2bottom {
+.slide2middle, .slide2bottom, .fancyLine {
     display: block;
-    height: 40vh;
     width: 100%;
     text-align: center;
-    padding: 50px 0 0 0;
+    padding-top: 47.5px;
+}
+.fancyLine {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid white;
+}
+.slide2bottomLeft, .slide2bottomRight {
+    display: inline-block;
+    width: 220px;
+    height: 250px;
 }
 .slide2bottomLeft {
-    display: inline-block;
-    width: 50%;
     float:left;
+    margin-left: 210px;
 }
 .slide2bottomRight {
-    display: inline-block;
-    width: 50%;
     float:right;
+    margin-right: 210px;
 }
-
-.aboutUs {
-    color: #2b2925;
-    font-size: 30px;
+.aboutUs, .ourRules {
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 24px;
     line-height: 36px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
-.aboutStatement {
-    font-family: Lato, sans-serif;
-    color: #2b2925;
+.aboutStatement, .ruleText {
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: white;
     font-size: 20px;
     line-height: 24px;
     font-weight: 300;
@@ -63,21 +63,19 @@
 }
 
 .ruleNumber {
-    color: #2b2925;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 5px;
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom: 20px;
-}
-.ruleText {
-    font-family: Lato, sans-serif;
-    color: #2b2925;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 300;
-    text-align:center;
+    border: 1px solid white;
+    border-radius: 100px;
+    display: block;
+    width: 40px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
 }

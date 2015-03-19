@@ -9,10 +9,9 @@
     height: 90px;
     width: 100%;
     position: fixed;
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(255, 255, 255);
     z-index: 30;
-    border-bottom: 3px solid rgb(151, 7, 12);
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgb(153, 153, 153);
 
 }
 .leftNav {
@@ -36,7 +35,7 @@
     text-decoration: none;
     padding-left: 5px;
     font-family: Montserrat, sans-serif;
-    color: #2b2925;
+    color: rgb(53, 53, 53);
     text-transform: uppercase;
     font-size: 13px;
     padding-left: 20px;

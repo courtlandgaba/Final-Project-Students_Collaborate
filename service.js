@@ -65,9 +65,10 @@
          })
          .factory('ConfirmService', function ($http, $rootScope) {
 
-              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmmmm';
+              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-rsvp-confirmmmmm';
 
               var createConfirm = function (Confirm) {
+                  delete Confirm._id;
                   $http.post(url, Confirm);
                   $rootScope.$broadcast('Confirm:created');
               };
@@ -97,6 +98,7 @@
          .factory('EventService', function ($http, $rootScope) {
 
              var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-event';
+
 
              var createEvent = function (Event) {
                  $http.post(url, Event);

@@ -5,101 +5,73 @@
     margin-right: auto;
     max-width: 940px;
     height: 100%;
-}
-.slide3top {
-    display: block;
-    width: 100%;
-    height: 40vh;
-}
-.slide3bottom {
-    display: block;
-    width: 100%;
-    text-align: center;
-    height: 40vh;
+    padding: 55px 0;
+    position: relative;
 }
 
-
-
-
-
-.slide3top h1 {
-    font-family: Montserrat, sans-serif;
-    color: white;
+.h1event {
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(53, 53, 53);
     font-size: 43px;
     line-height: 49px;
     font-weight: 700;
     letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-    padding-top: 40px;
-    border-bottom: 3px solid rgb(151, 7, 12);
-    padding-bottom: 5px;
+    text-align: center;
+}
+.slide3top {
+    display: block;
+    width: 100%;
+    height: 45vh;
+}
+.slide3bottom {
+    display: block;
+    width: 100%;
+}
 
-}
-.eventInfo {
-    padding-top: 20px;
-}
-.eventText {
-    font-family: Montserrat, sans-serif;
-    color: white;
-    font-size: 34px;
-    line-height: 24px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-    padding-bottom: 10px;
-}
 .slide3bottomLeft {
     display: inline-block;
-    width: 50%;
+    width: 48%;
     float:left;
-    background-color: white;
+    height: 250px;
 }
-.slide3bottomRightRsvp {
+.slide3bottomRight {
     display: inline-block;
-    width: 50%;
-    float:right;
-    background-color: rgb(151, 7, 12);
-
+    width: 48%;
+    float: right;
 }
 .containerForm {
     height: 250px;
-    padding: 12px;
+    padding: 10px;
+    background-color: rgba(190, 190, 190, 0.65);
+
 }
-.containerForm h1 {
-    color: white;
+.h1form{
+    color: rgb(84, 84, 84);
     font-family: Montserrat, sans-serif;
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 400;
-    letter-spacing: 4.5px;
-    padding-bottom: 12px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-
-
+    letter-spacing: 0;
+    margin-bottom: 8px;
+    text-align: center;
 
 }
-
-
-
-
 .rsvpForm input {
     width: 100%;
-    height: 35px;
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0);
+    height: 46px;
     font-family: Montserrat, sans-serif;
-    color: white;
-    font-size: 20px;
+    color: rgb(84, 84, 84);
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: none;
     list-style-type: none;
-    outline:none;
-    margin-bottom: 10px;
+    outline: none;
+    margin-bottom: 14px;
     padding-left: 8px;
-    padding-top: 4px;
+    padding-top: 2px;
+    border: 1px solid rgb(213, 213, 213);
 }
 
 .rsvpForm textarea {
@@ -109,115 +81,79 @@
     display: block;
     width: 100%;
     height: 50px;
-    background-color: white;
+    background-color: rgb(151, 7, 12);
     font-family: Montserrat, sans-serif;
-    color: rgb(151, 7, 12);
-    font-size: 20px;
-    border: none;
+    color: white;
+    font-size: 14px;
+    border: 1px solid rgb(213, 213, 213);
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
-    cursor:pointer;
-    border: 1px solid white;
-    letter-spacing: 4px;
+    cursor: pointer;
+    border: 1px solid rgb(84, 84, 84);
+    letter-spacing: 3px;
     outline: none;
 
 }
 .rsvpFormButton:hover {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(85, 85, 85, 0);
     color: white;
+
+}
+
+
+
+
+
+.eventSmallText {
+    display :inline-block;
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(53, 53, 53);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 72px;
+    text-align: left;
+
+
+
+}
+
+li .eventText {
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(153, 153, 153);
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-top: 12px;
+    text-align: center;
+    display: block;
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+
+}
+.fancyLineBlack {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(151, 7, 12);
+    padding-top: 40px;
+    margin-bottom: 25px;
+}
+
+.slide3bottom {
+    display: block;
+    width: 100%;
 }
 
 .map {
+    height: 240px;
+    width: 100%;
+}
+.angular-google-map-container {
     height: 250px;
-    width: 480px;
-}
-
-
-
-.containerList {
-    height: 250px;
-    margin: 12px;
-}
-
-
-.slide3bottomRightList {
-    height: 250px;
-    width: 470px;
-    background-color: white;
-    position: absolute;
-    left: 720px;
-    overflow: scroll;
-
-}
-.guestList {
-    text-align: left;
-    border-bottom: 1px solid #63615c;
-    padding: 8px 0;
-}
-.slide3bottomRightList h1 {
-    color: rgb(151, 7, 12);
-    font-family: Montserrat, sans-serif;
-    font-size: 27px;
-    font-weight: 400;
-    letter-spacing: 4.5px;
-    padding-bottom: 6px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-    border-bottom: 1px solid rgb(151, 7, 12);
-}
-
-.guestName, .guestEmail {
-    font-family: Montserrat, sans-serif;
-    color: #2b2925;
-    font-size: 17px;
-    font-weight: 300;
-}
-.guestWebsite {
-    font-size: 17px;
-    font-weight: 300;
-}
-.guestName {
-    font-weight: 500;
-}
-
-#rsvpButton {
-    height: 30px;
-    width: 150px;
-    background-color: rgb(151, 7, 12);
-    position: absolute;
-    left: 1040px;
-    top: 281px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    color: white;
-    font-family: Montserrat, sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    letter-spacing: 4.5px;
-    padding: 3px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-}
-#guestButton {
-    height: 30px;
-    width: 150px;
-    background-color: white;
-    position: absolute;
-    left: 890px;
-    top: 281px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    color: rgb(151, 7, 12);
-    font-family: Montserrat, sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    letter-spacing: 4.5px;
-    padding: 3px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-
-
-
+    width: 100%;
 }

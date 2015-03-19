@@ -3,7 +3,7 @@
     margin: 0;
     height: 90px;
     width: 100%;
-    background-color: #2b2925;
+    background-color: rgb(53, 53, 53);
 }
 .containerFooter {
     margin-left: auto;
@@ -13,10 +13,28 @@
 
 .containerFooter h1 {
     display: inline-block;
-    color: #63615c;
+    color: white;
     font-family: Lato, sans-serif;
     font-size: 17px;
     line-height: 24px;
     font-weight: 300;
     padding-top: 30px;
+}
+
+
+
+.social {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+
+}
+
+.social a{
+    display: inline-block;
+    margin:0;
+    padding: 0;
+}
+.social img {
+    height: 50px;
 }

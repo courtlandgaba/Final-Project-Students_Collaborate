@@ -54,6 +54,89 @@
         });
         mainCtrl.currentIndex = $routeParams.EventId;
 
+
+
+
+
+
+
+
+
+
+        $scope.map = {
+            center: {
+                latitude: 32.783224,
+                longitude: -79.937603
+            },
+            zoom: 16,
+        };
+        $scope.marker = {
+            id: 0,
+            coords: {
+                latitude: 32.783224,
+                longitude: -79.937603
+            },
+        };
+
+
+
+
+        // window.onload = function () {
+        //
+        //     var latlng = new google.maps.LatLng(53.385873, -1.471471);
+        //
+        //     var styles = [
+        //         {
+        //             featureType: "landscape",
+        //             stylers: [
+        //                 { color: '#eeddee' }
+        //             ]
+        //         },{
+        //             featureType: "natural",
+        //             stylers: [
+        //                 { hue: '#ff0000' }
+        //             ]
+        //         },{
+        //             featureType: "road",
+        //             stylers: [
+        //                 { hue: '#5500aa' },
+        //                 { saturation: -70 }
+        //             ]
+        //         },{
+        //             featureType: "building",
+        //             elementType: "labels",
+        //             stylers: [
+        //                 { hue: '#000066' }
+        //             ]
+        //         },{
+        //             featureType: "poi", //points of interest
+        //             stylers: [
+        //                 { hue: '#0044ff' }
+        //             ]
+        //         }
+        //     ];
+        //
+        //
+        //     var myOptions = {
+        //         zoom: 14,
+        //         center: latlng,
+        //         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        //         disableDefaultUI: true,
+        //         styles: styles
+        //     };
+        //
+        //     map = new google.maps.Map(document.getElementById('map'), myOptions);
+        // }
+
+
+
+
+
+
+
+
+
+
     //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
             mainCtrl.singlePerson=person;
@@ -85,18 +168,6 @@
             ContactService.createContact(Contact);
             $location.path('/');
         };
-     ///////////events////////
-        $('#guestButton').on('click', function(){
-            console.log('asdfsadfasdfasdf');
-            $('.slide3bottomRightList').removeClass('hide');
-            $('.slide3bottomRightRsvp').addClass('hide');
-        });
-        $('#rsvpButton').on('click', function(){
-            console.log('asdfsadfasdfasdf');
-            $('.slide3bottomRightRsvp').removeClass('hide');
-            $('.slide3bottomRightList').addClass('hide');
-        });
-
 
     })
 

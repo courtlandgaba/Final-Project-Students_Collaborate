@@ -1,15 +1,1 @@
-.social {
-    position: fixed;
-    left: 0;
-    top: 40%;
-    z-index: 30;
-}
 
-.social a{
-    display: block;
-    margin:0;
-    padding: 0;
-}
-.social img {
-    height: 50px;
-}

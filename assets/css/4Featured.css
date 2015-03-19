@@ -14,16 +14,16 @@
     margin: 0 auto;
 }
 .containerPeople h1 {
-    text-align: center;
-    color: #2b2925;
-    font-size: 28px;
-    line-height: 36px;
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(53, 53, 53);
+    font-size: 40px;
+    line-height: 49px;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-top: 40px;
-    padding-bottom: 30px;
+    text-align: center;
+    padding: 55px 0 30px 0;
 }
 #slide4 ul {
     margin-left: auto;
@@ -41,28 +41,20 @@
 
 .thumb {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 100px;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
-    border: 5px solid #2b2925;
-}
-.thumbName {
-    font-family: Lato, sans-serif;
-    color: #2b2925;
-    font-size: 12px;
-    line-height: 24px;
-    font-weight: 300;
-    text-align:center;
-    text-transform: uppercase;
-    width: 120px;
-
+    z-index: 50;
+    margin: 15px 14px 0 14px;
+    -webkit-filter: grayscale(100%);
+     filter: grayscale(100%);
 }
 .big {
     position: absolute;
-    top: 250px;
+    top: 300px;
     left: 2000px;
     -webkit-transition: left .7s ease;
     -moz-transition: left .7s ease;
@@ -72,26 +64,26 @@
     width: 940px;
     padding-top: 50px;
 }
-
+.fancyLineRed {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(151, 7, 12);
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
 
 .containerPeople a:focus .thumb {
-    border: 5px solid rgb(151, 7, 12);
-
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 .containerPeople a:hover .thumb {
-    border: 5px solid rgb(151, 7, 12);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
-
-.containerPeople a:focus .big{
-    top: 250px;
-    left: 240px;
-    position: absolute;
-    margin-left: auto;
-    margin-right:auto;
-}
-.containerPeople a:active .big{
-    top: 250px;
-    left: 210px;
+.containerPeople a:focus .big {
+    top: 300px;
+    left: 260px;
     position: absolute;
     margin-left: auto;
     margin-right:auto;
@@ -104,53 +96,65 @@
     float: left;
 }
 .leftFavTop {
-    margin-left: 10px;
     width: 240px;
     height: 240px;
-    background-color: rgb(245, 242, 242);
-    margin-bottom: 15px;
     border-bottom: 3px solid rgb(151, 7, 12);
-    border-top: 3px solid #2b2925;
-
-
 }
-.leftFavTop img {
-    height: 100%;
-    width: 100%;
-}
-.leftFavBottom {
-    margin-left: 10px;
-    width: 260px;
-    height: 150px;
-    /* background-color: rgb(151, 7, 12); */
-}
-.leftFavBottom div {
-    font-family: Lato, sans-serif;
-    color: #2b2925;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
-    padding-bottom: 0px;
-
-}
-.favName {
-    font-size: 28px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-}
-
 .rightFav {
     display: inline-block;
     width: 65%;
     height: 100%;
     float: right;
 }
+.leftFavTop img {
+    height: 100%;
+    width: 100%;
+}
+.leftFavBottom {
+    width: 260px;
+    height: 150px;
+}
+
+.favName {
+    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: rgb(53, 53, 53);
+}
+.favWebsite {
+    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    padding-bottom: 5px;
+    color: rgb(53, 53, 53);
+
+}
+.favProfession {
+    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    padding-bottom: 5px;
+    color: rgb(53, 53, 53);
+}
+.favBio {
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+    font-weight: 300;
+}
+
 
 .Q {
-    color: #2b2925;
+    color: rgb(53, 53, 53);
     font-size: 28px;
     line-height: 36px;
     font-weight: 700;
@@ -158,17 +162,16 @@
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 7px;
+    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .A {
-    font-family: Lato, sans-serif;
-    color: #2b2925;
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
     font-size: 17px;
     line-height: 24px;
     font-weight: 300;
     padding-bottom: 20px;
     padding-left: 55px;
-}
-#favBio {
-    font-size: 14px;
+    color: rgb(153, 153, 153);
+
 }

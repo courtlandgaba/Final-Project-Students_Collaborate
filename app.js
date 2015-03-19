@@ -4,7 +4,8 @@
 
     angular.module('eventApp', [
         'ngRoute',
-        'angular-carousel'
+        'angular-carousel',
+        'uiGmapgoogle-maps'
 
     ])
     .config(function ($routeProvider) {

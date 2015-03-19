@@ -14,11 +14,7 @@
     </div>
 </div>
 
-<div class="social">
-    <a href=""><img src="../assets/images/facebook.png" alt=""></a>
-    <a href="https://twitter.com/studentscollab"><img src="../assets/images/twitter.png" alt=""></a>
-    <a href="https://instagram.com/studentscollab"><img src="../assets/images/instagram.png" alt=""></a>
-</div>
+
 <div class="wrapper">
 
 
@@ -32,44 +28,10 @@
 
 <!-- 22222222 about about about about about about about about -->
     <div class="slide" id="slide2">
-        <div>
-            <ul>
-                <li ng-repeat="Rule in mainCtrl.Rule">
-                    <div class="containerSlide">
-                        <div class="slide2top">
-                            <div class="slide2topLeft">
-                                <div class="aboutUs">       THE CHALLENGE     </div>
-                                <div class="aboutStatement">{{Rule.challenge}}</div>
-                            </div>
-                            <div class="slide2topRight">
-                                <div class="aboutUs">       OUR SOLUTION      </div>
-                                <div class="aboutStatement">{{Rule.solution}} </div>
-                            </div>
-                        </div>
-
-                        <div class="slide2bottom">
-                            <div class="slide2bottomLeft">
-                                <div class="ruleNumber">Rule 1             </div>
-                                <div class="ruleText">{{Rule.ruleOne}}</div>
-                            </div>
-                            <div class="slide2bottomRight">
-                                <div class="ruleNumber">Rule 2             </div>
-                                <div class="ruleText">{{Rule.ruleTwo}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
-<!-- 3333333 event event event event event event event event event -->
-    <div class="slide" id="slide3">
         <div class="containerEvent">
             <div class="slide3top">
-                <h1>UPCOMING EVENT:</h1>
+                <h1 class="h1event">UPCOMING EVENT</h1>
+                <div class="fancyLineBlack"></div>
                 <ul>
                     <li class="eventInfo" ng-repeat="Event in mainCtrl.Event">
                         <div class="eventText eventDate">    {{Event.eventLocationDate}}   </div>
@@ -78,51 +40,66 @@
                         <div class="eventText eventAddress"> {{Event.eventLocationAddress}}</div>
                     </li>
                 </ul>
-            <!-- 3.5 3.5 3.5 rsvp rsvp rsvp rsvp rsvp rsvp -->
-
-
+                <div class="fancyLineBlack"></div>
             </div>
             <div class="slide3bottom">
                 <div class="slide3bottomLeft">
-                    <div class="map" height="300px" width="300px"></div>
+                    <div class="map" id="map" >
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
+                        </ui-gmap-google-map>
+                    </div>
                 </div>
-                <div class="slide3bottomRightRsvp">
+                <div class="slide3bottomRight">
                     <div class="containerForm">
-                        <h1>let us know you're coming!</h1>
                         <form class="rsvpForm">
-                            <input placeholder="*YOUR NAME"    type="text" ng-model="Rsvp.name"      ng-required="'true'">
-                            <input placeholder="*YOUR EMAIL"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
-                            <input placeholder=" YOUR WEBSITE" type="text" ng-model="Rsvp.website"   >
-
+                            <input placeholder="Name*"    type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                            <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                            <input placeholder="Website" type="text" ng-model="Rsvp.website"   >
                             <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >R.S.V.P.</button>
                         </form>
                     </div>
                 </div>
-                <div class="slide3bottomRightList hide">
-                    <div class="containerList">
-                        <h1>confirmed guests!</h1>
-                        <ul>
-                            <li class="guestList" ng-repeat="Confirm in mainCtrl.Confirm">
-                                <div class="guestName"> {{Confirm.name}}</div>
-                                <div class="guestEmail"> {{Confirm.email}}</div>
-                                <a   class="guestWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="slide3bottomRightButtonRsvp">
-                    <div class="containerListButton">
-                        <button id="rsvpButton">R.S.V.P.</button>
-                    </div>
-                </div>
-                <div class="slide3bottomRightButtonList">
-                    <div class="containerListButton">
-                        <button id="guestButton">GUESTS!</button>
-                    </div>
-                </div>
             </div>
-        </div>
 
+
+        </div>
+    </div>
+
+
+
+<!-- 3333333 event event event event event event event event event -->
+    <div class="slide" id="slide3">
+        <div>
+            <ul>
+                <li ng-repeat="Rule in mainCtrl.Rule">
+                    <div class="containerSlide">
+                        <div class="slide2whole">
+                            <div class="slide2top">
+                                <div class="aboutUs">       the challenge     </div>
+                                <div class="aboutStatement">{{Rule.challenge}}</div>
+                            </div>
+                        <div class="fancyLine"></div>
+                            <div class="slide2middle">
+                                <div class="aboutUs">       our solution      </div>
+                                <div class="aboutStatement">{{Rule.solution}} </div>
+                            </div>
+                        <div class="fancyLine"></div>
+                            <div class="slide2bottom">
+                                <div class="ourRules">we only have two rules</div>
+                                <div class="slide2bottomLeft">
+                                    <div class="ruleNumber">1             </div>
+                                    <div class="ruleText">{{Rule.ruleOne}}</div>
+                                </div>
+                                <div class="slide2bottomRight">
+                                    <div class="ruleNumber">2             </div>
+                                    <div class="ruleText">{{Rule.ruleTwo}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
     </div>
 
 
@@ -130,13 +107,13 @@
 <!-- 4444444 featured people featured people featured people featured people featured people -->
         <div class="slide" id="slide4">
             <div class="containerPeople">
-                <h1>check out some of our members!</h1>
+                <h1>People you should know about!</h1>
+                <div class="fancyLineRed"></div>
                 <ul>
                     <li ng-repeat="Person in mainCtrl.Person">
                         <a class="slideThumb" href="">
+                            <div class="circleBorder"></div>
                             <img class="thumb" ng-src="{{Person.featuredPicture}}" alt="{{Person.featuredFirstName}} {{Person.featuredLastName}}" width="100px" height="100px">
-                            <div class="thumbName">{{Person.featuredFirstName}}</div>
-                            <div class="thumbName">{{Person.featuredLastName}} </div>
                             <div class="big">
                                 <div class="leftFav">
                                     <div class="leftFavTop">
@@ -146,7 +123,7 @@
                                         <div class="favName">      {{Person.featuredFirstName}} {{Person.featuredLastName}}</div>
                                         <div class="favWebsite">   {{Person.featuredWebsite}}                              </div>
                                         <div class="favProfession">{{Person.featuredProfession}}                           </div>
-                                        <div id="favBio">          {{Person.featuredBio}}                                  </div>
+                                        <div class="favBio">          {{Person.featuredBio}}                                  </div>
 
                                     </div>
                                 </div>
@@ -174,13 +151,14 @@
     <div class="slide" id="slide5">
         <div class="containerGallery">
             <h1>photo gallery</h1>
-                <ul>
-                    <li ng-repeat="Gallery in mainCtrl.Gallery">
-                        <img ng-src="{{Gallery.photo}}" alt="">
-                    </li>
-                </ul>
+                <div class="containerPhotos">
+                    <ul>
+                        <li ng-repeat="Gallery in mainCtrl.Gallery">
+                            <img ng-src="{{Gallery.photo}}" alt="">
+                        </li>
+                    </ul>
+                </div>
         </div>
-
     </div>
 
 
@@ -217,6 +195,11 @@
     <div class="footer">
         <div class="containerFooter">
             <h1>© 2015 Students Collaborate</h1>
+            <div class="social">
+                <a href=""><img src="../assets/images/facebook.png" alt=""></a>
+                <a href="https://twitter.com/studentscollab"><img src="../assets/images/twitter.png" alt=""></a>
+                <a href="https://instagram.com/studentscollab"><img src="../assets/images/instagram.png" alt=""></a>
+            </div>
         </div>
     </div>
 </div>

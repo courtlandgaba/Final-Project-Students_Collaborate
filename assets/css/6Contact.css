@@ -23,7 +23,7 @@
 .contactForm label {
     width: 390px;
     font-family: Lato, sans-serif;
-    color: #2b2925;
+    color: white;
     font-weight: 400;
     letter-spacing: 2px;
     margin-bottom: 5px;
@@ -63,7 +63,7 @@
     margin-top: 4px;
     background-color: white;
     font-family: Montserrat, sans-serif;
-    color: rgb(151, 7, 12);
+    color: rgb(53, 53, 53);
     font-size: 20px;
     border: none;
     transition: all 0.3s ease 0s;
@@ -72,7 +72,7 @@
     cursor:pointer;
 }
 .contactFormButton:hover {
-    background-color: rgb(151, 7, 12);
+    background-color: rgb(53, 53, 53);
     color: white;
     border: 1px solid white;
 }
@@ -87,7 +87,7 @@
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-    border-bottom: 3px solid rgb(151, 7, 12);
+    border-bottom: 3px solid rgb(53, 53, 53);
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(255, 255, 255);
 
@@ -95,7 +95,7 @@
 .contactSmall {
     padding-top: 10px;
     font-family: Lato, sans-serif;
-    color: #2b2925;
+    color: white;
     font-size: 20px;
     line-height: 24px;
     font-weight: 300;
