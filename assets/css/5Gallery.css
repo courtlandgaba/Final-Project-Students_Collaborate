@@ -16,8 +16,8 @@
 }
 #slide5 ul {
     overflow: scroll;
-    max-height: 480px;
-}
+/*     max-height: 480px;
+ */}
 #slide5 ul li {
     margin: 0;
     padding: 0;
