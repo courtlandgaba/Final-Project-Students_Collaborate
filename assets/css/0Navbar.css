@@ -1,7 +1,7 @@
 .containerNav {
-    width:940px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 970px;
 }
 .navbar {
     margin: 0;
@@ -9,24 +9,11 @@
     height: 90px;
     width: 100%;
     position: fixed;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(163, 163, 163);
     z-index: 30;
-    border-bottom: 1px solid rgb(153, 153, 153);
+    border-radius: 0;
 }
-.leftNav {
-    float: left;
-}
-.home {
-    display:table-cell;
-    vertical-align: middle;
-    height: 93px;
-    text-decoration: none;
-    padding-right: 5px;
 
-}
-.rightNav {
-    float:right;
-}
 .links {
     display:table-cell;
     vertical-align: middle;
@@ -34,7 +21,7 @@
     text-decoration: none;
     padding-left: 5px;
     font-family: Montserrat, sans-serif;
-    color: rgb(53, 53, 53);
+    color: white;
     text-transform: uppercase;
     font-size: 13px;
     padding-left: 20px;
@@ -45,8 +32,8 @@
     font-weight: 800;
 }
 .links:hover {
-    color: rgb(151, 7, 12);
+    color: #B0976D;
 }
-.logo {
-    height: 77px;
+.rightNav {
+    float:right;
 }

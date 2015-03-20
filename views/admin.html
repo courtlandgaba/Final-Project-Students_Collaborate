@@ -56,7 +56,10 @@
             <h2>Event location name</h2>
                 <input type="text" ng-model="Event.eventLocationName"    placeholder="example: black tap coffee">
             <h2>Event address</h2>
-                <input type="text" ng-model="Event.eventLocationAddress" placeholder="example: 555 example street, charleston, sc, 29401">
+                <input type="text" ng-model="Event.eventLocationAddress" placeholder="example: 555 example street">
+            <h2>Event City, State, zipcode</h2>
+                <input type="text" ng-model="Event.eventLocationCityStateZip" placeholder="example: charleston, sc, 29401">
+
                 <button ng-click="adminCtrl.addEvent(Event)">Add event</button>
         </div>
 
@@ -67,6 +70,8 @@
                 <div>time: {{Event.eventLocationTime}}       </div>
                 <div>name: {{Event.eventLocationName}}       </div>
                 <div>address: {{Event.eventLocationAddress}} </div>
+                <div>city,state,zip: {{Event.eventLocationCityStateZip}} </div>
+
                 <a href="#/admin/edit/event/{{Event._id}}">         edit</a>
                 <button ng-click="adminCtrl.deleteEvent(Event._id)">delete</button>
             </li></ul>

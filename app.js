@@ -8,6 +8,9 @@
         'uiGmapgoogle-maps'
 
     ])
+    .run(['$anchorScroll', function($anchorScroll) {
+      $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+    }])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -35,7 +38,6 @@
                 templateUrl: 'views/edit/editGallery.html',
                 controller: 'AdminController as adminCtrl'
             })
-    })
-
-    .constant('_', _)
+        })
+        .constant('_', _)
 })();

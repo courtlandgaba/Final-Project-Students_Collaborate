@@ -7,7 +7,7 @@
 //////////////////////main controller//////////////////////////////////////////
 //////////////////////main controller//////////////////////////////////////////
 
-    .controller('MainController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function ($anchorScroll, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
@@ -53,16 +53,7 @@
             mainCtrl.Event = event;
         });
         mainCtrl.currentIndex = $routeParams.EventId;
-
-
-
-
-
-
-
-
-
-
+///////////////////mpa stufff////////
         $scope.map = {
             center: {
                 latitude: 32.783224,
@@ -70,6 +61,7 @@
             },
             zoom: 16,
         };
+
         $scope.marker = {
             id: 0,
             coords: {
@@ -77,65 +69,6 @@
                 longitude: -79.937603
             },
         };
-
-
-
-
-        // window.onload = function () {
-        //
-        //     var latlng = new google.maps.LatLng(53.385873, -1.471471);
-        //
-        //     var styles = [
-        //         {
-        //             featureType: "landscape",
-        //             stylers: [
-        //                 { color: '#eeddee' }
-        //             ]
-        //         },{
-        //             featureType: "natural",
-        //             stylers: [
-        //                 { hue: '#ff0000' }
-        //             ]
-        //         },{
-        //             featureType: "road",
-        //             stylers: [
-        //                 { hue: '#5500aa' },
-        //                 { saturation: -70 }
-        //             ]
-        //         },{
-        //             featureType: "building",
-        //             elementType: "labels",
-        //             stylers: [
-        //                 { hue: '#000066' }
-        //             ]
-        //         },{
-        //             featureType: "poi", //points of interest
-        //             stylers: [
-        //                 { hue: '#0044ff' }
-        //             ]
-        //         }
-        //     ];
-        //
-        //
-        //     var myOptions = {
-        //         zoom: 14,
-        //         center: latlng,
-        //         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        //         disableDefaultUI: true,
-        //         styles: styles
-        //     };
-        //
-        //     map = new google.maps.Map(document.getElementById('map'), myOptions);
-        // }
-
-
-
-
-
-
-
-
-
 
     //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
@@ -167,6 +100,11 @@
         mainCtrl.addContact = function (Contact) {
             ContactService.createContact(Contact);
             $location.path('/');
+        };
+
+        $scope.scrollTo = function(div) {
+            $location.hash(div);
+            $anchorScroll();
         };
 
     })
@@ -328,6 +266,8 @@
         };
 
     })
+
+
 
 
 })();

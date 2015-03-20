@@ -1,23 +1,26 @@
 /* slide 6   contact */
+.container6 {
+    padding: 5px;
+}
+#slide6 .container {
+    padding-top: 150px;
+}
 .bigTextSlide6 {
     font-family: Lato, sans-serif;
-    color: white;
-    font-size: 43px;
+    color: #B0976D;
+    font-size: 2.688em;
     line-height: 49px;
     font-weight: 700;
     letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.29);
-    border-bottom: 3px solid rgb(53, 53, 53);
     padding-bottom: 5px;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 .smallTextSlide6 {
     padding-top: 10px;
     font-family: Lato, sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 1.250em;
     line-height: 24px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -35,10 +38,10 @@
     width: 390px;
     height: 50px;
     border: 1px solid white;
-    background-color: rgb(151, 7, 12);
+    background-color: rgb(18, 18, 18);
     font-family: Lato, sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 1.250em;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: none;
@@ -60,10 +63,10 @@
     width: 390px;
     height: 64px;
     margin-top: 4px;
-    background-color: white;
+    background-color: #B0976D;
     font-family: Montserrat, sans-serif;
-    color: rgb(53, 53, 53);
-    font-size: 20px;
+    color: white;
+    font-size: 1.250em;
     border: none;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -71,7 +74,13 @@
     cursor:pointer;
 }
 .contactFormButton:hover {
-    background-color: rgb(53, 53, 53);
-    color: white;
+    background-color: white;
+    color: #B0976D;
     border: 1px solid white;
+}
+
+.containerLeftSlide6 {
+    padding-left: 170px;
+}
+.containerLeftSlide6 {
 }

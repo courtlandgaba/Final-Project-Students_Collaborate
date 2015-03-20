@@ -1,29 +1,29 @@
 /* slide 4   featured people */
-.containerPeople{
-    padding: 0;
+#slide4 .container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 940px;
     height: 100%;
 }
-#slide4 {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
+.fancyLineRed {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    margin-bottom: 25px;
 }
-.containerPeople h1 {
+.biggestTextSlide4 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: rgb(53, 53, 53);
-    font-size: 40px;
+    color: #B0976D;
+    font-size: 2.500em;
     line-height: 49px;
     font-weight: 700;
     letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    padding: 55px 0 30px 0;
+    padding-bottom: 25px;
+
 }
 #slide4 ul {
     margin-left: auto;
@@ -32,15 +32,9 @@
 }
 #slide4 ul li {
     display: inline-block;
-    margin: 0 20px;
-
-}
-#slide4 a {
-    float: left;
 }
 
 .thumb {
-    position: relative;
     width: 100px;
     height: 100px;
     border-radius: 100px;
@@ -48,117 +42,72 @@
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     z-index: 50;
-    margin: 15px 14px 0 14px;
     -webkit-filter: grayscale(100%);
      filter: grayscale(100%);
+     padding: 0;
+     margin: 0 25px;
 }
-.big {
+#slide4 a:focus .thumb {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+#slide4 a:hover .thumb {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+#slide4 a:focus .containerBig {
+    top: 40%;
+    left: 19%;
     position: absolute;
-    top: 300px;
-    left: 2000px;
+}
+.containerBig {
+    position: absolute;
+    top: 40%;
+    left: 200%;
     -webkit-transition: left .7s ease;
     -moz-transition: left .7s ease;
     -o-transition: left .7s ease;
     -ms-transition: left .7s ease;
     transition: left .7s ease;
     width: 940px;
-    padding-top: 50px;
-}
-.fancyLineRed {
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid rgb(151, 7, 12);
-    padding-top: 10px;
-    margin-bottom: 25px;
 }
 
-.containerPeople a:focus .thumb {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-.containerPeople a:hover .thumb {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-.containerPeople a:focus .big {
-    top: 300px;
-    left: 260px;
-    position: absolute;
-    margin-left: auto;
-    margin-right:auto;
+.containerBig img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5px;
 }
 
 
 
-.leftFav {
-    display: inline-block;
-    float: left;
-}
-.leftFavTop {
-    width: 240px;
-    height: 240px;
-    border-bottom: 3px solid rgb(151, 7, 12);
-}
-.rightFav {
-    display: inline-block;
-    width: 65%;
-    height: 100%;
-    float: right;
-}
-.leftFavTop img {
-    height: 100%;
-    width: 100%;
-}
-.leftFavBottom {
-    width: 260px;
-    height: 150px;
-}
 
-.favName {
+
+.text1Slide4 {
     font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 1.250em;
     line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    color: rgb(53, 53, 53);
-}
-.favWebsite {
-    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 0px;
     padding-bottom: 5px;
-    color: rgb(53, 53, 53);
-
+    color: white;
 }
-.favProfession {
-    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    padding-bottom: 5px;
-    color: rgb(53, 53, 53);
-}
-.favBio {
+.text2Slide4 {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    color: rgb(153, 153, 153);
+    font-size: 0.875em;
+    color: rgb(163, 163, 163);
     line-height: 20px;
     font-weight: 300;
 }
 
-
+.containerQuestions {
+    padding-left: 50px;
+}
 .Q {
-    color: rgb(53, 53, 53);
-    font-size: 28px;
+    color: white;
+    font-size: 1.750em;
     line-height: 36px;
-    font-weight: 700;
-    letter-spacing: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 7px;
@@ -167,11 +116,10 @@
 
 .A {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    font-size: 17px;
+    font-size: 1.063em;
     line-height: 24px;
     font-weight: 300;
     padding-bottom: 20px;
-    padding-left: 55px;
-    color: rgb(153, 153, 153);
+    color: rgb(163, 163, 163);
 
 }

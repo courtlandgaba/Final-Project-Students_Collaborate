@@ -158,7 +158,7 @@
         })
         .factory('GalleryService', function ($http, $rootScope) {
 
-            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-photoooo';
+            var url = 'http://tiy-fee-rest.herokuapp.com/collections/courtland-final-photooooo';
 
             var createGallery = function (Gallery) {
                 $http.post(url, Gallery);

@@ -9,8 +9,8 @@
 
 .bigTextSlide3 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: white;
-    font-size: 24px;
+    color: #B0976D;
+    font-size: 1.600em;
     line-height: 36px;
     font-weight: 600;
     text-align: center;
@@ -22,8 +22,8 @@
 }
 .smallTextSlide3 {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    color: white;
-    font-size: 20px;
+    color: rgb(163, 163, 163);
+    font-size: 1.350em;
     line-height: 24px;
     font-weight: 300;
     text-align:center;
@@ -34,15 +34,21 @@
 .ruleNumber {
     font-family: Montserrat, sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 1.000em;
     font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
     margin-bottom: 20px;
-
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 42px;
+    left: 40%;
 }
 
-.ruleBox {
-    padding: 0 120px;
+.ruleBox1 {
+    padding: 0 100px 0 200px;
+}
+.ruleBox2 {
+    padding: 0 200px 0 100px;
 }

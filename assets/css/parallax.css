@@ -6,6 +6,7 @@
     padding:0;
     transform-style: inherit;
     position: relative;
+
 }
 .slide:before {
     content: "";
@@ -16,44 +17,39 @@
     right:0;
 }
 
+body {
+    background-color: rgb(28, 28, 28)}
 
 #slide1:before {
-    background-image: url("../images/splash2.jpg");
+    background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");
     transform: translateZ(-1px) scale(2);
     z-index:-1;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-color: #949494;
+    background-color: rgb(28, 28, 28);
+
 
 }
 #slide2 {
-    background-image: url("../images/dot.png");
-    background-color: white;
+    background-color: rgb(28, 28, 28);
+    background-attachment: fixed;
+}
+#slide3:before {
+    background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    background-color: rgb(28, 28, 28);
+}
+#slide4 {
+    background-color: rgb(28, 28, 28);
     background-attachment: fixed;
     min-height: 100vh;
 }
-#slide3:before {
+#slide5:before {
+    background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");
     transform: translateZ(-1px) scale(2);
     z-index:-1;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-color: #949494;
-}
-#slide4 {
-/*     background-image: url("../images/dot.png");
- */    background-color: white;
-    background-attachment: fixed;
-}
-#slide5:before {
-/*        background-image: url("../images/Splash.jpg");
- */       transform: translateZ(-1px) scale(2);
-       z-index:-1;
-       background-color: #949494;
-
-
-
+    background-color: rgb(28, 28, 28);
 }
 #slide6 {
-    background-color: rgb(151, 7, 12);
+    background-color: rgb(18, 18, 18);
     background-attachment: fixed;
 }
