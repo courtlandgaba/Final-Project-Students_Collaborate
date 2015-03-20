@@ -10,6 +10,12 @@
 .centerText {
     text-align: center;
 }
+.leftText {
+    text-align: left;
+}
+.rightText {
+    text-align: right;
+}
 .container {
     padding-top: 70px;
 }

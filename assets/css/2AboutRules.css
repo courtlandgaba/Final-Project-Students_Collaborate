@@ -1,18 +1,18 @@
 /* slide 3   about/rules */
 
-.whiteLine {
+.blackLine {
     width: 120px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(18, 18, 18);
     margin: 20px auto;
 
 }
 
-.bigTextSlide3 {
+.bigTextSlide2 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #B0976D;
     font-size: 1.600em;
     line-height: 36px;
-    font-weight: 600;
+    font-weight: 300;
     text-align: center;
     letter-spacing: 7px;
     text-decoration: none;
@@ -20,12 +20,12 @@
     padding-bottom: 10px;
 
 }
-.smallTextSlide3 {
+.smallTextSlide2 {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
     color: rgb(163, 163, 163);
     font-size: 1.350em;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 100;
     text-align:center;
     padding-bottom: 20px;
 
@@ -33,14 +33,14 @@
 
 .ruleNumber {
     font-family: Montserrat, sans-serif;
-    color: white;
+    color: rgb(163, 163, 163);
     font-size: 1.000em;
     font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid white;
+    border: 1px solid rgb(163, 163, 163);
     border-radius: 100px;
     width: 42px;
     left: 40%;

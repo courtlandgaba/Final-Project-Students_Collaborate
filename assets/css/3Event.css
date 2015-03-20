@@ -1,6 +1,6 @@
 /* slide 2   next event */
 #slide2 .container {
-    padding: 150px 0 0 0;
+    padding: 110px 0 0 0;
 }
 .redLine {
     width: 120px;
@@ -9,29 +9,29 @@
     border-bottom: 1px solid rgb(163, 163, 163);
     margin: 30px auto 50px auto;
 }
-.bigTextSlide2 {
+.bigTextSlide3 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #B0976D;
     font-size: 3em;
     line-height: 49px;
-    font-weight: 500;
+    font-weight: 100;
     letter-spacing: 7px;
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 50px;
 }
-.smallTextSlide2 {
+.smallTextSlide3 {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    color: white;
+    color: rgb(18, 18, 18);
     font-size: 2em;
     line-height: 20px;
-    font-weight: 200;
+    font-weight: 100;
     display: block;
     padding-left: 15px;
     letter-spacing: 2px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
 }
-.smallTexttSlide2 {
+.smallTexttSlide3 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: rgb(163, 163, 163);
     text-align: right;
@@ -103,6 +103,7 @@
     display: block;
     letter-spacing: 0px;
     text-align: center;
+    margin-bottom: 5px;
 }
 .rsvpButton {
     display: block;

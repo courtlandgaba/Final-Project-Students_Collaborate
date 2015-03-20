@@ -4,7 +4,7 @@
 .containerFooter {
     height: 90px;
     border-top: 1px solid rgba(165, 165, 165, 0.2);
-    width: 970px;
+    max-width: 970px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,7 +25,7 @@
     font-family: Lato, sans-serif;
     font-size: .7em;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 100;
     padding-top: 31px;
     letter-spacing: 3px;
     margin: 0 5px;
