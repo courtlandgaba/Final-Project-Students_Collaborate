@@ -21,7 +21,9 @@ body {
     background-color: rgb(28, 28, 28)}
 
 #slide1:before {
-    background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");
+    background-image: url("../images/splash.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
     transform: translateZ(-1px) scale(2);
     z-index:-1;
     background-color: rgb(28, 28, 28);

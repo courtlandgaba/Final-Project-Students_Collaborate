@@ -57,11 +57,11 @@
     position: absolute;
     top: 45%;
     left: 200%;
-    -webkit-transition: left .7s ease;
-    -moz-transition: left .7s ease;
-    -o-transition: left .7s ease;
-    -ms-transition: left .7s ease;
-    transition: left .7s ease;
+    -webkit-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    -o-transition: left .3s ease;
+    -ms-transition: left .3s ease;
+    transition: left .3s ease;
     width: 100vw;
 }
 
