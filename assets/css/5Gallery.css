@@ -25,7 +25,7 @@
 }
 #slide5 ul {
     overflow: scroll;
-    padding-bottom: 65px;
+    padding-bottom: 20px;
 /*     max-height: 480px;
  */}
 #slide5 ul li {
@@ -38,4 +38,29 @@
     margin-right: auto;
     border-bottom: 1px solid white;
     margin: 30px auto 50px auto;
+}
+.showMore {
+    font-family: Montserrat, sans-serif;
+    display: inline-block;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid white;
+    padding: .8em;
+    text-align: center;
+    margin-top: 2em;
+    letter-spacing: .25em;
+    font-weight: 700;
+    color: #B0976D;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    margin-bottom: 40px;
+}
+
+.showMore:hover {
+    background-color: #B0976D;
+    border: 1px solid #B0976D;
+    color: white;
+
+
 }

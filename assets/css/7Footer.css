@@ -2,7 +2,7 @@
     background-color: rgb(18, 18, 18);
 }
 .containerFooter {
-    height: 90px;
+    min-height: 90px;
     border-top: 1px solid rgba(165, 165, 165, 0.2);
     max-width: 970px;
     margin-left: auto;
@@ -33,11 +33,12 @@
 
 .social {
     display: inline-block;
-    float: right;
 }
 
 .social a{
     display: inline-block;
+    float: right;
+
 }
 .social img {
     height: 50px;

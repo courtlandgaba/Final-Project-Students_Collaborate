@@ -175,12 +175,15 @@
             <div class="row">
                 <div class="col-lg-12  centerText bigTextSlide5">photo gallery</div>
             </div>
-            <div class="row">
+            <div class="row" ng-init="limit = 8">
                 <ul class="centerText">
-                    <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="Gallery in mainCtrl.Gallery">
+                    <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="Gallery in mainCtrl.Gallery | limitTo: limit as results">
                         <img ng-src="{{Gallery.photo}}">
                     </li>
                 </ul>
+            </div>
+            <div class="row">
+                <button class="showMore col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12" ng-hide="results.length === mainCtrl.Gallery.length" ng-click="limit = limit +4">show more...</button>
             </div>
         </div>
     </div>
@@ -230,8 +233,8 @@
     <div class="footer">
         <div class="containerFooter">
             <div class="row">
-                <div class="col-lg-4 col-md-4  footerText">© 2015 Students Collaborate</div>
-                <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4  social">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 footerText">© 2015 Students Collaborate</div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 social">
                     <a class="footerLinkText" href="">facebook</a>
                     <a class="footerLinkText" href="https://twitter.com/studentscollab">twitter</a>
                     <a class="footerLinkText" href="https://instagram.com/studentscollab">instagram</a>
