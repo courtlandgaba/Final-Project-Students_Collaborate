@@ -3,8 +3,8 @@
     <div class="containerNav">
 
         <div class="rightNav">
-            <a class="links whatWeDo"   ng-click="scrollTo('UpcomingEvent')"    href="" > next event </a>
             <a class="links blog"       ng-click="scrollTo('AboutUs')"          href="" > what we do </a>
+            <a class="links whatWeDo"   ng-click="scrollTo('UpcomingEvent')"    href="" > next event </a>
             <a class="links gallery"    ng-click="scrollTo('FeaturedMemebers')" href="" > members    </a>
             <a class="links investment" ng-click="scrollTo('Photos')"           href="" > photos     </a>
             <a class="links contact"    ng-click="scrollTo('ContactUs')"        href="" > info       </a>
@@ -24,9 +24,11 @@
         </div>
     </div>
 
+
 <!-- 22222222 about about about about about about about about -->
 
 <div id="AboutUs"></div>
+
 <div class="slide" id="slide2">
     <div class="container">
         <ul>
@@ -45,11 +47,11 @@
                     <div class="bigTextSlide2   col-lg-12 col-md-12  centerText" >we only have two rules</div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6  ruleBox1" >
+                    <div class="col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4">
                         <div class="ruleNumber col-lg-12 col-md-12  centerText">1              </div>
                         <div class="smallTextSlide2 col-lg-12 col-md-12  centerText">{{Rule.ruleOne}}</div>
                     </div>
-                    <div class="col-lg-6 col-md-6  ruleBox2">
+                    <div class="col-lg-2 col-md-2">
                         <div class="ruleNumber col-lg-12 col-md-12  centerText">2              </div>
                         <div class="smallTextSlide2 col-lg-12 col-md-12  centerText">{{Rule.ruleTwo}}</div>
                     </div>
@@ -59,67 +61,63 @@
     </div>
 </div>
 
-<div class="slide1-2">
-    <div class="containerShit">
+
+
+<!-- 2.5    shit shit shit  -->
+
+<div class="slide2-3">
+    <div class="containerShit centerText">
         <div class="shit">we make shit happen</div>
     </div>
 </div>
 <!-- 3333333 event event event event event event event event event -->
 
-<div id="NextEvent"></div>
+<div id="UpcomingEvent"></div>
 
 <div class="slide" id="slide3">
     <div class="container">
         <div class="row">
-            <div class="slide3left col-lg-6">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12  bigTextSlide3">upcoming event</div>
-                </div>
-                <div class="row">
-                    <ul>
-                        <li ng-repeat="Event in mainCtrl.Event">
-                            <div class="row">
-                                <div class="smallTexttSlide3 col-lg-2 col-md-2">Date</div>
-                                <div class="smallTextSlide3 col-lg-10 col-md-10 ">{{Event.eventLocationDate}}</div>
-                                <div class="smallTexttSlide3 col-lg-2 col-md-2">Time</div>
-                                <div class="smallTextSlide3 col-lg-10 col-md-10">{{Event.eventLocationTime}}</div>
-                                <div class="smallTexttSlide3 col-lg-2 col-md-2">Name</div>
-                                <div class="smallTextSlide3 col-lg-10 col-md-10 ">{{Event.eventLocationName}}</div>
-                                <div class="smallTexttSlide3 col-lg-2 col-md-2">Address</div>
-                                <div class="smallTextSlide3 col-lg-10 col-md-10 ">{{Event.eventLocationAddress}}</div>
-                                <div class="smallTexttSlide3 col-lg-2 col-md-2">City, State</div>
-                                <div class="smallTextSlide3 col-lg-10 col-md-10 ">{{Event.eventLocationCityStateZip}}</div>
-                            </div>
-
-
-                        </li>
-                    </ul>
-                    <div class="containerForm">
-                        <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
-                        <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
-                        <form class="rsvpForm" ng-show="formm">
-                            <input placeholder="Name*"    type="text" ng-model="Rsvp.name"      ng-required="'true'">
-                            <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
-                            <input placeholder="Website" type="text" ng-model="Rsvp.website"   >
-                            <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >Submit!</button>
-                        </form>
-                    </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="bigTextSlide3">upcoming event</div>
+                <ul>
+                    <li ng-repeat="Event in mainCtrl.Event">
+                        <div class="row">
+                            <div class="smallTexttSlide3 col-lg-3">Date</div>
+                            <div class="smallTextSlide3 col-lg-9">{{Event.eventLocationDate}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="smallTexttSlide3 col-lg-3">Name</div>
+                            <div class="smallTextSlide3 col-lg-9">{{Event.eventLocationName}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="smallTexttSlide3 col-lg-3">Address</div>
+                            <div class="smallTextSlide3 col-lg-9">{{Event.eventLocationAddress}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="smallTexttSlide3 col-lg-3">City, State</div>
+                            <div class="smallTextSlide3 col-lg-9">{{Event.eventLocationCityStateZip}}</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="containerForm">
+                    <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
+                    <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
+                    <form class="rsvpForm" ng-show="formm">
+                        <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                        <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                        <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
+                        <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >Submit!</button>
+                    </form>
                 </div>
             </div>
-            <div class="slide3right col-lg-6">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
-                        </ui-gmap-google-map>
-                    </div>
-                </div>
+            <div class="col-lg-6 col-md-6">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                    <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
+                </ui-gmap-google-map>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <!-- 4444444 featured people featured people featured people featured people featured people -->
 
@@ -128,7 +126,7 @@
     <div class="slide" id="slide4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12  centerText biggestTextSlide4">people you should know about</div>
+                <div class="centerText biggestTextSlide4">people you should know about</div>
             </div>
             <div class="blackLine"></div>
             <ul>
@@ -139,17 +137,17 @@
                             <img ng-src="{{Person.featuredPicture}}" alt="{{Person.featuredFirstName}} {{Person.featuredLastName}}" class="thumb col-lg-3 col-md-3 ">
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-md-12  containerBig ">
-                                <div class="col-lg-4 rightText">
+                            <div class="containerBig">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 rightText">
                                     <div class="text1Slide4"> {{Person.featuredFirstName}} {{Person.featuredLastName}}</div>
                                     <div class="text1Slide4"> {{Person.featuredWebsite}}                              </div>
                                     <div class="text1Slide4"> {{Person.featuredProfession}}                           </div>
                                     <div class="text2Slide4"> {{Person.featuredBio}}                                 </div>
                                 </div>
-                                <div class="col-lg-4 centerText">
+                                <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs centerText">
                                     <img ng-src="{{Person.featuredPicture}}">
                                 </div>
-                                <div class="col-lg-4 leftText">
+                                <div class="col-lg-4 hidden-md hidden-sm hidden-xs leftText">
                                     <div class="containerQuestions leftText">
                                         <div class="Q"> {{Person.questionOne}}  </div>
                                         <div class="A"> {{Person.answerOne}}    </div>
@@ -175,11 +173,11 @@
     <div class="slide" id="slide5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12  centerText bigTextSlide5">photo gallery</div>
+                <div class="col-lg-12  centerText bigTextSlide5">photo gallery</div>
             </div>
             <div class="row">
                 <ul class="centerText">
-                    <li class="col-lg-3 col-md-3" ng-repeat="Gallery in mainCtrl.Gallery">
+                    <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="Gallery in mainCtrl.Gallery">
                         <img ng-src="{{Gallery.photo}}">
                     </li>
                 </ul>
@@ -194,7 +192,21 @@
     <div class="slide" id="slide6">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 containerLeftSlide6">
+                <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2">
+                    <div class="bigTextSlide6">  say hello!               </div>
+                    <div class="smallTextSlide6">WE WOULD LOVE TO MEET YOU. </div>
+                    <div class="smallTextSlide6">SEND US AN EMAIL AND TELL US ABOUT YOUR PROJECT AND WE'LL SEE WHERE WE CAN HELP!</div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="smallTextSlide6">Charleston, SC           </div>
+                    <div class="smallTextSlide6">803-984-3126             </div>
+                    <div class="smallTextSlide6">example@gmail.com        </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-md-4">
                     <form class="contactForm">
                         <label>*YOUR NAME</label>
                         <input type="text" ng-required="'true'" ng-model="Contact.name">
@@ -207,28 +219,19 @@
                         <button class="contactFormButton" ng-click="mainCtrl.addContact(Contact)">SEND YOUR MESSAGE</button>
                     </form>
                 </div>
-                <div class="col-lg-6 col-md-6 containerRightSlide6">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12  bigTextSlide6">  say hello!               </div>
-                        <div class="col-lg-12 col-md-12  smallTextSlide6">casdfasdfsafsadfsadfasfas</div>
-                        <div class="col-lg-12 col-md-12  smallTextSlide6">asdfasfsafasfsaffa       </div>
-                        <br>
-                        <div class="col-lg-12 col-md-12  smallTextSlide6">Charleston, SC           </div>
-                        <div class="col-lg-12 col-md-12  smallTextSlide6">843-555-5555             </div>
-                        <div class="col-lg-12 col-md-12  smallTextSlide6">example@gmail.com        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+
+
 
 <!-- footerrrrrr -->
     <div class="shitHappen"></div>
     <div class="footer">
         <div class="containerFooter">
             <div class="row">
-                <div class="col-lg-6 col-md-6  footerText">© 2015 Students Collaborate</div>
-                <div class="col-lg-6 col-md-6  social">
+                <div class="col-lg-4 col-md-4  footerText">© 2015 Students Collaborate</div>
+                <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4  social">
                     <a class="footerLinkText" href="">facebook</a>
                     <a class="footerLinkText" href="https://twitter.com/studentscollab">twitter</a>
                     <a class="footerLinkText" href="https://instagram.com/studentscollab">instagram</a>

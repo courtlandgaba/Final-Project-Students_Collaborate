@@ -1,15 +1,11 @@
 /* slide 6   contact */
-.container6 {
-    padding: 5px;
-}
 #slide6 .container {
     padding-top: 150px;
 }
 .bigTextSlide6 {
-    font-family: Lato, sans-serif;
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
     color: #B0976D;
     font-size: 2.688em;
-    line-height: 49px;
     font-weight: 100;
     letter-spacing: 6px;
     text-decoration: none;
@@ -17,13 +13,10 @@
     padding-bottom: 5px;
 }
 .smallTextSlide6 {
-    padding-top: 10px;
-    font-family: Lato, sans-serif;
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
     color: white;
     font-size: 1.250em;
-    line-height: 24px;
     font-weight: 100;
-    letter-spacing: 1px;
 }
 .contactForm label {
     width: 390px;
@@ -72,15 +65,10 @@
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     cursor:pointer;
+    margin-bottom: 10px;
 }
 .contactFormButton:hover {
     background-color: white;
     color: #B0976D;
     border: 1px solid white;
-}
-
-.containerLeftSlide6 {
-    padding-left: 170px;
-}
-.containerLeftSlide6 {
 }

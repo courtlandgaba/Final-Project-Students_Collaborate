@@ -1,7 +1,5 @@
 /* slide 2   next event */
-#slide2 .container {
-    padding: 110px 0 0 0;
-}
+
 .redLine {
     width: 120px;
     margin-left: auto;
@@ -13,7 +11,6 @@
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #B0976D;
     font-size: 3em;
-    line-height: 49px;
     font-weight: 100;
     letter-spacing: 7px;
     text-decoration: none;
@@ -24,32 +21,30 @@
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
     color: rgb(18, 18, 18);
     font-size: 2em;
-    line-height: 20px;
     font-weight: 100;
-    display: block;
-    padding-left: 15px;
     letter-spacing: 2px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 }
 .smallTexttSlide3 {
     font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: rgb(163, 163, 163);
-    text-align: right;
     font-weight: 100;
-
+    font-size: 0.950em;
+    letter-spacing: 1px;
+    line-height: 40px;
 }
 .containerForm {
+    padding-top: 40px;
     height: 250px;
-    padding: 10px;
-    margin: 12px;
+    max-width: 555px;
     position: relative;
     z-index: 100;
 }
 .rsvpForm input {
     width: 100%;
-    height: 46px;
+    height: 40px;
     font-family: Montserrat, sans-serif;
-    color: white;
+    color: rgb(18,18,18);
     font-size: 0.875em;
     font-weight: 300;
     letter-spacing: 1px;
@@ -57,19 +52,18 @@
     list-style-type: none;
     outline: none;
     padding-left: 8px;
-    padding-top: 2px;
-    border: 1px solid white;
-    background-color: rgb(28, 28, 28);
+    padding-top: 1px;
+    margin: 1px 0;
+    border: 1px solid rgba(165, 165, 165, 0.55);
+    background-color: rgb(255, 255, 255);
 }
 
-.rsvpForm textarea {
-    height: 100px;
-}
+
 .rsvpFormButton {
     display: block;
     width: 100%;
     height: 40px;
-    background-color: #6cdd7b;
+    background-color: #B0976D;
     font-family: Montserrat, sans-serif;
     color: white;
     font-size: 0.875em;
@@ -84,16 +78,12 @@
 }
 .rsvpFormButton:hover {
     background-color: white;
-    border: 1px solid white;
-    color: #6cdd7b;
+    border: 1px solid #B0976D;
+    color: #B0976D;
 }
 .angular-google-map-container {
-    height: 463px;
-    width: 80%;
-    margin-top: 10px;
-    float:right;
-
-
+    height: 425px;
+    width: 100%;
 }
 .rsvpButtonText {
     font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
@@ -123,6 +113,6 @@
 }
 .rsvpButton:hover {
     background-color: white;
-    border: 1px solid white;
+    border: 1px solid rgb(202, 223, 170);
     color: rgb(202, 223, 170);
 }

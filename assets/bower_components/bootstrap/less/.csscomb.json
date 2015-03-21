@@ -59,7 +59,9 @@
       "clip",
       "clear",
       "font",
-      "font-family",
+      "font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+",
       "font-size",
       "font-style",
       "font-weight",
