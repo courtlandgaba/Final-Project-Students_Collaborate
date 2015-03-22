@@ -33,68 +33,13 @@
     letter-spacing: 1px;
     line-height: 40px;
 }
-.containerForm {
-    padding-top: 40px;
-    height: 250px;
-    max-width: 555px;
-    position: relative;
-    z-index: 100;
-}
-.rsvpForm input {
-    width: 100%;
-    height: 40px;
-    font-family: Montserrat, sans-serif;
-    color: rgb(18,18,18);
-    font-size: 0.875em;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: none;
-    list-style-type: none;
-    outline: none;
-    padding-left: 8px;
-    padding-top: 1px;
-    margin: 1px 0;
-    border: 1px solid rgba(165, 165, 165, 0.55);
-    background-color: rgb(255, 255, 255);
-}
-
-
-.rsvpFormButton {
-    display: block;
-    width: 100%;
-    height: 40px;
-    background-color: #B0976D;
-    font-family: Montserrat, sans-serif;
-    color: white;
-    font-size: 0.875em;
-    border: 1px solid #6cdd7b;
-    transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    cursor: pointer;
-    border: 1px solid #B0976D;
-    letter-spacing: 3px;
-    outline: none;
-}
-.rsvpFormButton:hover {
-    background-color: white;
-    border: 1px solid #B0976D;
-    color: #B0976D;
-}
 .angular-google-map-container {
     height: 425px;
     width: 100%;
 }
-.rsvpButtonText {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    color: rgb(163, 163, 163);
-    font-size: 15px;
-    font-weight: 200;
-    display: block;
-    letter-spacing: 0px;
-    text-align: center;
-    margin-bottom: 5px;
-}
+
+
+
 .rsvpButton {
     display: block;
     width: 100%;
@@ -115,4 +60,90 @@
     background-color: white;
     border: 1px solid rgb(202, 223, 170);
     color: rgb(202, 223, 170);
+}
+.rsvpButton:focus {
+    background-color: white;
+    border: 1px solid rgb(202, 223, 170);
+    color: rgb(202, 223, 170);
+}
+
+
+
+.containerForm {
+    padding-top: 40px;
+    height: 250px;
+    max-width: 555px;
+    position: relative;
+    z-index: 100;
+}
+.RsvpForm input {
+    width: 100%;
+    height: 40px;
+    font-family: Montserrat, sans-serif;
+    color: rgb(18,18,18);
+    font-size: 0.875em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: none;
+    list-style-type: none;
+    outline: none;
+    padding-left: 8px;
+    padding-top: 1px;
+    margin: 1px 0;
+    border: 1px solid rgba(165, 165, 165, 0.55);
+    background-color: rgb(255, 255, 255);
+}
+
+.submitRsvpButton {
+    display: inline-block;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(202, 223, 170);
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 0.875em;
+    border: 1px solid rgb(202, 223, 170);
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
+    letter-spacing: 3px;
+    outline: none;
+}
+.submitRsvpButton:hover {
+    background-color: white;
+    border: 1px solid rgb(202, 223, 170);
+    color: rgb(202, 223, 170);
+}
+.cancelRsvpButton {
+    display: inline-block;
+    width: 20%;
+    height: 40px;
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 0.875em;
+    border: 1px solid #d05050;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
+    letter-spacing: 3px;
+    outline: none;
+    background-color: #d05050;
+}
+.cancelRsvpButton:hover {
+    background-color: white;
+    border: 1px solid #d05050;
+    color: #d05050;
+}
+
+.rsvpButtonText {
+    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: rgb(163, 163, 163);
+    font-size: 15px;
+    font-weight: 200;
+    display: block;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 5px;
 }

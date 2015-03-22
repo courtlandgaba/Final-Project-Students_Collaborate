@@ -51,8 +51,28 @@
 #slide4 a:focus .containerBig {
     top: 45%;
     left: 0%;
-    position: absolute;
 }
+.bigFeature {
+    position: absolute;
+    left: 43%;
+    top: 55%;
+    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #B0976D;
+    font-size: 2.500em;
+    line-height: 49px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    -o-transition: left .3s ease;
+    -ms-transition: left .3s ease;
+    transition: left .3s ease;
+    z-index: 0;
+}
+
 .containerBig {
     position: absolute;
     top: 45%;
@@ -63,17 +83,13 @@
     -ms-transition: left .3s ease;
     transition: left .3s ease;
     width: 100vw;
+    z-index: 3;
 }
-
 .containerBig img {
     height: 300px;
     width: 300px;
     margin-bottom: 5px;
 }
-
-
-
-
 
 .text1Slide4 {
     font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;

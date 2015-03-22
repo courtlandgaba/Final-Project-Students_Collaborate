@@ -102,11 +102,11 @@
                 <div class="containerForm">
                     <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
                     <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
-                    <form class="rsvpForm" ng-show="formm">
+                    <form class="RsvpForm" ng-show="formm">
                         <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
                         <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
                         <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
-                        <button class="rsvpFormButton" ng-click="mainCtrl.addRsvp(Rsvp)" >Submit!</button>
+                        <button class="submitRsvpButton" ng-click="mainCtrl.addRsvp(Rsvp); formm =! formm" >Submit!</button><button class="cancelRsvpButton" ng-click="formm =! formm">X</button>
                     </form>
                 </div>
             </div>
@@ -161,6 +161,8 @@
                         </div>
                     </a>
                 </li>
+                <div class="bigFeature hidden-md hidden-sm hidden-xs">Click on <br>a circle<br> above!</div>
+
             </ul>
         </div>
     </div>
