@@ -1,13 +1,16 @@
 
-.navbar {
+#navbar {
     margin: 0;
     padding: 0;
     height: 90px;
     width: 100vw;
     position: fixed;
-    background-color: rgb(18, 18, 18);
     z-index: 30;
     border-radius: 0;
+    background-color:rgb(18,18,18);
+    top:0px;
+    left:0px;
+    right:0px;
 }
 .homeText {
     padding-top: 28px;
