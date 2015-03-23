@@ -20,6 +20,12 @@
     font-size: 1.600em;
     letter-spacing: 7px;
     font-weight: 300;
+    transition: all 0.6s ease 0s;
+    -moz-transition: all 0.6s ease 0s;
+    -webkit-transition: all 0.6s ease 0s;
+}
+.home:hover {
+    color: #B0976D;
 }
 .linkText {
     padding-top: 33px;
