@@ -16,18 +16,20 @@
     right:0;
 }
 
-#slide1:before {
+#slide1 {
     background-image: url("../images/ryan.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     transform: translateZ(-1px) scale(2);
     z-index:-1;
     background-color: rgb(28, 28, 28);
-
+    min-height: 114vh;
 }
 #slide2 {
     background-color: rgb(243, 243, 243);
     background-attachment: fixed;
+    top: -13vh;
+
 }
 .slide2-3 {
     width: 100%;
