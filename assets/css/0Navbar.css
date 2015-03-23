@@ -1,39 +1,46 @@
-.containerNav {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 970px;
-}
+
 .navbar {
     margin: 0;
     padding: 0;
     height: 90px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     background-color: rgb(18, 18, 18);
     z-index: 30;
     border-radius: 0;
 }
-
-.links {
-    display:table-cell;
-    vertical-align: middle;
-    height: 93px;
+.homeText {
+    padding-top: 28px;
+}
+.home {
     text-decoration: none;
-    padding-left: 5px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.600em;
+    letter-spacing: 7px;
+    font-weight: 300;
+}
+.linkText {
+    padding-top: 33px;
+    text-align:right;
+}
+.links {
+    display:inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 10px;
-    padding-left: 25px;
+    padding-left: 20px;
     transition: all 0.6s ease 0s;
     -moz-transition: all 0.6s ease 0s;
     -webkit-transition: all 0.6s ease 0s;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 100;
+
 }
 .links:hover {
     color: #B0976D;
-}
-.rightNav {
-    float:right;
 }

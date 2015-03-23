@@ -1,13 +1,12 @@
+
 .bigTextSlide5 {
-    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #B0976D;
     font-size: 2.500em;
-    line-height: 49px;
     font-weight: 100;
     letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom: 10px;
 }
 #slide5 img {
     margin: 0;
@@ -25,40 +24,32 @@
 }
 #slide5 ul {
     overflow: scroll;
-    padding-bottom: 20px;
+    padding: 50px 0;
 /*     max-height: 480px;
  */}
 #slide5 ul li {
     margin: 0;
     padding: 0;
 }
-.whiteLine {
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid white;
-    margin: 30px auto 50px auto;
-}
+
 .showMore {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
-    background-color: rgb(243, 243, 243);
+    background-color: rgba(246, 246, 246, 0);
     border: 1px solid white;
     padding: .8em;
     text-align: center;
-    margin-top: 2em;
     letter-spacing: .25em;
-    font-weight: 700;
-    color: #B0976D;
+    font-weight: 100;
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
-    margin-bottom: 40px;
 }
 
 .showMore:hover {
-    background-color: #B0976D;
+    background-color: rgba(179, 149, 113, 0.5);
     border: 1px solid #B0976D;
     color: white;
 

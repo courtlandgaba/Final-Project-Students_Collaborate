@@ -1,52 +1,65 @@
-/* slide 2   next event */
-
-.redLine {
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid rgb(163, 163, 163);
-    margin: 30px auto 50px auto;
-}
+/* slide 3   next event */
 .bigTextSlide3 {
-    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #B0976D;
     font-size: 3em;
     font-weight: 100;
-    letter-spacing: 7px;
+    letter-spacing: 19px;
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 50px;
 }
 .smallTextSlide3 {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(18, 18, 18);
     font-size: 2em;
     font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     padding-bottom: 5px;
 }
 .smallTexttSlide3 {
-    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(163, 163, 163);
     font-weight: 100;
     font-size: 0.950em;
     letter-spacing: 1px;
     line-height: 40px;
 }
-.angular-google-map-container {
-    height: 425px;
+.guestButton {
+    display: block;
     width: 100%;
+    height: 60px;
+    background-color: #B0976D;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+    border: 1px solid #B0976D;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
+    letter-spacing: 3px;
+    outline: none;
 }
-
-
-
+.guestButton:hover {
+    background-color: white;
+    border: 1px solid #B0976D;
+    color: #B0976D;
+}
+.guestButton:focus {
+    background-color: white;
+    border: 1px solid #B0976D;
+    color: #B0976D;
+}
 .rsvpButton {
     display: block;
     width: 100%;
     height: 60px;
     background-color: rgb(202, 223, 170);
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
+    font-weight: 100;
     font-size: 20px;
     border: 1px solid rgb(202, 223, 170);
     transition: all 0.3s ease 0s;
@@ -66,23 +79,43 @@
     border: 1px solid rgb(202, 223, 170);
     color: rgb(202, 223, 170);
 }
-
-
-
 .containerForm {
     padding-top: 40px;
-    height: 250px;
+    padding-bottom: 40px;
     max-width: 555px;
     position: relative;
     z-index: 100;
 }
+.cName, .cEmail, .cWebsite {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(18,18,18);
+    font-size: 0.975em;
+    font-weight: 100;
+}
+.cName {
+    display: inline-block;
+}
+.cEmail{
+    float:right;
+    display: inline-block;
+}
+.cWebsite {
+    display: block;
+    text-align: right;
+}
+.guestList {
+    width: 100%;
+    border: 1px solid rgba(165, 165, 165, 0.55);
+    height: 200px;
+    overflow: scroll;
+}
 .RsvpForm input {
     width: 100%;
-    height: 40px;
-    font-family: Montserrat, sans-serif;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
     color: rgb(18,18,18);
     font-size: 0.875em;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 1px;
     text-transform: none;
     list-style-type: none;
@@ -99,8 +132,9 @@
     width: 80%;
     height: 40px;
     background-color: rgb(202, 223, 170);
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
+    font-weight: 100;
     font-size: 0.875em;
     border: 1px solid rgb(202, 223, 170);
     transition: all 0.3s ease 0s;
@@ -119,8 +153,9 @@
     display: inline-block;
     width: 20%;
     height: 40px;
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
+    font-weight: 100;
     font-size: 0.875em;
     border: 1px solid #d05050;
     transition: all 0.3s ease 0s;
@@ -138,7 +173,7 @@
 }
 
 .rsvpButtonText {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: rgb(163, 163, 163);
     font-size: 15px;
     font-weight: 200;
@@ -146,4 +181,20 @@
     letter-spacing: 0px;
     text-align: center;
     margin-bottom: 5px;
+}
+.guestButtonText {
+    font-family: 'Oswald', sans-serif;
+    color: rgb(163, 163, 163);
+    font-size: 15px;
+    font-weight: 200;
+    display: block;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.angular-google-map-container {
+    height: 32vw;
+    width: 100%;
+    margin-bottom: 10px;
 }

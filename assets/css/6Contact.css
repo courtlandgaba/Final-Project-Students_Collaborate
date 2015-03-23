@@ -3,7 +3,7 @@
     padding-top: 150px;
 }
 .bigTextSlide6 {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #B0976D;
     font-size: 2.688em;
     font-weight: 100;
@@ -13,14 +13,14 @@
     padding-bottom: 5px;
 }
 .smallTextSlide6 {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.250em;
     font-weight: 100;
 }
 .contactForm label {
-    width: 390px;
-    font-family: Lato, sans-serif;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
     color: white;
     font-weight: 100;
     letter-spacing: 2px;
@@ -28,11 +28,11 @@
 }
 
 .contactForm input, textarea {
-    width: 390px;
+    width: 100%;
     height: 50px;
     border: 1px solid white;
     background-color: rgb(18, 18, 18);
-    font-family: Lato, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.250em;
     font-weight: 100;
@@ -53,11 +53,11 @@
 }
 .contactFormButton {
     display: block;
-    width: 390px;
+    width: 100%;
     height: 64px;
     margin-top: 4px;
     background-color: #B0976D;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
     font-size: 1.250em;
     border: none;
@@ -68,7 +68,7 @@
     margin-bottom: 10px;
 }
 .contactFormButton:hover {
-    background-color: white;
+    background-color: rgba(147, 103, 8, 0);
     color: #B0976D;
-    border: 1px solid white;
+    border: 1px solid #B0976D;
 }

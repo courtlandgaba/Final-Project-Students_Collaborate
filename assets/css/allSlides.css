@@ -1,56 +1,92 @@
-.wrapper {
-    max-height: 100vh;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.slide {
+    width: 100vw;
+    min-height: 90vh;
+    margin:0;
+    padding:0;
+    transform-style: inherit;
+    position: relative;
+
 }
-.centerText {
-    text-align: center;
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
 }
-.leftText {
-    text-align: left;
+
+#slide1:before {
+    background-image: url("../images/ryan.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    background-color: rgb(28, 28, 28);
+
 }
-.rightText {
-    text-align: right;
+#slide2 {
+    background-color: rgb(243, 243, 243);
+    background-attachment: fixed;
 }
-.hide {
-    display: none;
+.slide2-3 {
+    width: 100%;
+    height: 350px;
+    background-image: url("../images/singing.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
 }
-.container {
-    padding: 70px 0 0 0;
+#slide3:before {
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    background-color: rgb(255, 255, 255);
 }
+#slide4 {
+    background-color: rgb(243, 243, 243);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+#slide5:before {
+    background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+    background-color: rgb(28, 28, 28);
+}
+#slide6 {
+    background-color: rgb(18, 18, 18);
+    background-attachment: fixed;
+}
+
 
 /* invisible divs for the scrollTo feature to work */
 #AboutUs {
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top: 571px;
+    width: 100vw;
+    height: 1px;
+    position: inherit;
+    z-index: -100;
 }
 #UpcomingEvent {
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top: 1581px;
+    width: 100vw;
+    height: 1px;
+    position: inherit;
+    z-index: -100;
 }
 
 #FeaturedMemebers {
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top: 2242px;
+    width: 100vw;
+    height: 1px;
+    position: inherit;
+    z-index: -100;
 }
 #Photos {
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top:2976px;
+    width: 100vw;
+    height: 1px;
+    position: inherit;
+    z-index: -100;
 }
 #ContactUs {
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top:4589px;
+    width: 100vw;
+    height: 1px;
+    position: inherit;
+    z-index: -100;
 }

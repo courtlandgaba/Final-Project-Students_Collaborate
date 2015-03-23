@@ -22,7 +22,7 @@
                 <div type="text" ng-model="Confirm.name">      {{Rsvp.name}}    </div>
                 <div type="text" ng-model="Confirm.email">     {{Rsvp.email}}   </div>
                 <div type="text" ng-model="Confirm.website">   {{Rsvp.website}}   </div>
-                <button ng-click="adminCtrl.addConfirm(Rsvp); adminCtrl.deleteRsvp(Rsvp._id)">confirm </button>
+                <button ng-click="adminCtrl.deleteRsvp(Rsvp._id); adminCtrl.addConfirm(Rsvp)">confirm </button>
                 <button ng-click="adminCtrl.deleteRsvp(Rsvp._id)"                            >delete  </button>
             </li></ul>
         </div>

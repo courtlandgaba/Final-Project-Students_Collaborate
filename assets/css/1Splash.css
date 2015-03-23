@@ -1,6 +1,9 @@
 /* slide 1   splash */
+.containerSlogan {
+    top: 40vh;
+}
 .slogan {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
     font-size: 2.0em;
     font-weight: 600;
@@ -11,8 +14,4 @@
     padding: 15px;
     background-color: rgb(18, 18, 18);
     display:inline-block;
-}
-
-.containerSlogan {
-    top: 40vh;
 }

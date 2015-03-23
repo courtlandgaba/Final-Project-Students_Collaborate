@@ -62,6 +62,7 @@
             zoom: 16,
         };
 
+
         $scope.marker = {
             id: 0,
             coords: {

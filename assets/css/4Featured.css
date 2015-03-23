@@ -6,16 +6,14 @@
 }
 
 .biggestTextSlide4 {
-    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #B0976D;
     font-size: 2.500em;
-    line-height: 49px;
     font-weight: 100;
     letter-spacing: 6px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 25px;
 
 }
 #slide4 ul {
@@ -49,17 +47,17 @@
     filter: grayscale(0);
 }
 #slide4 a:focus .containerBig {
-    top: 45%;
+    top: 42%;
     left: 0%;
 }
 .bigFeature {
+    width: 100vw;
     position: absolute;
-    left: 43%;
+    left: 0%;
     top: 55%;
-    font-family: "verlag","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #B0976D;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(196, 154, 120, 0.67);
     font-size: 2.500em;
-    line-height: 49px;
     font-weight: 100;
     letter-spacing: 6px;
     text-decoration: none;
@@ -75,7 +73,7 @@
 
 .containerBig {
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 200%;
     -webkit-transition: left .3s ease;
     -moz-transition: left .3s ease;
@@ -84,23 +82,29 @@
     transition: left .3s ease;
     width: 100vw;
     z-index: 3;
+    background-color: rgb(243, 243, 243);
 }
 .containerBig img {
-    height: 300px;
-    width: 300px;
-    margin-bottom: 5px;
+    height: 25vw;
+    width: 25vw;
 }
 
+#featName {
+    text-transform: uppercase;
+    color: #B0976D;
+}
 .text1Slide4 {
-    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2.250em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.750em;
     font-weight: 100;
     padding-bottom: 3px;
     color: rgb(18,18,18);
+    letter-spacing: 1px;
+
 }
 .text2Slide4 {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
-    font-size: 1.575em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.375em;
     color: rgb(163, 163, 163);
     font-weight: 100;
 }
@@ -113,11 +117,10 @@
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 3px;
-    font-family: verlag, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+    font-family: 'Oswald', sans-serif;}
 
 .A {
-    font-family: "quadon","Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.063em;
     font-weight: 100;
     color: rgb(163, 163, 163);
