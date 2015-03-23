@@ -50,6 +50,10 @@
     top: 42%;
     left: 0%;
 }
+#slide4 a:active .containerBig {
+    top: 42%;
+    left: 0%;
+}
 .bigFeature {
     width: 100vw;
     position: absolute;

@@ -5,7 +5,8 @@
     angular.module('eventApp', [
         'ngRoute',
         'angular-carousel',
-        'uiGmapgoogle-maps'
+        'uiGmapgoogle-maps',
+        'smoothScroll'
 
     ])
     .run(['$anchorScroll', function($anchorScroll) {
