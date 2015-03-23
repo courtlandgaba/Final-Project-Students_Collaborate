@@ -5,7 +5,7 @@
     height: 90px;
     width: 100vw;
     position: fixed;
-    background-color: rgb(18, 18, 18);
+    background-color: white;
     z-index: 30;
     border-radius: 0;
 }
@@ -15,7 +15,7 @@
 .home {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
-    color: white;
+    color: rgb(18, 18, 18);
     text-transform: uppercase;
     font-size: 1.600em;
     letter-spacing: 7px;
@@ -36,7 +36,7 @@
     text-align: center;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: rgb(18, 18, 18);
     text-transform: uppercase;
     font-size: 10px;
     padding-left: 20px;
