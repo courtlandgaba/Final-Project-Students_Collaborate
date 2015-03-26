@@ -58,13 +58,13 @@
                             <div class="bigTextSlide2   centerText" >we only have two rules</div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4 col-sm-4 col-sm-offset-2 col-xs-12">
+                            <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-12">
                                 <div class="row">
                                     <div class="ruleNumber centerText col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5">      1                </div>
                                 </div>
                                 <div class="smallTextSlide2 centerText"> {{Rule.ruleOne}} </div>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                 <div class="row">
                                     <div class="ruleNumber centerText col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5">      2                </div>
                                 </div>
@@ -109,29 +109,33 @@
                     </li>
                 </ul>
                 <div class="containerForm">
-                    <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
-                    <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
-                    <form class="RsvpForm" ng-show="formm">
-                        <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
-                        <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
-                        <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
-                        <button class="submitRsvpButton" ng-click="mainCtrl.addRsvp(Rsvp); formm =! formm" >SUBMIT!</button><button class="cancelRsvpButton" ng-click="formm =! formm">X</button>
-                    </form>
-                    <div class="guestButtonText">Want to know who's going? Click on the link below to see the list!</div>
-                    <button class="guestButton" ng-click="listt =! listt">GUEST LIST!</button>
-                    <div class="guestList" ng-show="listt">
-                        <ul>
-                            <li ng-repeat=" Confirm in mainCtrl.Confirm">
-                                <div class="cName">    {{Confirm.name}}    </div>
-                                <div class="cEmail">   {{Confirm.email}}   </div>
-                                <a   class="cWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
-                                <hr>
-                            </li>
-                        </ul>
+                    <div class="containerRsvp col-lg-6">
+                        <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
+                        <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
+                        <form class="RsvpForm" ng-show="formm">
+                            <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                            <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                            <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
+                            <button class="submitRsvpButton" ng-click="mainCtrl.addRsvp(Rsvp); formm =! formm" >SUBMIT!</button><button class="cancelRsvpButton" ng-click="formm =! formm">X</button>
+                        </form>
+                    </div>
+                    <div class="containerGuest col-lg-6">
+                        <div class="guestButtonText">Want to know who's going? Click on the link below to see the list!</div>
+                        <button class="guestButton" ng-click="listt =! listt">GUEST LIST!</button>
+                        <div class="guestList" ng-show="listt">
+                            <ul>
+                                <li ng-repeat=" Confirm in mainCtrl.Confirm">
+                                    <div class="cName">    {{Confirm.name}}    </div>
+                                    <div class="cEmail">   {{Confirm.email}}   </div>
+                                    <a   class="cWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-12 hidden-xs">
                 <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                     <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
                 </ui-gmap-google-map>
@@ -154,15 +158,15 @@
                 <div class="centerText biggestTextSlide4">people you should know about</div>
             </div>
             <div class="blackLine"></div>
-            <ul>
+            <ul ng-init="activeIndex=0">
                 <li ng-repeat="Person in mainCtrl.Person">
-                    <a href="" class="">
+                    <a href="" ng-class={active:(activeIndex==$index)}>
 
                         <div class="row">
                             <img ng-src="{{Person.featuredPicture}}" alt="{{Person.featuredFirstName}} {{Person.featuredLastName}}" class="thumb col-lg-3 col-md-3 ">
                         </div>
-                        <div class="row">
-                            <div class="containerBig">
+                        <div class="row" >
+                            <div id="containerBig" class="col-lg-12">
                                 <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs centerText">
                                     <img ng-src="{{Person.featuredPicture}}">
                                 </div>

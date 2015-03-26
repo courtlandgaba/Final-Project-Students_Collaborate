@@ -67,6 +67,16 @@
             },
         };
 
+        /////////////thumb slider //////
+
+
+        $( document ).ready(function() {
+            $("#slide4, a").click(function(){
+                console.log('asdfasfsadfsdfsf');
+                $('a').removeClass("active");
+            });
+        });
+
     //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
             mainCtrl.singlePerson=person;

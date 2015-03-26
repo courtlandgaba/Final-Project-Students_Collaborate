@@ -10,7 +10,7 @@
 .slide:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -13vh;
     bottom: 0;
     left:0;
     right:0;
@@ -37,16 +37,20 @@
     background-image: url("../images/singing.jpg");
     -webkit-background-size: cover;
     background-size: cover;
+
 }
-#slide3:before {
-    transform: translateZ(-1px) scale(2);
-    z-index:-1;
+#slide3 {
+    background-attachment: fixed;
     background-color: rgb(255, 255, 255);
+    top: -13vh;
+
 }
 #slide4 {
     background-color: rgb(243, 243, 243);
     background-attachment: fixed;
     min-height: 100vh;
+    top: -13vh;
+
 }
 #slide5:before {
     background-image: url("http://subtlepatterns.com/patterns/binding_dark.png");

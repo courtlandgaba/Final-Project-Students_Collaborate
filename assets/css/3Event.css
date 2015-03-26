@@ -1,4 +1,5 @@
 /* slide 3   next event */
+
 .bigTextSlide3 {
     font-family: 'Oswald', sans-serif;
     color: #B0976D;
@@ -26,7 +27,6 @@
     line-height: 40px;
 }
 .guestButton {
-    display: block;
     width: 100%;
     height: 60px;
     background-color: #B0976D;
@@ -53,7 +53,6 @@
     color: #B0976D;
 }
 .rsvpButton {
-    display: block;
     width: 100%;
     height: 60px;
     background-color: rgb(202, 223, 170);
@@ -91,18 +90,9 @@
     color: rgb(18,18,18);
     font-size: 0.975em;
     font-weight: 100;
-}
-.cName {
-    display: inline-block;
-}
-.cEmail{
-    float:right;
-    display: inline-block;
-}
-.cWebsite {
     display: block;
-    text-align: right;
 }
+
 .guestList {
     width: 100%;
     border: 1px solid rgba(165, 165, 165, 0.55);
@@ -177,7 +167,6 @@
     color: rgb(163, 163, 163);
     font-size: 15px;
     font-weight: 200;
-    display: block;
     letter-spacing: 0px;
     text-align: center;
     margin-bottom: 5px;
@@ -187,14 +176,14 @@
     color: rgb(163, 163, 163);
     font-size: 15px;
     font-weight: 200;
-    display: block;
     letter-spacing: 0px;
     text-align: center;
     margin-bottom: 5px;
 }
 
 .angular-google-map-container {
-    height: 26vw;
+    height: 35vw;
+    max-height: 507px;
     width: 100%;
     margin-bottom: 10px;
 }

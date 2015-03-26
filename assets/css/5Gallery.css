@@ -1,4 +1,6 @@
-
+#slide5 .container {
+    padding: 0;
+}
 .bigTextSlide5 {
     font-family: 'Oswald', sans-serif;
     color: #B0976D;
