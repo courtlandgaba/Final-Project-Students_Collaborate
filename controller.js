@@ -1,4 +1,3 @@
-
 (function () {
     "use strict";
     angular.module('eventApp')
@@ -10,7 +9,6 @@
     .controller('MainController', function ($anchorScroll, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
-
 
     //MAIN CRUD: RULES//////////////////////////////////////////////////////////////////
         RuleService.getSingleRule($routeParams.RuleId).success(function (rule) {
@@ -44,7 +42,6 @@
         });
         mainCtrl.currentIndex = $routeParams.ConfirmId;
 
-
     //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
         EventService.getSingleEvent($routeParams.EventId).success(function (event) {
             mainCtrl.singleEvent=event;
@@ -53,7 +50,7 @@
             mainCtrl.Event = event;
         });
         mainCtrl.currentIndex = $routeParams.EventId;
-///////////////////mpa stufff////////
+///////////////////map stufff////////
         $scope.map = {
             center: {
                 latitude: 32.783224,
@@ -61,7 +58,6 @@
             },
             zoom: 16,
         };
-
 
         $scope.marker = {
             id: 0,
@@ -107,7 +103,6 @@
             $location.hash(div);
             $anchorScroll();
         };
-
     })
 
 //////////////////////admin controller//////////////////////////////////////////
@@ -252,6 +247,7 @@
         ContactService.getSingleContact($routeParams.ContactId).success(function (Contact) {
             adminCtrl.singleContact=Contact;
         });
+
         adminCtrl.currentIndex = $routeParams.ContactId;
 
         adminCtrl.addContact = function (Contact) {
@@ -265,10 +261,5 @@
             ContactService.updateContact(Contact, $routeParams.ContactId);
             $location.path('/admin');
         };
-
     })
-
-
-
-
 })();
