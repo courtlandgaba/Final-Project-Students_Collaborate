@@ -62,8 +62,8 @@
 .bigFeature {
     width: 100vw;
     position: absolute;
-    bottom: 5vw;
-    top: 55%;
+    bottom: 20vw;
+    left: 0%;
     font-family: 'Oswald', sans-serif;
     color: rgba(196, 154, 120, 0.67);
     font-size: 2.500em;
