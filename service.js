@@ -216,13 +216,4 @@
                 deleteContact: deleteContact,
             }
         })
-
-
-
-
-
-
-
-
-
 })();

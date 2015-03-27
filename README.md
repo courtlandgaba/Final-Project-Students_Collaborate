@@ -12,7 +12,7 @@ Final Project: Web app for Students Collaborate <br>
 
 What is Students Collaborate?
 --------
-Students Collaborate is a student-ran, monthly meet-up for college students to meet other students that are working on interesting side projects. <br>
+Students Collaborate is a monthly event for college students to meet other students and discuss side projects. <br>
 
 
 Technologies that I used.
@@ -32,6 +32,7 @@ Dependencies<br>
 Features
 --------
 Parallax Background<br>
+Full Responsiveness <br>
 User CRUD (C = Create, R = Render, U = Update, D = Delete) <br>
 Admin CRUD <br>
 Admin-approved user CRUD <br>

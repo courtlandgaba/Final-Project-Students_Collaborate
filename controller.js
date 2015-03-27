@@ -3,10 +3,7 @@
     angular.module('eventApp')
 
 //////////////////////main controller//////////////////////////////////////////
-//////////////////////main controller//////////////////////////////////////////
-//////////////////////main controller//////////////////////////////////////////
-
-    .controller('MainController', function ($anchorScroll, RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
+    .controller('MainController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope, $scope) {
 
         var mainCtrl = this;
 
@@ -18,7 +15,6 @@
             mainCtrl.Rule = rule;
         });
         mainCtrl.currentIndex = $routeParams.RuleId;
-
     //MAIN CRUD: RSVP//////////////////////////////////////////////////////////////////
         RsvpService.getSingleRsvp($routeParams.RsvpId).success(function (rsvp) {
             mainCtrl.singleRsvp=rsvp;
@@ -32,7 +28,6 @@
             RsvpService.createRsvp(rsvp);
             $location.path('/');
         };
-
     //MAIN CRUD: CONFIRM RSVP//////////////////////////////////////////////////////////////////
         ConfirmService.getSingleConfirm($routeParams.ConfirmId).success(function (rsvp) {
             mainCtrl.singleConfirm=rsvp;
@@ -41,7 +36,6 @@
             mainCtrl.Confirm = rsvp;
         });
         mainCtrl.currentIndex = $routeParams.ConfirmId;
-
     //MAIN CRUD: EVENT//////////////////////////////////////////////////////////////////
         EventService.getSingleEvent($routeParams.EventId).success(function (event) {
             mainCtrl.singleEvent=event;
@@ -50,33 +44,6 @@
             mainCtrl.Event = event;
         });
         mainCtrl.currentIndex = $routeParams.EventId;
-///////////////////map stufff////////
-        $scope.map = {
-            center: {
-                latitude: 32.783224,
-                longitude: -79.937603
-            },
-            zoom: 16,
-        };
-
-        $scope.marker = {
-            id: 0,
-            coords: {
-                latitude: 32.783224,
-                longitude: -79.937603
-            },
-        };
-
-        /////////////thumb slider //////
-
-
-        $( document ).ready(function() {
-            $("#slide4, a").click(function(){
-                console.log('asdfasfsadfsdfsf');
-                $('a').removeClass("active");
-            });
-        });
-
     //MAIN CRUD: PERSON//////////////////////////////////////////////////////////////////
         PersonService.getSinglePerson($routeParams.PersonId).success(function (person) {
             mainCtrl.singlePerson=person;
@@ -85,7 +52,6 @@
             mainCtrl.Person = person;
         });
         mainCtrl.currentIndex = $routeParams.PersonId;
-
     //MAIN CRUD: PHOTO //////////////////////////////////////////////////////////////////
         GalleryService.getSingleGallery($routeParams.GalleryId).success(function (gallery) {
             mainCtrl.singleGallery=gallery;
@@ -94,7 +60,6 @@
             mainCtrl.Gallery = gallery;
         });
         mainCtrl.currentIndex = $routeParams.GalleryId;
-
     //MAIN CRUD: CONTACT//////////////////////////////////////////////////////////////////
         ContactService.getSingleContact($routeParams.ContactId).success(function (Contact) {
             mainCtrl.singleContact=Contact;
@@ -113,12 +78,32 @@
             $location.hash(div);
             $anchorScroll();
         };
+      ///////////////////map stuff////////
+            $scope.map = {
+                center: {
+                    latitude: 32.783224,
+                    longitude: -79.937603
+                },
+                zoom: 16,
+            };
+
+            $scope.marker = {
+                id: 0,
+                coords: {
+                    latitude: 32.783224,
+                    longitude: -79.937603
+                },
+            };
+      /////////////thumb slider / active on page load//////
+            $(document).ready(function() {
+                $("#slide4, a").click(function(){
+                    console.log('asdfasfsadfsdfsf');
+                    $('a').removeClass("active");
+                });
+            });
     })
 
 //////////////////////admin controller//////////////////////////////////////////
-//////////////////////admin controller//////////////////////////////////////////
-//////////////////////admin controller//////////////////////////////////////////
-
     .controller('AdminController', function (RuleService, RsvpService, ConfirmService, EventService, PersonService, GalleryService, ContactService, $location, $routeParams, _, $rootScope) {
 
         var adminCtrl = this;
