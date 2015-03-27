@@ -86,7 +86,7 @@
 <div class="slide" id="slide3">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1">
+            <div class="col-lg-6 col-md-5 col-sm-8 col-xs-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-2 col-xs-offset-1">
                 <div class="bigTextSlide3">upcoming event</div>
                 <ul>
                     <li ng-repeat="Event in mainCtrl.Event">
@@ -109,30 +109,34 @@
                     </li>
                 </ul>
                 <div class="containerForm">
-                    <div class="containerRsvp col-lg-6">
-                        <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
-                        <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
-                        <form class="RsvpForm" ng-show="formm">
-                            <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
-                            <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
-                            <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
-                            <button class="submitRsvpButton" ng-click="mainCtrl.addRsvp(Rsvp); formm =! formm" >SUBMIT!</button><button class="cancelRsvpButton" ng-click="formm =! formm">X</button>
-                        </form>
-                    </div>
-                    <div class="containerGuest col-lg-6">
-                        <div class="guestButtonText">Want to know who's going? Click on the link below to see the list!</div>
-                        <button class="guestButton" ng-click="listt =! listt">GUEST LIST!</button>
-                        <div class="guestList" ng-show="listt">
-                            <ul>
-                                <li ng-repeat=" Confirm in mainCtrl.Confirm">
-                                    <div class="cName">    {{Confirm.name}}    </div>
-                                    <div class="cEmail">   {{Confirm.email}}   </div>
-                                    <a   class="cWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
-                                    <hr>
-                                </li>
-                            </ul>
+                    <div class="row">
+                        <div class="containerRsvp col-lg-6 col-md-6 col-sm-6">
+                            <div class="rsvpButtonText">Thinking about coming? Click on the link below to reserve your spot!</div>
+                            <button class="rsvpButton" ng-click="formm =! formm">R.S.V.P.</button>
+                            <form class="RsvpForm" ng-show="formm">
+                                <input placeholder="Name*"            type="text" ng-model="Rsvp.name"      ng-required="'true'">
+                                <input placeholder="Email Address*"   type="text" ng-model="Rsvp.email"     ng-required="'true'">
+                                <input placeholder="Website"          type="text" ng-model="Rsvp.website"   >
+                                <button class="submitRsvpButton" ng-click="mainCtrl.addRsvp(Rsvp); formm =! formm" >SUBMIT!</button><button class="cancelRsvpButton" ng-click="formm =! formm">X</button>
+                            </form>
                         </div>
+                        <div class="containerGuest col-lg-6 col-md-6 col-sm-6">
+                            <div class="guestButtonText">Want to know who's going? Click on the link below to see the list!</div>
+                            <button class="guestButton" ng-click="listt =! listt">GUEST LIST!</button>
+                            <div class="guestList" ng-show="listt">
+                                <ul>
+                                    <li ng-repeat=" Confirm in mainCtrl.Confirm">
+                                        <div class="cName">    {{Confirm.name}}    </div>
+                                        <div class="cEmail">   {{Confirm.email}}   </div>
+                                        <a   class="cWebsite" href="{{Confirm.website}}">{{Confirm.website}}</a>
+                                        <hr>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 hidden-xs">
@@ -152,7 +156,7 @@
 
 <!-- 4444444 featured people featured people featured people featured people featured people -->
 
-    <div class="slide" id="slide4">
+    <div class="slide hidden-sm hidden-xs" id="slide4">
         <div class="container">
             <div class="row">
                 <div class="centerText biggestTextSlide4">people you should know about</div>
