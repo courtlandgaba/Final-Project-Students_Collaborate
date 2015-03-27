@@ -48,11 +48,11 @@
     filter: grayscale(0);
 }
 #slide4 a:focus #containerBig {
-    top: 42%;
+    bottom: 5vw;
     left: 0%;
 }
 #slide4 a:active #containerBig {
-    top: 42%;
+    bottom: 5vw;
     left: 0%;
 }
 
